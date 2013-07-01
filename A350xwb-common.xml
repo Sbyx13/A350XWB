@@ -19,7 +19,7 @@
 		</model>
 
 		<instrumentation>
-			<path>Aircraft/A350xwb/Systems/instrumentation.xml</path>
+			<path>Aircraft/A350XWB/Systems/instrumentation.xml</path>
 		</instrumentation>
 	</sim>
 

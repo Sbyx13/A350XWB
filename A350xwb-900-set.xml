@@ -3,14 +3,14 @@
 <PropertyList include="A350xwb-common.xml">
 <!-- A321 WV011 -->
 	<sim>
-		<description> Airbus A350xwb - 900 - Rolls Royce High ByPass Turbofan Engine</description>
+		<description>Airbus A350XWB-900 (Rolls Royce High ByPass Turbofan Engine)</description>
 		<!-- Plus A320neo-common.xml author and status -->
 		<flight-model>jsb</flight-model>
-		<aero>A350xwb-900-jsbsim</aero>
+		<aero>A350XWB-900-jsbsim</aero>
 		<variant>900</variant>
 		<engine>CFM LeapX</engine>
 
-		<model><path>Aircraft/A350xwb/Models/A350xwb-900.xml</path></model>
+		<model><path>Aircraft/A350XWB/Models/A350XWB-900.xml</path></model>
 		
 
 
@@ -60,7 +60,7 @@
 		<menubar>
 				<default>
 					<menu n="100">
-						<label>Airbus A350xwb</label>
+						<label>Airbus A350XWB</label>
 					</menu>
 				</default>
 		</menubar>
