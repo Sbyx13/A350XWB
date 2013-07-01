@@ -11,7 +11,7 @@
 		<engine>CFM LeapX</engine>
 
 		<model><path>Aircraft/A350xwb/Models/A350xwb-900.xml</path></model>
-		<model><path>Aircraft/A350xwb/Models/A350xwb-900-flightdeck.xml</path></model>
+		
 
 
 
