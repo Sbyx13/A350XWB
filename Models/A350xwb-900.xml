@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?><PropertyList><path>A350xwb-900.ac</path></PropertyList>
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList><path>A350xwb-900.ac</path>
+
+<model><path>A350xwb-900-flightdeck.xml</path></model>
+
+</PropertyList>
