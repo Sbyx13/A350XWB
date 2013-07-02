@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+  <path>A350XWB-900.ac</path>
+  
+  <offsets>
+    <x-m>-32.8</x-m>
+  </offsets>
+   
+  <model>
+    <name>Instruments</name>
+    <path>A350XWB-900-flightdeck.xml</path>
+  </model>
+
+</PropertyList>
