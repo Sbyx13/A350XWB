@@ -6,7 +6,7 @@ name "Blender_export__flightdeck.ac"
 kids 1
 OBJECT poly
 name "Fuselage.002"
-loc 17.2062130 1.5460000 0.0000000
+loc 19.5679226 1.5460000 0.0000000
 numvert 32
 -17.1062145 0.4112290 -0.9974564
 -17.1062145 0.4112290 0.9974564
