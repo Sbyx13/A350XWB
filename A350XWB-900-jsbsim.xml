@@ -12,15 +12,16 @@
     <limitation/>
   </fileheader>
   <metrics>
-    <!-- lenght 44.50 m -->
-    <wingarea unit="M2">   128.00 </wingarea>
-    <wingspan unit="M">    34.10 </wingspan>
-    <wing_incidence>          1.03 </wing_incidence>
-    <chord unit="FT">   13.76 </chord>
-    <htailarea unit="FT2">  334.24 </htailarea>
-    <htailarm unit="FT">   57.88 </htailarm>
-    <vtailarea unit="FT2">  248.79 </vtailarea>
-    <vtailarm unit="FT">   57.33 </vtailarm>
+    <!-- lenght 66.61 m -->
+    <wingarea unit="M2">432</wingarea>
+    <wingspan unit="M">64.74</wingspan>
+    <wing_incidence>2</wing_incidence> <!--Guestimate (Model inaccurate)-->
+    <chord unit="M">7.38</chord>
+    <htailarea unit="M2">70.92</htailarea>
+    <htailarm unit="M">19.29</htailarm>
+    <vtailarea unit="M2">49.64</vtailarea>
+    <vtailarm unit="M">9.42</vtailarm>
+    <!--
     <location name="AERORP" unit="IN">
       <x> 642.122 </x>
       <y> 0 </y>
@@ -31,6 +32,7 @@
       <y> -30 </y>
       <z> 70 </z>
     </location>
+    -->
     <location name="VRP" unit="IN">
       <x> 0 </x>
       <y> 0 </y>
@@ -64,49 +66,42 @@ YAW MOI_________3950000______23089847_______24848934
     <!-- #ref-11 page 48, WV011. 103300 lb - 5248x2 (engines)=92804lbs 42095.1863KG-->
     <location name="CG" unit="IN">
       <!--x> 642.122 </x-->
-      <x> 650.122 </x>
+      <x> 0</x>
       <!-- At zero load of fuel and cargo/pax the CG goes to 642 -->
       <y> 0 </y>
-      <z> -41.7398 </z>
+      <z> 0 </z>
     </location>
     <pointmass name="Crew">
       <weight unit="LBS">400</weight>
       <!-- MAX: 600lbs-->
       <location name="POINTMASS" unit="IN">
-        <x>200</x>
+        <x>-1165.35</x>
         <y>0</y>
         <z>0</z>
       </location>
     </pointmass>
     <pointmass name="PAX">
       <weight unit="LBS">19750</weight>
-      <!-- MAX: 39500 lbs ** looks too heavy. maybe low it and give a long cilinder shape. need to do some maths-->
       <form shape="cylinder">
-        <radius unit="M"> 2.13 </radius>
-        <length unit="M"> 24.44 </length>
+        <radius unit="M"> 4 </radius>
+        <length unit="M"> 40 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <x>705</x>
+        <x>30</x>
         <y>0</y>
         <z>0</z>
       </location>
     </pointmass>
-    <!-- NEW Pointmasses Start Weights for good CG -->
     <pointmass name="Fwd Cargo">
       <weight unit="LBS">3750</weight>
-      <!-- #REF-3 page 19, MAX 3402 kilograms = 7500.12616 lbs -->
       <form shape="cylinder">
-        <radius unit="M"> 1.24 </radius>
-        <length unit="M"> 4.95 </length>
+        <radius unit="M"> 2 </radius>
+        <length unit="M"> 5 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <!-- #REF-1 page 88+98,
-			x= (door form nose(8.16m))-(door with(1.816m)/2)+(Cargo compartment lenght(4.953m)/2)
-			x= 9.7285 meters = 383.011811 in
-			-->
-        <x>383.01</x>
+        <x>-582</x>
         <y>0</y>
-        <z>-59.05</z>
+        <z>0</z>
         <!-- Aprox lower deck 1.5 meters = 59.0551181 in -->
       </location>
     </pointmass>
@@ -114,17 +109,17 @@ YAW MOI_________3950000______23089847_______24848934
       <weight unit="LBS">0</weight>
       <!-- #REF-3 page 19, MAX 4536 kilograms = 10000.1682 lbs -->
       <form shape="cylinder">
-        <radius unit="M"> 1.24 </radius>
-        <length unit="M"> 6.6 </length>
+        <radius unit="M"> 2 </radius>
+        <length unit="M"> 5 </length>
       </form>
       <location name="POINTMASS" unit="IN">
         <!-- #REF-1 page 88+98,
 			x= (door form nose(22.69m))-(door with(1.816m)/2)
 			x= 21.78200 meters = 857.559055 in
 			-->
-        <x>857.55</x>
+        <x>638</x>
         <y>0</y>
-        <z>-59.05</z>
+        <z>0</z>
         <!-- Aprox lower deck 1.5 meters = 59.0551181 in -->
       </location>
     </pointmass>
@@ -140,9 +135,9 @@ YAW MOI_________3950000______23089847_______24848934
 			x= (door form nose(22.69m))+(door with(1.816m)/2)+( Dist. between rear doors(2.19))+(Aprox to compartment center (2m))
 			x= 27.78800 meters = 1 094.01575 in
 			-->
-        <x>1094</x>
+        <x>874</x>
         <y>0</y>
-        <z>-39.37</z>
+        <z>0</z>
         <!-- Aprox bulk lower deck 1 meter = 39.3700787 in -->
       </location>
     </pointmass>
@@ -153,9 +148,9 @@ YAW MOI_________3950000______23089847_______24848934
         <length unit="M"> 5 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <x>589.735</x>
-        <y>-226.575</y>
-        <z>-45.567</z>
+        <x>-307</x>
+        <y>-404</y>
+        <z>54</z>
       </location>
     </pointmass>
     <pointmass name="Engine2">
@@ -165,9 +160,9 @@ YAW MOI_________3950000______23089847_______24848934
         <length unit="M"> 5 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <x>589.735</x>
-        <y>226.575</y>
-        <z>-45.567</z>
+        <x>-307</x>
+        <y>404</y>
+        <z>54</z>
       </location>
     </pointmass>
   </mass_balance>
@@ -175,7 +170,7 @@ YAW MOI_________3950000______23089847_______24848934
     <!-- REF-1 page 165 + 271  -->
     <contact type="BOGEY" name="NOSE_LG">
       <location unit="IN">
-        <x> 182.31 </x>
+        <x> -1109.03 </x>
         <y> 0 </y>
         <z> -157.33 </z>
       </location>
@@ -192,7 +187,7 @@ YAW MOI_________3950000______23089847_______24848934
     <contact type="BOGEY" name="LEFT_MLG">
       <location unit="IN">
         <!--<x> 699.9243 </x>-->
-        <x> 1279.92 </x>
+        <x> -11.42 </x>
         <y> -210.04 </y>
         <z> -157.87 </z>
       </location>
@@ -210,7 +205,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location unit="IN">
         <!-- <x> 697.3425 </x> It should be right left simetric
 			<x> 699.9243 </x> -->
-        <x> 1279.92 </x>
+        <x> -11.42 </x>
         <y> 210.04 </y>
         <z> -157.87 </z>
       </location>
@@ -226,62 +221,81 @@ YAW MOI_________3950000______23089847_______24848934
       <brake_group> RIGHT </brake_group>
       <retractable>1</retractable>
     </contact>
-    <!--
+    <!--Nose tip (VRP)-->
     <contact type="STRUCTURE" name="NOSE_1">
       <location unit="IN">
-        <x> 37.7953 </x>
+        <x> -1291.33 </x>
         <y> 0 </y>
-        <z> -38.1374 </z>
+        <z> 0 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Under the nose if front gear was down-->
     <contact type="STRUCTURE" name="NOSE_2">
       <location unit="IN">
-        <x> 128.1102 </x>
+        <x> -1138.98 </x>
         <y> 0 </y>
-        <z> -55.0271 </z>
+        <z> -56.69 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Nose top-->
+    <contact type="STRUCTURE" name="NOSE_3">
+      <location unit="IN">
+        <x> -986.61 </x>
+        <y> 0 </y>
+        <z> 176.77 </z>
+      </location>
+      <static_friction> 1.0 </static_friction>
+      <dynamic_friction> 0.4 </dynamic_friction>
+      <rolling_friction> 0.4 </rolling_friction>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+      <max_steer unit="DEG"> 0.0 </max_steer>
+      <brake_group> NONE </brake_group>
+      <retractable>0</retractable>
+    </contact>
+    <!--Center Bottom (Belly fairing)-->
     <contact type="STRUCTURE" name="CENTER_1">
       <location unit="IN">
-        <x> 274.0157 </x>
+        <x> 0 </x>
         <y> 0 </y>
-        <z> -60.0665 </z>
+        <z> -81.10 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Center Top-->
     <contact type="STRUCTURE" name="CENTER_2">
       <location unit="IN">
-        <x> 930 </x>
+        <x> -79.53 </x>
         <y> 0 </y>
-        <z> -60.0665 </z>
+        <z> 179.92 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
@@ -289,14 +303,14 @@ YAW MOI_________3950000______23089847_______24848934
     </contact>
     <contact type="STRUCTURE" name="ENG_1">
       <location unit="IN">
-        <x>589.735</x>
-        <y>-226.575</y>
-        <z>-95.567</z>
+        <x>-320.08</x>
+        <y>409.84</y>
+        <z>-128.74</z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
@@ -304,117 +318,154 @@ YAW MOI_________3950000______23089847_______24848934
     </contact>
     <contact type="STRUCTURE" name="ENG_2">
       <location unit="IN">
-        <x>589.735</x>
-        <y>226.575</y>
-        <z>-95.567</z>
+        <x>-320.08</x>
+        <y>-409.84</y>
+        <z>-128.74</z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Normal tail strike position I guess-->
     <contact type="STRUCTURE" name="TAIL_1">
       <location unit="IN">
-        <x> 1097.9921 </x>
+        <x> 740.55 </x>
         <y> 0 </y>
-        <z> -44.7722 </z>
+        <z> -31.21 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Top of VSTAB-->
     <contact type="STRUCTURE" name="TAIL_2">
       <location unit="IN">
-        <x> 1225 </x>
+        <x> 1233.07 </x>
         <y> 0 </y>
-        <z> -18.8067 </z>
+        <z> 514.57 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Left HSTAB-->
     <contact type="STRUCTURE" name="TAIL_3">
       <location unit="IN">
-        <x> 1341.6142 </x>
-        <y> 0 </y>
-        <z> -10.2599 </z>
+        <x> 1327.95 </x>
+        <y> -371.65 </y>
+        <z> 137.79 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Right HSTAB-->
     <contact type="STRUCTURE" name="TAIL_4">
       <location unit="IN">
-        <x> 1469.0945 </x>
-        <y> 0 </y>
-        <z> 47.4138 </z>
+        <x> 1327.95 </x>
+        <y> 371.65 </y>
+        <z> 137.79 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Left Wing-->
     <contact type="STRUCTURE" name="WING_TIP_1">
       <location unit="IN">
-        <x> 838.8898 </x>
-        <y> -667.5197 </y>
-        <z> 35.7926 </z>
+        <x> 394.09 </x>
+        <y> -1153.94 </y>
+        <z> 116.54 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
+    <!--Left Wing tip-->
     <contact type="STRUCTURE" name="WING_TIP_2">
       <location unit="IN">
-        <x> 838.8898 </x>
-        <y> 667.5197 </y>
-        <z> 35.7926 </z>
+        <x> 534.25 </x>
+        <y> -1274.41 </y>
+        <z> 207.87 </z>
       </location>
       <static_friction> 1.0 </static_friction>
       <dynamic_friction> 0.4 </dynamic_friction>
       <rolling_friction> 0.4 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1.5e+06 </spring_coeff>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
       <brake_group> NONE </brake_group>
       <retractable>0</retractable>
     </contact>
-    -->
+    <!--Right wing-->
+    <contact type="STRUCTURE" name="WING_TIP_3">
+      <location unit="IN">
+        <x> 394.09 </x>
+        <y> 1153.94 </y>
+        <z> 116.54 </z>
+      </location>
+      <static_friction> 1.0 </static_friction>
+      <dynamic_friction> 0.4 </dynamic_friction>
+      <rolling_friction> 0.4 </rolling_friction>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+      <max_steer unit="DEG"> 0.0 </max_steer>
+      <brake_group> NONE </brake_group>
+      <retractable>0</retractable>
+    </contact>
+    <!--Left Wing tip-->
+    <contact type="STRUCTURE" name="WING_TIP_4">
+      <location unit="IN">
+        <x> 534.25 </x>
+        <y> 1274.41 </y>
+        <z> 207.87 </z>
+      </location>
+      <static_friction> 1.0 </static_friction>
+      <dynamic_friction> 0.4 </dynamic_friction>
+      <rolling_friction> 0.4 </rolling_friction>
+      <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+      <max_steer unit="DEG"> 0.0 </max_steer>
+      <brake_group> NONE </brake_group>
+      <retractable>0</retractable>
+    </contact>
   </ground_reactions>
   <propulsion>
     <engine file="cfm_leapx">
       <location unit="IN">
-        <x> 589.735 </x>
-        <y> -226.575 </y>
-        <z> -45.567 </z>
+        <x>-307</x>
+        <y>-404</y>
+        <z>54</z>
       </location>
       <orient unit="DEG">
         <roll> 0.0 </roll>
@@ -424,9 +475,9 @@ YAW MOI_________3950000______23089847_______24848934
       <feed>7</feed>
       <thruster file="direct">
         <location unit="IN">
-          <x> 589.735 </x>
-          <y> -226.575 </y>
-          <z> -45.567 </z>
+        <x>-307</x>
+        <y>-404</y>
+        <z>54</z>
         </location>
         <orient unit="DEG">
           <roll> 0.0 </roll>
@@ -437,9 +488,9 @@ YAW MOI_________3950000______23089847_______24848934
     </engine>
     <engine file="cfm_leapx">
       <location unit="IN">
-        <x> 589.735 </x>
-        <y> 226.575 </y>
-        <z> -45.567 </z>
+        <x>-307</x>
+        <y>404</y>
+        <z>54</z>
       </location>
       <orient unit="DEG">
         <roll> 0.0 </roll>
@@ -454,9 +505,9 @@ YAW MOI_________3950000______23089847_______24848934
       <feed>8</feed>
       <thruster file="direct">
         <location unit="IN">
-          <x> 589.735 </x>
-          <y> 226.575 </y>
-          <z> -45.567 </z>
+        <x>-307</x>
+        <y>404</y>
+        <z>54</z>
         </location>
         <orient unit="DEG">
           <roll> 0.0 </roll>
@@ -468,9 +519,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Left Tank (Wing tip Ventilation Surge) -->
       <location unit="IN">
-        <x> 788.4322 </x>
-        <y> -574.4148 </y>
-        <z> 3.1080 </z>
+        <x> 534 </x>
+        <y> -1274 </y>
+        <z> 207 </z>
       </location>
       <capacity unit="LBS"> 328.13 </capacity>
       <!-- need review -->
@@ -482,9 +533,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Left Tank (Outer) -->
       <location unit="IN">
-        <x> 737.4190 </x>
-        <y> -457.4259 </y>
-        <z> -8.0898 </z>
+        <x> 200 </x>
+        <y> -804 </y>
+        <z> 96 </z>
       </location>
       <capacity unit="LBS"> 1548.8 </capacity>
       <!-- need review -->
@@ -498,9 +549,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Left Tank (Inner) -->
       <location unit="IN">
-        <x> 630.6588 </x>
-        <y> -236.2992 </y>
-        <z> -33.9470 </z>
+        <x> -41 </x>
+        <y> -333 </y>
+        <z> 51 </z>
       </location>
       <capacity unit="LBS"> 12186.9 </capacity>
       <!-- need review -->
@@ -514,9 +565,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Center Tank -->
       <location unit="IN">
-        <x> 580.9955 </x>
+        <x> -183.46 </x>
         <y> 0 </y>
-        <z> -47.0 </z>
+        <z> -59.05 </z>
       </location>
       <capacity unit="LBS"> 14520 </capacity>
       <!-- need review -->
@@ -530,9 +581,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Right Tank (Inner) -->
       <location unit="IN">
-        <x> 630.6588 </x>
-        <y> 236.2992 </y>
-        <z> -33.9470 </z>
+        <x> -41 </x>
+        <y> 333 </y>
+        <z> 51 </z>
       </location>
       <capacity unit="LBS"> 12186.9 </capacity>
       <!-- need review -->
@@ -546,9 +597,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Right Tank (Outer) -->
       <location unit="IN">
-        <x> 737.4190 </x>
-        <y> 457.4259 </y>
-        <z> -8.0898 </z>
+        <x> 200 </x>
+        <y> 804 </y>
+        <z> 96 </z>
       </location>
       <capacity unit="LBS"> 1548.8 </capacity>
       <!-- need review -->
@@ -562,9 +613,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- Right Tank (Wing tip Ventilation Surge) -->
       <location unit="IN">
-        <x> 788.4322 </x>
-        <y> 574.4148 </y>
-        <z> 3.1080 </z>
+        <x> 534 </x>
+        <y> 1274 </y>
+        <z> 207 </z>
       </location>
       <capacity unit="LBS"> 328.13 </capacity>
       <!-- need review -->
@@ -576,9 +627,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- LEFT FUEL PIPES (Engine 1 feed from this) -->
       <location unit="IN">
-        <x>589.735</x>
-        <y>-226.575</y>
-        <z>-45.567</z>
+        <x> -320 </x>
+        <y> -409 </y>
+        <z> -128 </z>
       </location>
       <capacity unit="LBS"> 100 </capacity>
       <!-- need review -->
@@ -589,9 +640,9 @@ YAW MOI_________3950000______23089847_______24848934
     <tank type="FUEL">
       <!-- RIGHT FUEL PIPES (Engine 2 feed from this) -->
       <location unit="IN">
-        <x>589.735</x>
-        <y>226.575</y>
-        <z>-45.567</z>
+        <x> -320 </x>
+        <y> 409 </y>
+        <z> -128 </z>
       </location>
       <capacity unit="LBS"> 100 </capacity>
       <!-- need review -->
@@ -600,9 +651,8 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
     </tank>
   </propulsion>
-  <system file="A350XWB-fuel" />
-  <!--system file="pushback" />
-<system file="a320-fuel" /-->
+  <system file="A350XWB-fuel"/>
+  <!--system file="pushback" /> -->
   <flight_control name="FCS: A320">
     <channel name="Pitch">
       <summer name="Pitch Trim Sum">

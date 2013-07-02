@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <key n="123">
+  <name>{</name>
+  <desc>Turn cutoffs off</desc>
+  <binding>
+   <command>property-assign</command>
+   <property>/controls/engines/engine[0]/cutoff</property>
+   <value>1</value>
+  </binding> 
+  <binding>
+   <command>property-assign</command>
+   <property>/controls/engines/engine[1]/cutoff</property>
+   <value>1</value>
+ </binding>
+ </key>
+  <key n="125">
+  <name>}</name>
+  <desc>Turn cutoffs on</desc>
+  <binding>
+   <command>property-assign</command>
+   <property>/controls/engines/engine[0]/cutoff</property>
+   <value>0</value>
+  </binding> 
+  <binding>
+   <command>property-assign</command>
+   <property>/controls/engines/engine[1]/cutoff</property>
+   <value>0</value>
+ </binding>
+ </key>
+</PropertyList>

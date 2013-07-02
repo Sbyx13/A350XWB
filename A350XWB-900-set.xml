@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList include="A350XWB-common.xml">
-  
   <sim>
     <description>Airbus A350XWB-900 (Rolls Royce High ByPass Turbofan Engine)</description>
-   
     <flight-model>jsb</flight-model>
     <aero>A350XWB-900-jsbsim</aero>
     <variant>900</variant>
@@ -23,6 +21,9 @@
         <start-offset-m>30</start-offset-m>
       </runways>
     </airport>
+
+    <chase-distance-m type="double" archive="y"> -60 </chase-distance-m>
+
     <view>
       <name>Pilot View</name>
       <internal archive="y">true</internal>
@@ -34,40 +35,30 @@
       </config>
     </view>
     <view n="1">
-
-   <config>
-     <target-z-offset-m archive="y">58.30</target-z-offset-m>
-     <target-y-offset-m archive="y">09.86</target-y-offset-m>
-   </config>
-  </view>
-
-  <view n="2">
-   <config>
-     <target-z-offset-m archive="y">58.30</target-z-offset-m>
-     <target-y-offset-m archive="y">09.86</target-y-offset-m>
-   </config>
-  </view>
-
-  <view n="5">
-   <config>
-     <target-z-offset-m archive="y">58.30</target-z-offset-m>
-     <target-y-offset-m archive="y">09.86</target-y-offset-m>
-   </config>
-  </view>
-
-  <view n="6">
-   <config>
-     <target-z-offset-m archive="y">58.30</target-z-offset-m>
-     <target-y-offset-m archive="y">09.86</target-y-offset-m>
-   </config>
-  </view>
-
-  <view n="7">
-   <config>
-     <target-z-offset-m archive="y">58.30</target-z-offset-m>
-     <target-y-offset-m archive="y">09.86</target-y-offset-m>
-   </config>
-  </view>
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="2">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="5">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="6">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="7">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
     <!-- Plus A320neo-common.xml Views -->
     <!-- Plus A320neo-common.xml sim/Multiplay/generic properties -->
     <!-- Plus A320neo-common.xml Splash Screen image and color -->

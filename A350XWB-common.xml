@@ -49,4 +49,8 @@
       </tank>
     </fuel>
   </consumables>
+   <input>
+  <keyboard include="Systems/A350XWB-keyboard.xml">
+  </keyboard>
+ </input>
 </PropertyList>
