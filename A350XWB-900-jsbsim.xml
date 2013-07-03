@@ -13,8 +13,8 @@
   </fileheader>
   <metrics>
     <!-- lenght 66.61 m -->
-    <wingarea unit="M2">432</wingarea>
-    <wingspan unit="M">64.74</wingspan>
+    <wingarea unit="M2">460</wingarea>
+    <wingspan unit="M">64.8</wingspan>
     <wing_incidence>2</wing_incidence> <!--Guestimate (Model inaccurate)-->
     <chord unit="M">7.38</chord>
     <htailarea unit="M2">70.92</htailarea>
@@ -62,18 +62,14 @@ YAW MOI_________3950000______23089847_______24848934
     <ixy unit="SLUG*FT2">         0 </ixy>
     <ixz unit="SLUG*FT2">         0 </ixz>
     <iyz unit="SLUG*FT2">         0 </iyz>
-    <emptywt unit="KG">42095.1863</emptywt>
-    <!-- #ref-11 page 48, WV011. 103300 lb - 5248x2 (engines)=92804lbs 42095.1863KG-->
+    <emptywt unit="LBS">229100</emptywt>
     <location name="CG" unit="IN">
-      <!--x> 642.122 </x-->
       <x> 0</x>
-      <!-- At zero load of fuel and cargo/pax the CG goes to 642 -->
       <y> 0 </y>
       <z> 0 </z>
     </location>
     <pointmass name="Crew">
       <weight unit="LBS">400</weight>
-      <!-- MAX: 600lbs-->
       <location name="POINTMASS" unit="IN">
         <x>-1165.35</x>
         <y>0</y>
@@ -81,68 +77,55 @@ YAW MOI_________3950000______23089847_______24848934
       </location>
     </pointmass>
     <pointmass name="PAX">
-      <weight unit="LBS">19750</weight>
+      <weight unit="LBS">40000</weight>
       <form shape="cylinder">
-        <radius unit="M"> 4 </radius>
+        <radius unit="M"> 5.6 </radius>
         <length unit="M"> 40 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <x>30</x>
+        <x>-300</x>
         <y>0</y>
         <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Fwd Cargo">
-      <weight unit="LBS">3750</weight>
+      <weight unit="LBS">7000</weight>
       <form shape="cylinder">
-        <radius unit="M"> 2 </radius>
-        <length unit="M"> 5 </length>
+        <radius unit="M"> 3 </radius>
+        <length unit="M"> 18 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <x>-582</x>
+        <x>-800</x>
         <y>0</y>
-        <z>0</z>
-        <!-- Aprox lower deck 1.5 meters = 59.0551181 in -->
+        <z>-120</z>
       </location>
     </pointmass>
     <pointmass name="Aft Cargo">
       <weight unit="LBS">0</weight>
-      <!-- #REF-3 page 19, MAX 4536 kilograms = 10000.1682 lbs -->
       <form shape="cylinder">
         <radius unit="M"> 2 </radius>
         <length unit="M"> 5 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <!-- #REF-1 page 88+98,
-			x= (door form nose(22.69m))-(door with(1.816m)/2)
-			x= 21.78200 meters = 857.559055 in
-			-->
         <x>638</x>
         <y>0</y>
-        <z>0</z>
-        <!-- Aprox lower deck 1.5 meters = 59.0551181 in -->
+        <z>-120</z>
       </location>
     </pointmass>
     <pointmass name="Rear Bulk Cargo">
       <weight unit="LBS">0</weight>
-      <!-- #REF-3 page 19, MAX 1497 kilograms = 3300.32006 lbs -->
       <form shape="cylinder">
         <radius unit="M"> 1.24 </radius>
         <length unit="M"> 2 </length>
       </form>
       <location name="POINTMASS" unit="IN">
-        <!-- #REF-1 page 88+102,
-			x= (door form nose(22.69m))+(door with(1.816m)/2)+( Dist. between rear doors(2.19))+(Aprox to compartment center (2m))
-			x= 27.78800 meters = 1 094.01575 in
-			-->
         <x>874</x>
         <y>0</y>
-        <z>0</z>
-        <!-- Aprox bulk lower deck 1 meter = 39.3700787 in -->
+        <z>-120</z>
       </location>
     </pointmass>
     <pointmass name="Engine1">
-      <weight unit="LBS">5248</weight>
+      <weight unit="LBS">13000</weight>
       <form shape="cylinder">
         <radius unit="M"> 1.31 </radius>
         <length unit="M"> 5 </length>
@@ -154,7 +137,7 @@ YAW MOI_________3950000______23089847_______24848934
       </location>
     </pointmass>
     <pointmass name="Engine2">
-      <weight unit="LBS">5248</weight>
+      <weight unit="LBS">13000</weight>
       <form shape="cylinder">
         <radius unit="M"> 1.31 </radius>
         <length unit="M"> 5 </length>
@@ -167,7 +150,6 @@ YAW MOI_________3950000______23089847_______24848934
     </pointmass>
   </mass_balance>
   <ground_reactions>
-    <!-- REF-1 page 165 + 271  -->
     <contact type="BOGEY" name="NOSE_LG">
       <location unit="IN">
         <x> -1109.03 </x>
@@ -180,18 +162,15 @@ YAW MOI_________3950000______23089847_______24848934
       <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 70 </max_steer>
-      <!-- REF-1 page 133 -->
       <brake_group> NONE </brake_group>
       <retractable>1</retractable>
     </contact>
     <contact type="BOGEY" name="LEFT_MLG">
       <location unit="IN">
-        <!--<x> 699.9243 </x>-->
         <x> -11.42 </x>
         <y> -210.04 </y>
         <z> -157.87 </z>
       </location>
-      <!-- 		<static_friction> 0.5 </static_friction>  WHAT??? less static than dinamyc friction?-->
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
       <rolling_friction> 0.02 </rolling_friction>
@@ -203,18 +182,13 @@ YAW MOI_________3950000______23089847_______24848934
     </contact>
     <contact type="BOGEY" name="RIGHT_MLG">
       <location unit="IN">
-        <!-- <x> 697.3425 </x> It should be right left simetric
-			<x> 699.9243 </x> -->
         <x> -11.42 </x>
         <y> 210.04 </y>
         <z> -157.87 </z>
       </location>
-      <!-- 		<static_friction> 0.5 </static_friction>  WHAT??? less static than dinamyc friction?-->
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
       <rolling_friction> 0.02 </rolling_friction>
-      <!--spring_coeff unit="LBS/FT"> 169785 </spring_coeff>
-		<damping_coeff unit="LBS/FT/SEC"> 33957 </damping_coeff-->
       <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
       <max_steer unit="DEG"> 0.0 </max_steer>
@@ -461,7 +435,7 @@ YAW MOI_________3950000______23089847_______24848934
     </contact>
   </ground_reactions>
   <propulsion>
-    <engine file="cfm_leapx">
+    <engine file="trent_xwb">
       <location unit="IN">
         <x>-307</x>
         <y>-404</y>
@@ -486,7 +460,7 @@ YAW MOI_________3950000______23089847_______24848934
         </orient>
       </thruster>
     </engine>
-    <engine file="cfm_leapx">
+    <engine file="trent_xwb">
       <location unit="IN">
         <x>-307</x>
         <y>404</y>
@@ -497,11 +471,6 @@ YAW MOI_________3950000______23089847_______24848934
         <pitch> 2.2 </pitch>
         <yaw> -1 </yaw>
       </orient>
-      <!--	<feed>1</feed>
-	<feed>2</feed>
-	<feed>3</feed>
-	<feed>4</feed>
-	<feed>5</feed> -->
       <feed>8</feed>
       <thruster file="direct">
         <location unit="IN">
@@ -523,8 +492,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> -1274 </y>
         <z> 207 </z>
       </location>
-      <capacity unit="LBS"> 328.13 </capacity>
-      <!-- need review -->
+      <capacity unit="LBS"> 300 </capacity>
       <contents unit="LBS"> 0 </contents>
       <priority>0</priority>
       <type>JET-A1</type>
@@ -537,9 +505,8 @@ YAW MOI_________3950000______23089847_______24848934
         <y> -804 </y>
         <z> 96 </z>
       </location>
-      <capacity unit="LBS"> 1548.8 </capacity>
-      <!-- need review -->
-      <contents unit="LBS"> 154.88 </contents>
+      <capacity unit="LBS"> 6000 </capacity>
+      <contents unit="LBS"> 3000 </contents>
       <standpipe unit="LBS">21</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>2</priority>
@@ -553,9 +520,8 @@ YAW MOI_________3950000______23089847_______24848934
         <y> -333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 12186.9 </capacity>
-      <!-- need review -->
-      <contents unit="LBS"> 2437.38 </contents>
+      <capacity unit="LBS"> 60000 </capacity>
+      <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>3</priority>
@@ -569,9 +535,8 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 0 </y>
         <z> -59.05 </z>
       </location>
-      <capacity unit="LBS"> 14520 </capacity>
-      <!-- need review -->
-      <contents unit="LBS"> 0 </contents>
+      <capacity unit="LBS"> 112000 </capacity>
+      <contents unit="LBS"> 64000 </contents>
       <standpipe unit="LBS">43</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>1</priority>
@@ -585,9 +550,8 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 12186.9 </capacity>
-      <!-- need review -->
-      <contents unit="LBS"> 2437.38 </contents>
+      <capacity unit="LBS"> 60000 </capacity>
+      <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>3</priority>
@@ -601,9 +565,8 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 804 </y>
         <z> 96 </z>
       </location>
-      <capacity unit="LBS"> 1548.8 </capacity>
-      <!-- need review -->
-      <contents unit="LBS"> 154.88 </contents>
+      <capacity unit="LBS"> 6000 </capacity>
+      <contents unit="LBS"> 3000 </contents>
       <standpipe unit="LBS">21</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>2</priority>
@@ -617,8 +580,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 1274 </y>
         <z> 207 </z>
       </location>
-      <capacity unit="LBS"> 328.13 </capacity>
-      <!-- need review -->
+      <capacity unit="LBS"> 300 </capacity>
       <contents unit="LBS"> 0 </contents>
       <priority>0</priority>
       <type>JET-A1</type>
@@ -632,7 +594,6 @@ YAW MOI_________3950000______23089847_______24848934
         <z> -128 </z>
       </location>
       <capacity unit="LBS"> 100 </capacity>
-      <!-- need review -->
       <contents unit="LBS"> 100 </contents>
       <priority>1</priority>
       <type>JET-A1</type>
@@ -645,7 +606,6 @@ YAW MOI_________3950000______23089847_______24848934
         <z> -128 </z>
       </location>
       <capacity unit="LBS"> 100 </capacity>
-      <!-- need review -->
       <contents unit="LBS"> 100 </contents>
       <priority>1</priority>
       <type>JET-A1</type>
@@ -653,7 +613,7 @@ YAW MOI_________3950000______23089847_______24848934
   </propulsion>
   <system file="A350XWB-fuel"/>
   <!--system file="pushback" /> -->
-  <flight_control name="FCS: A320">
+  <flight_control name="FCS: A350">
     <channel name="Pitch">
       <summer name="Pitch Trim Sum">
         <input>fcs/elevator-cmd-norm</input>
@@ -738,58 +698,6 @@ YAW MOI_________3950000______23089847_______24848934
       </aerosurface_scale>
     </channel>
     <channel name="Yaw">
-      <!-- Testing on Ground steering Rudder bug
-	<pure_gain name="Yaw Damper Rate">
-		<input>velocities/r-rad_sec</input>
-		<gain>2</gain>
-	</pure_gain>
-
-	<pure_gain name="Yaw Damper Beta">
-		<input>aero/beta-rad</input>
-		<gain>-5</gain>
-	</pure_gain>
-
-	<summer name="Yaw Trim Sum">
-		<input>fcs/rudder-cmd-norm</input>
-		<input>fcs/yaw-trim-cmd-norm</input>
-		<clipto>
-		<min>-1</min>
-		<max>1</max>
-		</clipto>
-	</summer>
-
-	<summer name="Rudder Sum">
-		<input>fcs/yaw-trim-sum</input>
-		<input>fcs/yaw-damper-rate</input>
-		<input>fcs/yaw-damper-beta</input>
-		<clipto>
-		<min>-1</min>
-		<max>1</max>
-		</clipto>
-	</summer>
-
-	<aerosurface_scale name="Rudder Control">
-		<input>fcs/rudder-sum</input>
-		<gain>0.01745</gain>
-		<range>
-		<min>-25</min>
-		<max>25</max>
-		</range>
-		<output>fcs/rudder-pos-rad</output>
-	</aerosurface_scale>
-
-	<aerosurface_scale name="Rudder position normalized">
-		<input>fcs/rudder-pos-deg</input>
-		<domain>
-		<min>-25</min>
-		<max>25</max>
-		</domain>
-		<range>
-		<min>-1</min>
-		<max>1</max>
-		</range>
-		<output>fcs/rudder-pos-norm</output>
-	</aerosurface_scale> -->
       <summer name="Rudder Command Sum">
         <input>fcs/rudder-cmd-norm</input>
         <input>fcs/yaw-trim-cmd-norm</input>
