@@ -10,5 +10,31 @@
     <name>Instruments</name>
     <path>A350XWB-900-flightdeck.xml</path>
   </model>
-
+  
+   <animation>
+  <type>translate</type>
+  <object-name>tyreln</object-name>
+  <object-name>tyreln.001</object-name>
+  <property>gear/gear[0]/compression-ft</property>
+  <factor>0.3048</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>translate</type>
+  <object-name>tyrerwrf</object-name>
+  <object-name>tyrerwrf.001</object-name>
+  <property>gear/gear[1]/compression-ft</property>
+  <factor>0.3048</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
 </PropertyList>
