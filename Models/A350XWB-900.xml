@@ -11,6 +11,15 @@
     <path>A350XWB-900-flightdeck.xml</path>
   </model>
   
+  <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.37</x-m>
+    <z-m>1.74</z-m>
+  </offsets>
+  </model>
+  
    <animation>
   <type>translate</type>
   <object-name>tyreln</object-name>

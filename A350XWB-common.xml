@@ -53,4 +53,11 @@
   <keyboard include="Systems/A350XWB-keyboard.xml">
   </keyboard>
  </input>
+ 
+ <nasal>
+ <a350-eicas>
+  <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
+ </a350-eicas>
+</nasal>
+
 </PropertyList>
