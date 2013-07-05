@@ -55,9 +55,10 @@
  </input>
  
  <nasal>
- <a350-eicas>
-  <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
- </a350-eicas>
+  <A350XWB>
+    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
+    <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
+  </A350XWB>
 </nasal>
 
 </PropertyList>
