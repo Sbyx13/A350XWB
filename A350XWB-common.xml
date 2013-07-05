@@ -17,6 +17,61 @@
     <instrumentation>
       <path>Aircraft/A350XWB/Systems/A350XWB-instrumentation.xml</path>
     </instrumentation>
+        <sound>
+      <path>Aircraft/A350XWB/Sounds/A350XWB-sounds.xml</path>
+    </sound>
+
+    <chase-distance-m type="double" archive="y"> -60 </chase-distance-m>
+
+    <view>
+      <name>Pilot View</name>
+      <internal archive="y">true</internal>
+      <config>
+        <x-offset-m archive="y">-0.60</x-offset-m>
+        <y-offset-m archive="y">2.37</y-offset-m>
+        <z-offset-m archive="y">-28.55</z-offset-m>
+        <pitch-offset-deg archive="y">-10.0</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="1">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="2">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="5">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="6">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <view n="7">
+      <config>
+        <pitch-offset-deg>20</pitch-offset-deg>
+      </config>
+    </view>
+    <menubar>
+      <default>
+        <menu n="100">
+          <label>Airbus A350XWB</label>
+          <item>
+            <label>Autostart</label>
+            <binding>
+              <command>nasal</command>
+              <script>A350XWB.enginesystem.autostart();</script>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
   </sim>
   <consumables>
     <fuel>
@@ -50,15 +105,32 @@
     </fuel>
   </consumables>
    <input>
-  <keyboard include="Systems/A350XWB-keyboard.xml">
+  <keyboard include="A350XWB-keyboard.xml">
   </keyboard>
  </input>
  
  <nasal>
   <A350XWB>
-    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
     <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
+    <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
+    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
   </A350XWB>
 </nasal>
+
+ <engines>
+  <engine n="0">
+    <running>true</running>
+  </engine>
+  <engine n="1">
+    <running>true</running>
+  </engine>
+  <engine n="2">
+    <running>true</running>
+  </engine>
+  <engine n="3">
+    <running>true</running>
+  </engine>
+ </engines>
+
 
 </PropertyList>

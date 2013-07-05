@@ -2,7 +2,7 @@ EICAS = {};
 
 EICAS.new = func {
   var obj = {
-    TESTVARIABLE : testvalue,
+    parents : [EICAS],
   };
 
    obj.init();

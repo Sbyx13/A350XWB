@@ -5,7 +5,8 @@
 A350XWBMain = {};
 
 A350XWBMain.new = func {
-  var obj = { parents : [A350XWBMain]
+  var obj = {
+    parents : [A350XWBMain],
   };
   
   obj.init();
@@ -19,14 +20,14 @@ A350XWBMain.new = func {
 
 A350XWBMain.fastcron = func {
   #fast code runs in here (EICAS)
-  EICAS.schedule();
+  eicassystem.schedule();
   # schedule the next call
   settimer(func { me.fastcron(); },0.1);
 }
 
 A350XWBMain.slowcron = func {
   #1 second code runs in here
-
+  enginesystem.schedule();
   # schedule the next call
   settimer(func { me.slowcron(); },1);
 }
@@ -34,10 +35,17 @@ A350XWBMain.slowcron = func {
 #=============
 # START NASAL
 #=============
+A350XWBMain.loadscripts = func {
+  globals.A350XWB.enginesystem = A350XWB.Engines.new();
+  globals.A350XWB.eicassystem = A350XWB.EICAS.new();
+}
 
 A350XWBMain.init = func {
+  me.loadscripts();
+  
   #Draw the eicas
-  EICAS.startcanvas();
+  eicassystem.startcanvas();
+  enginesystem.init();
   
   #Start the cron timers
   settimer(func { me.fastcron(); },0);
