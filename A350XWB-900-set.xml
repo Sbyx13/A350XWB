@@ -21,6 +21,9 @@
         <start-offset-m>30</start-offset-m>
       </runways>
     </airport>
+    <sound>
+      <path>Sounds/A350XWB-sounds.xml</path>
+    </sound>
 
     <chase-distance-m type="double" archive="y"> -60 </chase-distance-m>
 

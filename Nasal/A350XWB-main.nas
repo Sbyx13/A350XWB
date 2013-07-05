@@ -47,9 +47,11 @@ A350XWBMain.init = func {
 }
 
 A350XWBMain.reinit = func {
-  #Add reinit functions in here
-  
-  print('A350XWB Systems restarted');  
+  #This is here so the reinit only runs once instead of twice
+  if ( getprop("/sim/signals/reinit") ) {
+    #Add reinit functions in here
+    print('A350XWB Systems restarted');
+  }
 }
 
 A350XWBListener1 = setlistener("/sim/signals/fdm-initialized", func { globals.A350XWB.main = A350XWBMain.new(); removelistener(A350XWBListener1); });
