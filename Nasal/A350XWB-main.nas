@@ -41,11 +41,8 @@ A350XWBMain.loadscripts = func {
 }
 
 A350XWBMain.init = func {
+  #This is here so the reinit only runs once instead of twice
   me.loadscripts();
-  
-  #Draw the eicas
-  eicassystem.startcanvas();
-  enginesystem.init();
   
   #Start the cron timers
   settimer(func { me.fastcron(); },0);
