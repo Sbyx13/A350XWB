@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <sim>
-    <author>Jon A. Ortuondo(Bicyus)</author>
+    <author>Brendan O'Gara (Sbyx), Chris Leung (ACJZA), Chris Andrews (DARK-L)</author>
     <status>Alpha</status>
     <model>
       <A350XWB>
@@ -132,5 +132,10 @@
   </engine>
  </engines>
 
+<controls>
+   <gear>
+      <brake-parking>1</brake-parking>
+   </gear>
+</controls>
 
 </PropertyList>
