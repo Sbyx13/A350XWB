@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
   <path>A350XWB-900.ac</path>
   
@@ -15,10 +15,69 @@
     <name>EICAS</name>
     <path>A350XWB-900-EICAS.xml</path>
     <offsets>
-    <x-m>2.37</x-m>
-    <z-m>1.74</z-m>
+    <x-m>2.35</x-m>
+    <z-m>1.843</z-m>
+    			<pitch-deg>-12</pitch-deg>
   </offsets>
   </model>
+  
+    <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.35</x-m>
+    <z-m>1.843</z-m>
+        <y-m>0.439</y-m>
+    			<pitch-deg>-12</pitch-deg>
+  </offsets>
+  </model>
+  
+      <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.35</x-m>
+    <z-m>1.843</z-m>
+        <y-m>-0.439</y-m>
+    			<pitch-deg>-12</pitch-deg>
+  </offsets>
+  </model>
+  
+        <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.4211</x-m>
+    <z-m>1.86</z-m>
+        <y-m>0.8043</y-m>
+    			<pitch-deg>-9</pitch-deg>
+    			      <heading-deg>-22</heading-deg>
+    			            <roll-deg>2.5</roll-deg>
+  </offsets>
+  </model>
+  
+        <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.4211</x-m>
+    <z-m>1.86</z-m>
+        <y-m>-0.8043</y-m>
+    			<pitch-deg>-9</pitch-deg>
+    			      <heading-deg>22</heading-deg>
+    			            <roll-deg>-2.5</roll-deg>
+  </offsets>
+  </model>
+  
+          <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.487</x-m>
+    <z-m>1.64</z-m>
+    			<pitch-deg>-51</pitch-deg>
+  </offsets>
+  </model>  
   
    <animation>
   <type>translate</type>
