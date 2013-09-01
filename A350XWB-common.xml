@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <sim>
-    <author>Brendan O'Gara (Sbyx), Chris Leung (ACJZA), Chris Andrews (DARK-L)</author>
+    <author>Brendan O'Gara (Sbyx), Chris Leung (ACJZA), Chris Andrews (DARK-L), Juuso Tapaninen (jormapaappa1235)</author>
     <status>Alpha</status>
     <model>
       <A350XWB>
@@ -27,9 +27,9 @@
       <name>Pilot View</name>
       <internal archive="y">true</internal>
       <config>
-        <x-offset-m archive="y">-0.60</x-offset-m>
-        <y-offset-m archive="y">2.37</y-offset-m>
-        <z-offset-m archive="y">-28.55</z-offset-m>
+        <x-offset-m archive="y">-0.5326</x-offset-m>
+        <y-offset-m archive="y">2.38</y-offset-m>
+        <z-offset-m archive="y">-29.5</z-offset-m>
         <pitch-offset-deg archive="y">-10.0</pitch-offset-deg>
       </config>
     </view>

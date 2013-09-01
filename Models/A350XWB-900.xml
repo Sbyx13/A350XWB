@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
   <path>A350XWB-900.ac</path>
   
@@ -15,10 +15,69 @@
     <name>EICAS</name>
     <path>A350XWB-900-EICAS.xml</path>
     <offsets>
-    <x-m>2.37</x-m>
-    <z-m>1.74</z-m>
+    <x-m>2.3571</x-m>
+    <z-m>1.8452</z-m>
+    			<pitch-deg>-17</pitch-deg>
   </offsets>
   </model>
+  
+    <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.3571</x-m>
+    <z-m>1.8452</z-m>
+        <y-m>0.439</y-m>
+    			<pitch-deg>-17</pitch-deg>
+  </offsets>
+  </model>
+  
+      <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.3571</x-m>
+    <z-m>1.8452</z-m>
+        <y-m>-0.439</y-m>
+    			<pitch-deg>-17</pitch-deg>
+  </offsets>
+  </model>
+  
+        <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.433</x-m>
+    <z-m>1.8538</z-m>
+        <y-m>0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+    			      <heading-deg>-22</heading-deg>
+    			            <roll-deg>2.5</roll-deg>
+  </offsets>
+  </model>
+  
+        <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.433</x-m>
+    <z-m>1.8538</z-m>
+        <y-m>-0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+    			      <heading-deg>22</heading-deg>
+    			            <roll-deg>-2.5</roll-deg>
+  </offsets>
+  </model>
+  
+          <model>
+    <name>EICAS</name>
+    <path>A350XWB-900-EICAS.xml</path>
+    <offsets>
+    <x-m>2.4889</x-m>
+    <z-m>1.6444</z-m>
+    			<pitch-deg>-47.5</pitch-deg>
+  </offsets>
+  </model>  
   
    <animation>
   <type>translate</type>
@@ -45,5 +104,21 @@
    <z>1</z>
   </axis>
  </animation>
+ 
+ 	<animation>			
+		<type>spin</type>
+		<object-name>fan_eng1</object-name>
+		<factor>67</factor>
+		<property>engines/engine[0]/rpm</property>
+		<center>
+			<y-m>-10.3719 </y-m>
+			<z-m>-1.2299</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
  
 </PropertyList>
