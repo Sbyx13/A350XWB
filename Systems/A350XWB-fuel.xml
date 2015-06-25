@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <system name="fuel">
   <channel name="fuel">
     <switch name="tank1pump">
       <default value="0"/>
-      <test logic="AND" value="-5">
+      <test logic="AND" value="-3">
         propulsion/tank[1]/contents-lbs gt 0
         propulsion/tank[7]/contents-lbs lt 99
       </test>
@@ -11,7 +11,7 @@
     </switch>
     <switch name="tank2pump">
       <default value="0"/>
-      <test logic="AND" value="-5">
+      <test logic="AND" value="-3">
         propulsion/tank[1]/contents-lbs eq 0
         propulsion/tank[2]/contents-lbs gt 0
         propulsion/tank[7]/contents-lbs lt 99
@@ -20,7 +20,7 @@
     </switch>
     <switch name="tank5pump">
       <default value="0"/>
-      <test logic="AND" value="-5">
+      <test logic="AND" value="-3">
         propulsion/tank[5]/contents-lbs gt 0
         propulsion/tank[8]/contents-lbs lt 99
       </test>
@@ -28,7 +28,7 @@
     </switch>
     <switch name="tank4pump">
       <default value="0"/>
-      <test logic="AND" value="-5">
+      <test logic="AND" value="-3">
         propulsion/tank[4]/contents-lbs gt 0
         propulsion/tank[5]/contents-lbs eq 0
         propulsion/tank[8]/contents-lbs lt 99

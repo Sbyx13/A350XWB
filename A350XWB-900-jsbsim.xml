@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
 <fdm_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="A350XWB-900-jsbsim" version="2.0" release="BETA" xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
   <!-- A321 WV011 -->
@@ -13,8 +13,8 @@
   </fileheader>
   <metrics>
     <!-- lenght 66.61 m -->
-    <wingarea unit="M2">460</wingarea>
-    <wingspan unit="M">64.8</wingspan>
+    <wingarea unit="M2">442</wingarea>
+    <wingspan unit="M">64.7</wingspan>
     <wing_incidence>2</wing_incidence> <!--Guestimate (Model inaccurate)-->
     <chord unit="M">7.38</chord>
     <htailarea unit="M2">70.92</htailarea>
@@ -62,7 +62,7 @@ YAW MOI_________3950000______23089847_______24848934
     <ixy unit="SLUG*FT2">         0 </ixy>
     <ixz unit="SLUG*FT2">         0 </ixz>
     <iyz unit="SLUG*FT2">         0 </iyz>
-    <emptywt unit="LBS">229100</emptywt>
+    <emptywt unit="LBS">225100</emptywt>
     <location name="CG" unit="IN">
       <x> 0</x>
       <y> 0 </y>
@@ -125,7 +125,7 @@ YAW MOI_________3950000______23089847_______24848934
       </location>
     </pointmass>
     <pointmass name="Engine1">
-      <weight unit="LBS">13000</weight>
+      <weight unit="LBS">16038</weight>
       <form shape="cylinder">
         <radius unit="M"> 1.31 </radius>
         <length unit="M"> 5 </length>
@@ -137,7 +137,7 @@ YAW MOI_________3950000______23089847_______24848934
       </location>
     </pointmass>
     <pointmass name="Engine2">
-      <weight unit="LBS">13000</weight>
+      <weight unit="LBS">16038</weight>
       <form shape="cylinder">
         <radius unit="M"> 1.31 </radius>
         <length unit="M"> 5 </length>
@@ -612,6 +612,8 @@ YAW MOI_________3950000______23089847_______24848934
     </tank>
   </propulsion>
   <system file="A350XWB-fuel"/>
+  <system file="wingflex"/>
+    <system file="744_pfd"/>
   <!--system file="pushback" /> -->
   <flight_control name="FCS: A350">
     <channel name="Pitch">

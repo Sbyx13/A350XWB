@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <sim>
-    <author>Brendan O'Gara (Sbyx), Chris Leung (ACJZA), Chris Andrews (DARK-L), Juuso Tapaninen (jormapaappa1235)</author>
+    <author> Juuso Tapaninen (jormapaappa1235), Brendan O'Gara (Sbyx), Chris Leung (ACJZA), Chris Andrews (DARK-L)</author>
     <status>Alpha</status>
     <model>
       <A350XWB>
@@ -21,18 +21,24 @@
       <path>Aircraft/A350XWB/Sounds/A350XWB-sounds.xml</path>
     </sound>
 
-    <chase-distance-m type="double" archive="y"> -60 </chase-distance-m>
+    <chase-distance-m type="double" archive="y"> -80 </chase-distance-m>
+    
 
-    <view>
-      <name>Pilot View</name>
-      <internal archive="y">true</internal>
-      <config>
-        <x-offset-m archive="y">-0.5326</x-offset-m>
-        <y-offset-m archive="y">2.38</y-offset-m>
+
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <limits>
+        <enabled archive="y" type="bool">false</enabled>
+     </limits>
+     <!-- x/y/z == right/up/back -->
+            <x-offset-m archive="y">-0.5326</x-offset-m>
+        <y-offset-m archive="y">3.02</y-offset-m>
         <z-offset-m archive="y">-29.5</z-offset-m>
-        <pitch-offset-deg archive="y">-10.0</pitch-offset-deg>
-      </config>
-    </view>
+		 <pitch-offset-deg archive="y">-5</pitch-offset-deg>
+		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+   </config>
+  </view>
     <view n="1">
       <config>
         <pitch-offset-deg>20</pitch-offset-deg>
@@ -114,6 +120,10 @@
     <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
     <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
     <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
+    		<file>Aircraft/A350XWB/Models/flightdeck/Instruments/PFD/PFD.nas</file>
+        <file>Aircraft/A350XWB/Nasal/system.nas</file>
+                <file>Aircraft/A350XWB/Nasal/wipers.nas</file>
+    		
   </A350XWB>
 </nasal>
 
