@@ -28,4 +28,35 @@
    <value>0</value>
  </binding>
  </key>
+
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Speedbrakes</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>property-cycle</command>
+					<property>controls/flight/speedbrake</property>
+					<value>0.0</value>
+					<value>0.5</value>
+					<value>1.0</value>
+				</binding>
+			</key>
+
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle thrust reverser.</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>fdm/jsbsim/propulsion/engine/reverser-angle-rad</property>
+					<value>180</value>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-cycle</command>
+					<property>fdm/jsbsim/propulsion/engine[1]/reverser-angle-rad</property>
+					<value>180</value>
+					<value>0</value>
+				</binding>
+			</key>
+
 </PropertyList>
