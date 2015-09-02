@@ -64,7 +64,7 @@ YAW MOI_________3950000______23089847_______24848934
     <iyz unit="SLUG*FT2">         0 </iyz>
     <emptywt unit="LBS">229100</emptywt>
     <location name="CG" unit="IN">
-      <x> 0</x>
+      <x> 0 </x>
       <y> 0 </y>
       <z> 0 </z>
     </location>
@@ -97,7 +97,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>-800</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Aft Cargo">
@@ -109,7 +109,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>638</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Rear Bulk Cargo">
@@ -121,7 +121,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>874</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Engine1">
