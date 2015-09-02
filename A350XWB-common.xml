@@ -75,9 +75,30 @@
               <script>A350XWB.enginesystem.autostart();</script>
             </binding>
           </item>
+
+			<item>
+				<label>Pushback</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>pushback</dialog-name>
+				</binding>
+			</item>
         </menu>
       </default>
     </menubar>
+
+
+		<!-- Systems -->
+		<systems>
+			<electrical>
+				<path>Aircraft/Generic/generic-electrical.xml</path>
+			</electrical>
+			<autopilot>
+				<path>Aircraft/A350XWB/Systems/SYS8_0_autopilot.xml</path>
+			</autopilot>
+		</systems>
+
+
   </sim>
   <consumables>
     <fuel>
@@ -114,7 +135,34 @@
   <keyboard include="A350XWB-keyboard.xml">
   </keyboard>
  </input>
- 
+     
+	<!-- Autopilot initialization -->
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+		</internal>
+
+	</autopilot>
+  
+	<!-- Voodoomaster plane specific initializations -->
+	<voodoomaster>
+		<steering-wheel type="int">0</steering-wheel>
+		<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+		<pushback>
+			<activated type="bool">false</activated>
+		</pushback>
+	</voodoomaster>
+
  <nasal>
   <A350XWB>
     <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>

@@ -8,6 +8,15 @@
     <engine>Trent XWB</engine>
     <model>
       <path>Aircraft/A350XWB/Models/A350XWB-900.xml</path>
+
+			<!-- JPack: push forces for Voodoomaster Pushback -->
+			<pushback>
+				<kp type="double">1200</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+				<enabled type="bool">false</enabled>
+			</pushback>
     </model>
     <flaps>
       <setting>0.00</setting>
