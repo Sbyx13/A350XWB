@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <system name="fuel">
   <channel name="fuel">
     <switch name="tank1pump">
