@@ -6,37 +6,37 @@
     <model>
       <A350XWB>
         <!--heading-bug-pfd-deg type="double">0</heading-bug-pfd-deg>
-				<heading-bug-deg type="double">0</heading-bug-deg>
-				<nav1-bug-deg type="double">0</nav1-bug-deg>
-				<nav2-bug-deg type="double">0</nav2-bug-deg>
-				<wp-bug-deg type="double">0</wp-bug-deg>
-				<ias-bug-kt-norm type="double">0</ias-bug-kt-norm>
-				<mach-bug-kt-norm type="double">0</mach-bug-kt-norm-->
+	    <heading-bug-deg type="double">0</heading-bug-deg>
+	    <nav1-bug-deg type="double">0</nav1-bug-deg>
+	    <nav2-bug-deg type="double">0</nav2-bug-deg>
+	    <wp-bug-deg type="double">0</wp-bug-deg>
+	    <ias-bug-kt-norm type="double">0</ias-bug-kt-norm>
+	    <mach-bug-kt-norm type="double">0</mach-bug-kt-norm-->
       </A350XWB>
     </model>
     <instrumentation>
       <path>Aircraft/A350XWB/Systems/A350XWB-instrumentation.xml</path>
     </instrumentation>
-        <sound>
+    <sound>
       <path>Aircraft/A350XWB/Sounds/A350XWB-sounds.xml</path>
     </sound>
 
     <chase-distance-m type="double" archive="y"> -80 </chase-distance-m>
 
-  <view>
-   <internal archive="y">true</internal>
-   <config>
-     <limits>
-        <enabled archive="y" type="bool">false</enabled>
-     </limits>
-     <!-- x/y/z == right/up/back -->
-            <x-offset-m archive="y">-0.5326</x-offset-m>
+    <view>
+      <internal archive="y">true</internal>
+      <config>
+	<limits>
+          <enabled archive="y" type="bool">false</enabled>
+	</limits>
+	<!-- x/y/z == right/up/back -->
+        <x-offset-m archive="y">-0.5326</x-offset-m>
         <y-offset-m archive="y">3.02</y-offset-m>
         <z-offset-m archive="y">-29.5</z-offset-m>
-		 <pitch-offset-deg archive="y">-5</pitch-offset-deg>
-		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
-   </config>
-  </view>
+	<pitch-offset-deg archive="y">-5</pitch-offset-deg>
+	<default-field-of-view-deg type="double">72</default-field-of-view-deg>
+      </config>
+    </view>
     <view n="1">
       <config>
         <pitch-offset-deg>20</pitch-offset-deg>
@@ -96,15 +96,15 @@
     </menubar>
 
 
-		<!-- Systems -->
-		<systems>
-			<electrical>
-				<path>Aircraft/Generic/generic-electrical.xml</path>
-			</electrical>
-			<autopilot>
-				<path>Aircraft/A350XWB/Systems/SYS8_0_autopilot.xml</path>
-			</autopilot>
-		</systems>
+    <!-- Systems -->
+    <systems>
+      <electrical>
+	<path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      <autopilot>
+	<path>Aircraft/A350XWB/Systems/SYS8_0_autopilot.xml</path>
+      </autopilot>
+    </systems>
 
 
   </sim>
@@ -139,69 +139,69 @@
       </tank>
     </fuel>
   </consumables>
-   <input>
-  <keyboard include="A350XWB-keyboard.xml">
-  </keyboard>
- </input>
-     
-	<!-- Autopilot initialization -->
-	<autopilot>
-
-		<settings>
-			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float"> 6.0</max-pitch>
-			<min-pitch type="float">-4.0</min-pitch>
-			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
-		</settings>
-
-		<internal>
-			<target-pitch-deg type="float">0.00</target-pitch-deg>
-			<max-pitch type="float"> 6.0</max-pitch>
-			<min-pitch type="float">-4.0</min-pitch>
-		</internal>
-
-	</autopilot>
+  <input>
+    <keyboard include="A350XWB-keyboard.xml">
+    </keyboard>
+  </input>
   
-	<!-- Voodoomaster plane specific initializations -->
-	<voodoomaster>
-		<steering-wheel type="int">0</steering-wheel>
-		<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
-		<pushback>
-			<activated type="bool">false</activated>
-		</pushback>
-	</voodoomaster>
+  <!-- Autopilot initialization -->
+  <autopilot>
 
-	<nasal>
-	  <A350XWB>
-	    <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
-	    <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
-	    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
-    	    <file>Aircraft/A350XWB/Models/flightdeck/Instruments/PFD/PFD.nas</file>
-            <file>Aircraft/A350XWB/Nasal/system.nas</file>
-            <file>Aircraft/A350XWB/Nasal/wipers.nas</file>
-    	    <file>Aircraft/A350XWB/Nasal/liveries.nas</file>
-	  </A350XWB>
-	</nasal>
+    <settings>
+      <kts-mach-select type="string">kts</kts-mach-select>
+      <max-pitch type="float"> 6.0</max-pitch>
+      <min-pitch type="float">-4.0</min-pitch>
+      <bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+    </settings>
 
- <engines>
-  <engine n="0">
-    <running>true</running>
-  </engine>
-  <engine n="1">
-    <running>true</running>
-  </engine>
-  <engine n="2">
-    <running>true</running>
-  </engine>
-  <engine n="3">
-    <running>true</running>
-  </engine>
- </engines>
+    <internal>
+      <target-pitch-deg type="float">0.00</target-pitch-deg>
+      <max-pitch type="float"> 6.0</max-pitch>
+      <min-pitch type="float">-4.0</min-pitch>
+    </internal>
 
-<controls>
-   <gear>
+  </autopilot>
+  
+  <!-- Voodoomaster plane specific initializations -->
+  <voodoomaster>
+    <steering-wheel type="int">0</steering-wheel>
+    <steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+    <pushback>
+      <activated type="bool">false</activated>
+    </pushback>
+  </voodoomaster>
+
+  <nasal>
+    <A350XWB>
+      <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
+      <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
+      <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
+      <file>Aircraft/A350XWB/Models/flightdeck/Instruments/PFD/PFD.nas</file>
+      <file>Aircraft/A350XWB/Nasal/system.nas</file>
+      <file>Aircraft/A350XWB/Nasal/wipers.nas</file>
+      <file>Aircraft/A350XWB/Nasal/liveries.nas</file>
+    </A350XWB>
+  </nasal>
+
+  <engines>
+    <engine n="0">
+      <running>true</running>
+    </engine>
+    <engine n="1">
+      <running>true</running>
+    </engine>
+    <engine n="2">
+      <running>true</running>
+    </engine>
+    <engine n="3">
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <controls>
+    <gear>
       <brake-parking>1</brake-parking>
-   </gear>
-</controls>
+    </gear>
+  </controls>
 
 </PropertyList>
