@@ -5,6 +5,7 @@ FG Airbus A350XWB
 
 * By Sbyx, Jormappapa and other
 * Released under GPL2+
+* Livery system installed
 * New updates bring fully modelled gears, flap, rudder, elevators
 * Currently flyable
 * New Splash Screen and Thumbnail

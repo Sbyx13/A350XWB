@@ -6,6 +6,67 @@
     <x-m>-32.8</x-m>
     <z-m>0.7</z-m>
   </offsets>
+
+  <!-- Livery System : Updated IH-COL Sept 2015 -->
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/A350XWB/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+  
+  <animation>
+    <name>bodyWork</name>
+    <object-name>cone_eng1</object-name>
+    <object-name>cone_eng2</object-name>
+    <object-name>Cube</object-name>
+    <object-name>Cube.001</object-name>
+    <object-name>Cube.002</object-name>
+    <object-name>Cube.003</object-name>
+    <object-name>Cube.004</object-name>
+    <object-name>Cube.005</object-name>
+    <object-name>Cube.006</object-name>
+    <object-name>Cube.011</object-name>
+    <object-name>Cube.014</object-name>
+    <object-name>Cube.030</object-name>
+    <object-name>doors</object-name>
+    <object-name>eng.reverser</object-name>
+    <object-name>fan2_eng1</object-name>
+    <object-name>fan2_eng2</object-name>
+    <object-name>fan_eng1</object-name>
+    <object-name>fan_eng2</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>Fuselage.000</object-name>
+    <object-name>Fuselage.002</object-name>
+    <object-name>Fuselage.003</object-name>
+    <object-name>left.main.door.3</object-name>
+    <object-name>lgdoor.left.front</object-name>
+    <object-name>lgdoor.left.front.2</object-name>
+    <object-name>lgdoor.right.front</object-name>
+    <object-name>lgdoor.right.front.2</object-name>
+    <object-name>Nacelle</object-name>
+    <object-name>right.main.door.3</object-name>
+    <object-name>rudder</object-name>
+    <object-name>sensors</object-name>
+    <object-name>sensors.001</object-name>
+    <object-name>sensors.002</object-name>
+    <object-name>Windshield</object-name>
+    <object-name>wing.text</object-name>
+    <object-name>winglet.left</object-name>
+    <object-name>winglet.right</object-name>
+    <object-name>wiper1</object-name>
+    <object-name>wiper2</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>bodyWork</object-name>
+    <property-base>sim/model/livery/bodyWork</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>a350xwb.png</texture>
+  </animation>
   
   <model>
     <name>Instruments</name>

@@ -22,8 +22,6 @@
     </sound>
 
     <chase-distance-m type="double" archive="y"> -80 </chase-distance-m>
-    
-
 
   <view>
    <internal archive="y">true</internal>
@@ -64,25 +62,35 @@
         <pitch-offset-deg>20</pitch-offset-deg>
       </config>
     </view>
+    
     <menubar>
       <default>
         <menu n="100">
           <label>Airbus A350XWB</label>
+
           <item>
             <label>Autostart</label>
             <binding>
               <command>nasal</command>
               <script>A350XWB.enginesystem.autostart();</script>
             </binding>
-          </item>
+	  </item>
 
-			<item>
-				<label>Pushback</label>
-				<binding>
-					<command>dialog-show</command>
-					<dialog-name>pushback</dialog-name>
-				</binding>
-			</item>
+	  <item>
+            <label>Select livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+	  </item>
+
+	  <item>
+	    <label>Pushback</label>
+	    <binding>
+	      <command>dialog-show</command>
+	      <dialog-name>pushback</dialog-name>
+	    </binding>
+	  </item>
         </menu>
       </default>
     </menubar>
@@ -163,17 +171,17 @@
 		</pushback>
 	</voodoomaster>
 
- <nasal>
-  <A350XWB>
-    <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
-    <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
-    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
-    		<file>Aircraft/A350XWB/Models/flightdeck/Instruments/PFD/PFD.nas</file>
-        <file>Aircraft/A350XWB/Nasal/system.nas</file>
-                <file>Aircraft/A350XWB/Nasal/wipers.nas</file>
-    		
-  </A350XWB>
-</nasal>
+	<nasal>
+	  <A350XWB>
+	    <file>Aircraft/A350XWB/Nasal/A350XWB-EICAS.nas</file>
+	    <file>Aircraft/A350XWB/Nasal/A350XWB-engines.nas</file>
+	    <file>Aircraft/A350XWB/Nasal/A350XWB-main.nas</file>
+    	    <file>Aircraft/A350XWB/Models/flightdeck/Instruments/PFD/PFD.nas</file>
+            <file>Aircraft/A350XWB/Nasal/system.nas</file>
+            <file>Aircraft/A350XWB/Nasal/wipers.nas</file>
+    	    <file>Aircraft/A350XWB/Nasal/liveries.nas</file>
+	  </A350XWB>
+	</nasal>
 
  <engines>
   <engine n="0">
