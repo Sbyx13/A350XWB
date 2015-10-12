@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">MSN005</name>
+				<texture>Liveries/FW-ZNW.png</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>
