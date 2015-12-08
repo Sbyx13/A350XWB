@@ -6,7 +6,7 @@
   <!-- extra Trent whine -->
   <engine>
     <name>Trent0 n2</name>
-    <path>Aircraft/A350XWB/Sounds/a380-trent_04_loop_mono.wav</path>
+    <path>Aircraft/A350XWB/Sounds/trent.wav</path>
     <mode>looped</mode>
     <condition>
       <and>
@@ -42,7 +42,7 @@
   
   <engine>
     <name>Trent1 n2</name>
-    <path>Aircraft/A350XWB/Sounds/a380-trent_04_loop_mono.wav</path>
+    <path>Aircraft/A350XWB/Sounds/trent.wav</path>
     <mode>looped</mode>
     <condition>
       <and>
