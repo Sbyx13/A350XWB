@@ -1795,7 +1795,7 @@
   <!-- Pushback -->
   <model>
     <name>Pushback</name>
-    <path>Aircraft/767/Models/Pushback/Goldhofert.xml</path>
+    <path>Aircraft/A350XWB/Models/Pushback/Goldhofert.xml</path>
     <condition>
       <less-than-equals>
 	<property>velocities/airspeed-kt</property>
