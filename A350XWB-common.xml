@@ -98,9 +98,6 @@
 
     <!-- Systems -->
     <systems>
-      <electrical>
-	<path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
       <autopilot>
 	<path>Aircraft/A350XWB/Systems/SYS8_0_autopilot.xml</path>
       </autopilot>
