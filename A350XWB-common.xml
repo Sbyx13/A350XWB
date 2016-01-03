@@ -187,12 +187,6 @@
     <engine n="1">
       <running>true</running>
     </engine>
-    <engine n="2">
-      <running>true</running>
-    </engine>
-    <engine n="3">
-      <running>true</running>
-    </engine>
   </engines>
 
   <controls>
