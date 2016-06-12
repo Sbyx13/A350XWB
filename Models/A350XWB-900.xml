@@ -1038,7 +1038,7 @@
   <animation>
     <type>rotate</type>
     <object-name>nose.scissor.up</object-name>
-    <property>gear/gear[0]/compression-norm</property>
+    <property>sim/multiplay/generic/float[8]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>25</dep></entry>
@@ -1060,7 +1060,7 @@
     <object-name>front.strut.low</object-name>
     <object-name>tyres</object-name>
     <object-name>nose.scissor.down</object-name>
-    <property>gear/gear[0]/compression-ft</property>
+    <property>sim/multiplay/generic/float[0]</property>
     <factor>0.18</factor>
     <axis>
       <x>0</x>
@@ -1072,7 +1072,7 @@
   <animation>
     <type>rotate</type>
     <object-name>nose.scissor.down</object-name>
-    <property>gear/gear[0]/compression-norm</property>
+    <property>sim/multiplay/generic/float[8]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>-40</dep></entry>
@@ -1190,7 +1190,7 @@
     <object-name>tyres.right.back</object-name>
     <object-name>right.strut.low.2</object-name>
     <object-name>right.scissor.down</object-name>
-    <property>gear/gear[2]/compression-ft</property>
+    <property>sim/multiplay/generic/float[10]</property>
     <factor>0.35</factor>
     <axis>
       <x1-m>33.2843</x1-m>
@@ -1495,7 +1495,7 @@
     <object-name>tyres.left.back</object-name>
     <object-name>left.strut.low.2</object-name>
     <object-name>left.scissor.down</object-name>
-    <property>gear/gear[1]/compression-ft</property>
+    <property>sim/multiplay/generic/float[9]</property>
     <factor>0.35</factor>
     <axis>
       <x1-m>33.2843</x1-m>

@@ -123,6 +123,9 @@
 				<float n="5" alias="/gear/gear[0]/rollspeed-ms"/>
 				<float n="6" alias="/gear/gear[1]/rollspeed-ms"/>
 				<float n="7" alias="/gear/gear[2]/rollspeed-ms"/>
+                <float n="8" alias="/gear/gear[0]/compression-norm"/>
+                <float n="9" alias="/gear/gear[1]/compression-norm"/>
+                <float n="10" alias="/gear/gear[2]/compression-norm"/>
                 <string  alias="/sim/multiplay/callsign"/>
             </generic>
         </multiplay>
