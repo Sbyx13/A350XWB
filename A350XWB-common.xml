@@ -99,9 +99,35 @@
     <!-- Systems -->
     <systems>
       <autopilot>
-	<path>Aircraft/A350XWB/Systems/SYS8_0_autopilot.xml</path>
+		<path>Aircraft/A350XWB/Systems/it-autoflight.xml</path>
       </autopilot>
     </systems>
+	
+        <multiplay>
+            <generic>
+                <int n="0" alias="/systems/electrical/outputs/strobe"/>
+                <int n="1" alias="/systems/electrical/outputs/beacon"/>
+                <int n="2" alias="/systems/electrical/outputs/taxi-lights"/>
+                <int n="3" alias="/systems/electrical/outputs/logo-lights"/>
+                <int n="4" alias="/systems/electrical/outputs/landing-light[0]"/>
+                <int n="5" alias="/systems/electrical/outputs/landing-light[1]"/>
+                <int n="6" alias="/systems/electrical/outputs/landing-light[2]"/>
+                <int n="7" alias="/systems/electrical/outputs/nav-lights"/>
+                <int n="8" alias="/systems/electrical/outputs/cabin-lights"/>
+
+                <float n="0" alias="/gear/gear[0]/compression-ft"/>
+                <float n="1" alias="/gear/gear[1]/compression-ft"/>
+                <float n="2" alias="/gear/gear[2]/compression-ft"/>
+                <float n="3" alias="/surface-positions/speedbrake-pos-norm"/>
+                <float n="4" alias="/surface-positions/reverser-norm"/>
+				<float n="5" alias="/gear/gear[0]/rollspeed-ms"/>
+				<float n="6" alias="/gear/gear[1]/rollspeed-ms"/>
+				<float n="7" alias="/gear/gear[2]/rollspeed-ms"/>
+                <string  alias="/sim/multiplay/callsign"/>
+            </generic>
+        </multiplay>
+
+        <flight-recorder include="Systems/flight-recorder.xml"/>
 	
 	<instrument-options>
 		<canvas-popup-enable type="bool">true</canvas-popup-enable>
@@ -227,6 +253,10 @@
       <file>Aircraft/A350XWB/Nasal/engine-param.nas</file>
 	  <file>Aircraft/A350XWB/Models/Instruments/ND/ND.nas</file>
     </A350XWB>
+	<it2>
+      <file>Aircraft/A350XWB/Nasal/autoflight.nas</file>
+      <file>Aircraft/A350XWB/Nasal/autoflight-logic.nas</file>
+	</it2>
   </nasal>
 
   <engines>

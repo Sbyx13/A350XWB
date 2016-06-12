@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- IT-AUTOFLIGHT Configuration Dialog -->
+
+
+<PropertyList>
+
+	<name>autopilot</name>
+	<layout>vbox</layout>
+
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>left</halign>
+            <label>AUTOFLIGHT</label>
+        </text>
+        <button>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <legend>X</legend>
+            <key>Esc</key>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+	
+    <hrule/>
+
+	<group>
+		<layout>hbox</layout>
+
+		<button>
+			<legend>A/T off</legend>
+			<live type="bool">true</live>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/at_mastersw</property>
+			<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>A/T on</legend>
+			<property>/controls/it2/at_master</property>
+			<live type="bool">true</live>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/at_mastersw</property>
+			<value>1</value>
+			</binding>
+		</button>
+	</group>
+		
+	<group>
+		<layout>hbox</layout>
+		
+		<button>
+			<legend>AP off</legend>
+			<live type="bool">true</live>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/ap_mastersw</property>
+			<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>AP on</legend>
+			<property>/controls/it2/ap_mastersw</property>
+			<live type="bool">true</live>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/ap_mastersw</property>
+			<value>1</value>
+			</binding>
+		</button>
+	</group>
+
+	<group>
+		<layout>vbox</layout>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Mode Indicators</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<text>
+				<label>[SPD]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/apthrmode</property>
+						<value>0</value>
+					</equals>
+				</visible>
+			</text>
+
+			<text>
+				<label>        </label>
+			</text>
+
+			<text>
+				<label>        </label>
+			</text>
+			
+			<text>
+				<label>[Mach]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/apthrmode</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			<text>
+				<label>[HDG]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/aplatmode</property>
+						<value>0</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[NAV]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/aplatmode</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[LOC ARM]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/loc1</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[LOC]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/aplatmode</property>
+						<value>2</value>
+					</equals>
+				</visible>
+			</text>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			<text>
+				<label>[ALT]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/apvertmode</property>
+						<value>0</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[VS]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/apvertmode</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[G/S ARM]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/app1</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+			<text>
+				<label>[G/S]</label>
+				<visible>
+					<equals>
+						<property>/controls/it2/apvertmode</property>
+						<value>2</value>
+					</equals>
+				</visible>
+			</text>
+		</group>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Thrust Mode</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+
+		<group>
+			<layout>table</layout>
+			
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>SPD:</label>
+			</text>
+			
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>SPD</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apthrset</property>
+				<value>0</value>
+				</binding>
+			</button>
+
+			<input>
+				<row>0</row>
+				<col>2</col>
+				<property>autopilot/settings/target-speed-kt</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>Mach:</label>
+			</text>
+
+			<button>
+				<row>1</row>
+				<col>1</col>
+				<legend>Mach</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apthrset</property>
+				<value>1</value>
+				</binding>
+			</button>
+			
+			<input>
+				<row>1</row>
+				<col>2</col>
+				<property>autopilot/settings/target-mach</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+		</group>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Lateral Mode</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+
+		<group>
+			<layout>table</layout>
+
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>HDG:</label>
+			</text>
+			
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>HDG</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/aplatset</property>
+				<value>0</value>
+				</binding>
+			</button>
+
+			<input>
+				<row>0</row>
+				<col>2</col>
+				<property>autopilot/settings/heading-bug-deg</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+		</group>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Vertical Mode</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+
+		<group>
+			<layout>table</layout>
+
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>ALT:</label>
+			</text>
+			
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>ALT</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apvertset</property>
+				<value>0</value>
+				</binding>
+			</button>
+
+			<input>
+				<row>0</row>
+				<col>2</col>
+				<property>autopilot/settings/target-altitude-ft</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>VS:</label>
+			</text>
+			
+			<button>
+				<row>1</row>
+				<col>1</col>
+				<legend>VS</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apvertset</property>
+				<value>1</value>
+				</binding>
+			</button>
+
+			<input>
+				<row>1</row>
+				<col>2</col>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+		</group>
+
+		<group>
+			<layout>hbox</layout>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>NAV/LOC Modes</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			
+			<button>
+				<legend>NAV</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/aplatset</property>
+				<value>1</value>
+				</binding>
+			</button>
+			
+			<button>
+				<legend>LOC</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/aplatset</property>
+				<value>2</value>
+				</binding>
+			</button>
+			
+			<button>
+				<legend>ILS</legend>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apvertset</property>
+				<value>2</value>
+				</binding>
+			</button>
+			
+		</group>
+		
+	</group>
+
+</PropertyList>

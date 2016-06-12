@@ -124,10 +124,6 @@
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">/surface-positions/speedbrake-pos-norm</property>
-            </signal>
-            <signal>
-                <type>float</type>
                 <property type="string">/surface-positions/reverser-norm[0]</property>
             </signal>
 
