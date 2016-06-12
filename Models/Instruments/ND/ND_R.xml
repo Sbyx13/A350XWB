@@ -1,0 +1,22 @@
+<!--
+MD-11 Navigation display
+-->
+
+<PropertyList>
+
+<path>ND_R.ac</path>
+
+<animation>
+	<type>pick</type>
+	<object-name>ND.screenR</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>A350XWB.showNd("fo");</script>
+		</binding>
+	</action>
+</animation>
+
+</PropertyList>

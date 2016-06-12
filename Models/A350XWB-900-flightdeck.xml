@@ -9,8 +9,8 @@
 		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
 		<offsets>
 			<x-m>2.3571</x-m>
-			<y-m>0</y-m>
-			<z-m>1.8452</z-m>
+			<y-m>-0.08</y-m>
+			<z-m>1.872</z-m>
     			<pitch-deg>-17</pitch-deg>
 		</offsets>
 		<condition>
@@ -24,9 +24,9 @@
 	<animation>
 		<object-name>Upper-ECAM</object-name>>
 		<type>scale</type>
-		<x-offset>1.0</x-offset>
-		<y-offset>2.2</y-offset>
-		<z-offset>1.6</z-offset>
+		<x-offset>1.15</x-offset>
+		<y-offset>1.15</y-offset>
+		<z-offset>1.15</z-offset>
 	</animation>
 	
 	<!-- Primary Flight Displays -->
@@ -34,11 +34,10 @@
 	<model>
 		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD.xml</path>
 		<offsets>
-			<x-m>2.4571</x-m>
-			<y-m>-0.80515</y-m>
-			<z-m>1.8752</z-m>
-			<pitch-deg>-14</pitch-deg>
-			<heading-deg>17</heading-deg>
+			<x-m>2.3481</x-m>
+			<y-m>-0.529</y-m>
+			<z-m>1.8782</z-m>
+    			<pitch-deg>-17</pitch-deg>
 		</offsets>
 		<condition>
 			<greater-than-equals>
@@ -51,11 +50,10 @@
 	<model>
 		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD.xml</path>
 		<offsets>
-			<x-m>2.4571</x-m>
-			<y-m>0.80515</y-m>
-			<z-m>1.8752</z-m>
-			<pitch-deg>-14</pitch-deg>
-			<heading-deg>-17</heading-deg>
+			<x-m>2.3481</x-m>
+			<y-m>0.529</y-m>
+			<z-m>1.8782</z-m>
+    			<pitch-deg>-17</pitch-deg>
 		</offsets>
 		<condition>
 			<greater-than-equals>
@@ -68,10 +66,44 @@
 	<animation>
 		<object-name>PFD</object-name>>
 		<type>scale</type>
-		<x-offset>1.0</x-offset>
-		<y-offset>2.1</y-offset>
-		<z-offset>1.3</z-offset>
+		<x-offset>1.1</x-offset>
+		<y-offset>1.1</y-offset>
+		<z-offset>1.1</z-offset>
 	</animation>
+	
+	<!-- Navigation Displays -->
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/ND/ND_L.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>-0.349</y-m>
+			<z-m>1.8778</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/ND/ND_R.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>0.349</y-m>
+			<z-m>1.8778</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
 
 <!-- ##################################################### -->
 	<model>
@@ -81,6 +113,17 @@
 			<x-m>2.3571</x-m>
 			<z-m>1.8452</z-m>
 			<y-m>0.439</y-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.3571</x-m>
+			<z-m>1.8452</z-m>
+			<y-m>0</y-m>
     			<pitch-deg>-17</pitch-deg>
 		</offsets>
 	</model>

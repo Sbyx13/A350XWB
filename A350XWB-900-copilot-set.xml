@@ -2,7 +2,7 @@
 
 <PropertyList include="A350XWB-common.xml">
   <sim>
-    <description>Airbus A350XWB-900 (Rolls Royce High ByPass Turbofan Engine)</description>
+    <description>Airbus A350XWB-900 First Officer</description>
 	<author>vezza</author>
 	<status>alpha</status>
 	<flight-model>null</flight-model>

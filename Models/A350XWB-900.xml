@@ -59,6 +59,18 @@
     <object-name>wiper1</object-name>
     <object-name>wiper2</object-name>
   </animation>
+  
+<animation>
+	<type>translate</type>
+    <object-name>eng.reverser</object-name>
+	<property>sim/multiplay/generic/float[4]</property>
+	<factor>0.6</factor>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
 
   <animation>
     <type>material</type>
@@ -371,7 +383,7 @@
     <object-name>sb3</object-name>
     <object-name>sb4</object-name>
     <object-name>sb5</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>59</factor>
     <offset-deg>0</offset-deg>   
     <axis>
@@ -388,7 +400,7 @@
     <type>rotate</type>
     <object-name>sb6</object-name>
     <object-name>sb7</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>59</factor>
     <offset-deg>0</offset-deg>   
     <axis>
@@ -408,7 +420,7 @@
     <object-name>sb12</object-name>
     <object-name>sb13</object-name>
     <object-name>sb14</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>-59</factor>
     <offset-deg>0</offset-deg>   
     <axis>
@@ -425,7 +437,7 @@
     <type>rotate</type>
     <object-name>sb8</object-name>
     <object-name>sb9</object-name>
-    <property>surface-positions/speedbrake-pos-norm</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>-59</factor>
     <offset-deg>0</offset-deg>   
     <axis>
@@ -1080,7 +1092,7 @@
   <animation>
     <type>spin</type>
     <object-name>tyres</object-name>
-    <property>gear/gear[0]/rollspeed-ms</property>
+    <property>sim/multiplay/generic/float[5]</property>
     <factor>10</factor>
     <axis>
       <x>0</x>
@@ -1154,10 +1166,10 @@
     <object-name>right.strut.low</object-name>
     <object-name>tyres.right.front</object-name>
     <object-name>tyres.right.back</object-name>
-    <property>orientation/pitch-deg</property>
+    <property>sim/multiplay/generic/float[2]</property>
     <interpolation>
-      <entry><ind>20</ind><dep>-15</dep></entry>
-      <entry><ind>-20</ind><dep>15</dep></entry>
+      <entry><ind>0</ind><dep>-15</dep></entry>
+      <entry><ind>0.001</ind><dep>0</dep></entry>
     </interpolation>
     <center>
       <x-m>33.4821</x-m>
@@ -1193,7 +1205,7 @@
   <animation>
     <type>rotate</type>
     <object-name>right.scissor.up</object-name>
-    <property>gear/gear[2]/compression-norm</property>
+    <property>sim/multiplay/generic/float[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>40</dep></entry>
@@ -1213,7 +1225,7 @@
   <animation>
     <type>rotate</type>
     <object-name>right.scissor.down</object-name>
-    <property>gear/gear[2]/compression-norm</property>
+    <property>sim/multiplay/generic/float[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>-40</dep></entry>
@@ -1233,7 +1245,7 @@
   <animation>
     <type>spin</type>
     <object-name>tyres.right.back</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
+    <property>sim/multiplay/generic/float[7]</property>
     <factor>10</factor>
     <axis>
       <x>0</x>
@@ -1250,7 +1262,7 @@
   <animation>
     <type>spin</type>
     <object-name>tyres.right.front</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
+    <property>sim/multiplay/generic/float[7]</property>
     <factor>10</factor>
     <axis>
       <x>0</x>
@@ -1459,10 +1471,10 @@
     <object-name>left.strut.low</object-name>
     <object-name>tyres.left.front</object-name>
     <object-name>tyres.left.back</object-name>
-    <property>orientation/pitch-deg</property>
+    <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
-      <entry><ind>20</ind><dep>-15</dep></entry>
-      <entry><ind>-20</ind><dep>15</dep></entry>
+      <entry><ind>0</ind><dep>-15</dep></entry>
+      <entry><ind>0.001</ind><dep>0</dep></entry>
     </interpolation>
     <center>
       <x-m>33.4821</x-m>
@@ -1498,7 +1510,7 @@
   <animation>
     <type>rotate</type>
     <object-name>left.scissor.up</object-name>
-    <property>gear/gear[1]/compression-norm</property>
+    <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>40</dep></entry>
@@ -1518,7 +1530,7 @@
   <animation>
     <type>rotate</type>
     <object-name>left.scissor.down</object-name>
-    <property>gear/gear[1]/compression-norm</property>
+    <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>2</ind><dep>-40</dep></entry>
@@ -1538,7 +1550,7 @@
   <animation>
     <type>spin</type>
     <object-name>tyres.left.back</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
+    <property>sim/multiplay/generic/float[6]</property>
     <factor>10</factor>
     <axis>
       <x>0</x>
@@ -1555,7 +1567,7 @@
   <animation>
     <type>spin</type>
     <object-name>tyres.left.front</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
+    <property>sim/multiplay/generic/float[6]</property>
     <factor>10</factor>
     <axis>
       <x>0</x>
