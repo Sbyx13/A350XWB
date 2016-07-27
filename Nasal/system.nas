@@ -20,6 +20,6 @@ setlistener("controls/gear/gear-down", func
  });
  
 setlistener("/sim/signals/fdm-initialized", func {
-	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/A350XWB/Systems/autopilot-dlg.xml");
 	it2.ap_init();
+	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/A350XWB/Systems/autopilot-dlg.xml");
 });
