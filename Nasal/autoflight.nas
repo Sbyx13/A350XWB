@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Beta 2
+# V3.0.0 Beta 4
 
 var ap_init = func {
 	ap_logic_init();
@@ -13,6 +13,11 @@ var ap_init = func {
 	setprop("/it-autoflight/settings/heading-bug-deg", 360);
 	setprop("/it-autoflight/settings/target-altitude-ft", 10000);
 	setprop("/it-autoflight/settings/target-altitude-ft-actual", 10000);
+	setprop("/it-autoflight/settings/vertical-speed-fpm", 0);
+	setprop("/it-autoflight/min-pitch", -4);
+	setprop("/it-autoflight/max-pitch", 8);
+	setprop("/it-autoflight/internal-min-pitch", -4);
+	setprop("/it-autoflight/internal-max-pitch", 8);
 	setprop("/it-autoflight/settings/vertical-speed-fpm", 0);
 	update_arms();
 	ap_refresh();
@@ -111,6 +116,7 @@ var apparmcheck = func {
 		setprop("/it-autoflight/app1", 0);
 		setprop("/it-autoflight/apvertmode", 2);
 		setprop("/it-autoflight/aphldtrk2", 1);
+		flchthrust();
 	} else {
 		return 0;
 	}
