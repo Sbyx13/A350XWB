@@ -48,7 +48,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD.xml</path>
+		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD2.xml</path>
 		<offsets>
 			<x-m>2.3481</x-m>
 			<y-m>0.529</y-m>
