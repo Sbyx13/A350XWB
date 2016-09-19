@@ -17,8 +17,7 @@
     </unload>
   </nasal>
   
-  <!-- disabled for rembrandt. it0uchpods 7/7/16 -->
-  <!--animation>
+  <animation>
     <name>bodyWork</name>
     <object-name>cone_eng1</object-name>
     <object-name>cone_eng2</object-name>
@@ -59,7 +58,7 @@
     <object-name>winglet.right</object-name>
     <object-name>wiper1</object-name>
     <object-name>wiper2</object-name>
-  </animation-->
+  </animation>
   
 <animation>
 	<type>translate</type>
