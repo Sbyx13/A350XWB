@@ -23,46 +23,185 @@
 
     <chase-distance-m type="double" archive="y"> -80 </chase-distance-m>
 
-    <view>
-      <internal archive="y">true</internal>
+    <view n="0">
+      <name>Pilot View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
       <config>
-	<limits>
+        <limits>
           <enabled archive="y" type="bool">false</enabled>
-	</limits>
-	<!-- x/y/z == right/up/back -->
-        <x-offset-m archive="y">-0.5326</x-offset-m>
-        <y-offset-m archive="y">3.02</y-offset-m>
-        <z-offset-m archive="y">-29.5</z-offset-m>
-	<pitch-offset-deg archive="y">-5</pitch-offset-deg>
-	<default-field-of-view-deg type="double">72</default-field-of-view-deg>
+        </limits>
+        <!-- x/y/z == right/up/back -->
+        <x-offset-m type="double">-0.5326</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg>-5</pitch-offset-deg>
+        <default-field-of-view-deg type="double">72</default-field-of-view-deg>
       </config>
     </view>
     <view n="1">
+      <name>Copilot View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
       <config>
-        <pitch-offset-deg>20</pitch-offset-deg>
+        <x-offset-m type="double">0.5326</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg>-10.3</pitch-offset-deg>
+        <default-field-of-view-deg type="double">72</default-field-of-view-deg>
       </config>
     </view>
     <view n="2">
+      <internal archive="y">false</internal>
       <config>
-        <pitch-offset-deg>20</pitch-offset-deg>
+        <z-offset-m type="double" archive="y">-80.0</z-offset-m>
+        <pitch-offset-deg archive="y">12.0</pitch-offset-deg>
       </config>
+    </view>
+    <view n="3">
+      <internal archive="y">false</internal>
+    </view>
+    <view n="4">
+      <internal archive="y">false</internal>
     </view>
     <view n="5">
-      <config>
-        <pitch-offset-deg>20</pitch-offset-deg>
-      </config>
+      <internal archive="y">false</internal>
     </view>
     <view n="6">
+      <internal archive="y">false</internal>
+    </view>
+    <view n="101">
+      <name>Full Cockpit View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
       <config>
-        <pitch-offset-deg>20</pitch-offset-deg>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg archive="y">-5</pitch-offset-deg>
+        <default-field-of-view-deg type="double">105</default-field-of-view-deg>
       </config>
     </view>
-    <view n="7">
+    <view n="102">
+      <name>Gear View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
       <config>
-        <pitch-offset-deg>20</pitch-offset-deg>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">-2</y-offset-m>
+        <z-offset-m type="double">10</z-offset-m>
+        <default-field-of-view-deg type="double">90</default-field-of-view-deg>
       </config>
     </view>
-    
+    <view n="103">
+      <name>Autopilot View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg>-13</pitch-offset-deg>
+        <default-field-of-view-deg type="double">44.2</default-field-of-view-deg>
+      </config>
+    </view>
+    <view n="104">
+      <name>Overhead Panel View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29</z-offset-m>
+        <pitch-offset-deg>25</pitch-offset-deg>
+        <default-field-of-view-deg type="double">50</default-field-of-view-deg>
+      </config>
+    </view>
+    <view n="105">
+      <name>EFB View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">-0.5326</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg>-35</pitch-offset-deg>
+        <heading-offset-deg>30</heading-offset-deg>
+        <default-field-of-view-deg type="double">60</default-field-of-view-deg>
+      </config>
+    </view>
+    <view n="106">
+      <name>Pedestral View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-29.5</z-offset-m>
+        <pitch-offset-deg>-45</pitch-offset-deg>
+        <default-field-of-view-deg type="double">50</default-field-of-view-deg>
+      </config>
+    </view>
+    <view n="201">
+      <name>Left Engine View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">-3.25</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-18</z-offset-m>
+        <heading-offset-deg>120</heading-offset-deg>
+        <pitch-offset-deg>-16.2</pitch-offset-deg>
+        <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+      </config>
+    </view>
+    <view n="202">
+      <name>Right Engine View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <cockpit type="bool">true</cockpit>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m type="double">3.25</x-offset-m>
+        <y-offset-m type="double">3.02</y-offset-m>
+        <z-offset-m type="double">-18</z-offset-m>
+        <heading-offset-deg>-120</heading-offset-deg>
+        <pitch-offset-deg>-16.2</pitch-offset-deg>
+        <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+      </config>
+    </view>    
     <menubar>
       <default>
         <menu n="100">
