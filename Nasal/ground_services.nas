@@ -1,7 +1,5 @@
 var door = aircraft.door.new("/services/deicing_truck/crane", 20);
 var door3 = aircraft.door.new("/services/deicing_truck/deicing", 20);
-var RAD2DEG = 57.2957795;
-var DEG2RAD = 0.0174532925;
 
 var ground_services = {
 	init : func {

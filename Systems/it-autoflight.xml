@@ -40,18 +40,18 @@
  <!-- =============================================================== -->
   
   <filter>
-    <name>heading bug error computer/normalizer</name>
+    <name>MAGNETIC HDG ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>autopilot/settings/heading-bug-deg</property>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
       <offset>
-        <property>orientation/heading-magnetic-deg</property>
+        <property>/orientation/heading-magnetic-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/heading-bug-error-deg</output>
-    <output>it-autoflight/internal/fdm-heading-bug-error-deg</output>
+    <output>/it-autoflight/internal/heading-bug-error-deg</output>
+    <output>/it-autoflight/internal/fdm-heading-bug-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -60,17 +60,37 @@
   </filter>
 
   <filter>
-    <name>true heading error computer/normalizer</name>
+    <name>TRUE HDG ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>autopilot/settings/true-heading-deg</property>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
       <offset>
-        <property>orientation/heading-deg</property>
+        <property>/orientation/heading-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/true-heading-error-deg</output>
+    <output>/it-autoflight/internal/true-heading-error-deg</output>
+    <period>
+      <min>-180</min>
+      <max>180</max>
+    </period>
+    <gain>1.0</gain>
+  </filter>
+  
+
+  <filter>
+    <name>LNAV HDG ERROR DEG</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <property>/autopilot/settings/true-heading-deg</property>
+      <offset>
+        <property>/orientation/heading-deg</property>
+        <scale>-1.0</scale>
+      </offset>
+    </input>
+    <output>/it-autoflight/internal/lnav-hdg-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -79,17 +99,17 @@
   </filter>
 
   <filter>
-    <name>nav1 heading error computer/normalizer</name>
+    <name>NAV1 ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
+      <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
       <offset>
-        <property>orientation/heading-deg</property>
+        <property>/orientation/heading-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-heading-error-deg</output>
+    <output>/it-autoflight/internal/nav1-heading-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -98,17 +118,17 @@
   </filter>
 
   <filter>
-    <name>nav1 selected course error computer/normalizer</name>
+    <name>NAV1 COURSE ERROR</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/selected-deg</property>
+      <property>/instrumentation/nav[0]/radials/selected-deg</property>
       <offset>
-        <property>orientation/heading-magnetic-deg</property>
+        <property>/orientation/heading-magnetic-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-course-error</output>
+    <output>/it-autoflight/internal/nav1-course-error</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -117,53 +137,53 @@
   </filter>
 
   <filter>
-    <name>vertical speed fpm computer</name>
+    <name>INTERNAL VERTICAL SPEED COMPUTER</name>
     <debug>false</debug>
     <type>gain</type>
-    <input>velocities/vertical-speed-fps</input>
-    <output>it-autoflight/internal/vert-speed-fpm</output>
+    <input>/velocities/vertical-speed-fps</input>
+    <output>/it-autoflight/internal/vert-speed-fpm</output>
     <gain>60.0</gain>
   </filter>
 
   <predict-simple>
-    <name>speed in 5 seconds predictor</name>
+    <name>IAS 5 SECOND PREDICTOR</name>
     <debug>false</debug>
-    <input>velocities/airspeed-kt</input>
-    <output>it-autoflight/internal/lookahead-5-sec-airspeed-kt</output>
+    <input>/velocities/airspeed-kt</input>
+    <output>/it-autoflight/internal/lookahead-5-sec-airspeed-kt</output>
     <seconds>5.0</seconds>
     <filter-gain>0.0</filter-gain>
   </predict-simple>
 
   <predict-simple>
-    <name>speed in 10 seconds predictor</name>
+    <name>IAS 10 SECOND PREDICTOR</name>
     <debug>false</debug>
-    <input>velocities/airspeed-kt</input>
-    <output>it-autoflight/internal/lookahead-10-sec-airspeed-kt</output>
+    <input>/velocities/airspeed-kt</input>
+    <output>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</output>
     <seconds>10.0</seconds>
     <filter-gain>0.0</filter-gain>
   </predict-simple>
 
   <filter>
-    <name>static port pressure rate computer</name>
+    <name>STATIC PRESSURE COMPUTER</name>
     <debug>false</debug>
     <type>derivative</type>
-    <input>systems/static[0]/pressure-inhg</input>
-    <output>it-autoflight/internal/pressure-rate</output>
+    <input>/systems/static[0]/pressure-inhg</input>
+    <output>/it-autoflight/internal/pressure-rate</output>
     <filter-time>1.0</filter-time>
   </filter>
 
   <filter>
-    <name>nav1 track error computer</name>
+    <name>NAV1 TRACK ERROR</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
+      <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
       <offset>
-        <property>orientation/track-deg</property>
+        <property>/orientation/track-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-track-error-deg</output>
+    <output>/it-autoflight/internal/nav1-track-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -176,7 +196,7 @@
  <!-- =============================================================== -->
  
 	<filter>
-		<name>IT-TARGET ROLL CONTROLLER</name>
+		<name>TARGET ROLL CONTROLLER</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
@@ -195,12 +215,34 @@
 		</enable>
 		<input>
 			<condition>
-				<equals>
-					<property>/it-autoflight/aplatmode</property>
-					<value>0</value>
-				</equals>
+				<and>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/settings/use-true-hdg-error</property>
+						<value>0</value>
+					</equals>
+				</and>
 			</condition>
 			<property>/it-autoflight/internal/heading-bug-error-deg</property>
+			<scale>6.3</scale>
+		</input>
+		<input>
+			<condition>
+				<and>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/settings/use-true-hdg-error</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+			<property>/it-autoflight/internal/true-heading-error-deg</property>
 			<scale>6.3</scale>
 		</input>
 		<input>
@@ -210,7 +252,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/true-heading-error-deg</property>
+			<property>/it-autoflight/internal/lnav-hdg-error-deg</property>
 			<scale>6.3</scale>
 		</input>
 		<output>
@@ -341,7 +383,7 @@
 
 	
 	<pid-controller>
-		<name>VOR/LOC Stage 1</name>
+		<name>VORLOC TRK</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -373,7 +415,7 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>VOR/LOC Stage 2</name>
+		<name>IT-CONTROLLER: VORLOC</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -409,7 +451,7 @@
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
 				</condition>
-				<property>/it-autoflight/settings/roll/kp</property>
+				<property>/it-autoflight/settings/roll/kp-vorloc</property>
 			</Kp>
 			<Kp>
 				<condition>
@@ -446,8 +488,8 @@
 				</condition>
 				<value>0.50</value>
 			</u_max>
-    </config>
-  </pid-controller>
+		</config>
+	</pid-controller>
   
 	<filter>
 		<name>IT-CONTROLLER: ROLL FILTER</name>
@@ -473,7 +515,7 @@
 		</input>
 		<output>/controls/flight/aileron</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.4</max-rate-of-change>
+		<max-rate-of-change>0.8</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -529,16 +571,17 @@
 		</enable>
 		<input>
 			<prop>/it-autoflight/internal/vert-speed-fpm</prop>
-			<scale>0.05</scale>
+			<scale>0.1</scale>
 		</input>
 		<reference>
 			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
-			<scale>0.05</scale>
+			<scale>0.1</scale>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
+			<Kp>0.025</Kp>
 			<Kp>0.025</Kp>
 			<Ki>0.010</Ki>
 			<beta>1.0</beta>       
@@ -547,10 +590,50 @@
 			<Ti>10.0</Ti>
 			<Td>0.0001</Td>
 			<min>
-				<property>/it-autoflight/internal/min-pitch</property>
+				<value>-10</value>
 			</min>
 			<max>
-				<property>/it-autoflight/internal/max-pitch</property>
+				<value>30</value>
+			</max>
+		</config>
+	</pi-simple-controller>
+	
+	<pi-simple-controller>
+		<name>AUTOLAND VS HOLD</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>6</value>
+				</equals>
+				
+			</condition>
+		</enable>
+		<input>
+			<prop>/it-autoflight/internal/vert-speed-fpm</prop>
+			<scale>0.2</scale>
+		</input>
+		<reference>
+			<prop>/it-autoflight/autoland/target-vs</prop>
+			<scale>0.2</scale>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</output>
+		<config>
+			<Kp>0.06</Kp>
+			<Ki>0.010</Ki>
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			<Ti>10.0</Ti>
+			<Td>0.0001</Td>
+			<min>
+				<value>0</value>
+			</min>
+			<max>
+				<value>15</value>
 			</max>
 		</config>
 	</pi-simple-controller>
@@ -576,7 +659,18 @@
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>0.10</Kp>        
+			<Kp>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/gs/kp</property>
+			</Kp>
+			<Kp>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.10</value>
+			</Kp>        
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
 			<gamma>0.0</gamma>     
@@ -615,7 +709,7 @@
 				</equals>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>500.0</scale>
+			<scale>1000.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -634,7 +728,7 @@
 				</equals>
 			</condition>
 			<prop>/it-autoflight/settings/target-mach</prop>
-			<scale>500.0</scale>
+			<scale>1000.0</scale>
 		</reference>
 		<output>
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
@@ -672,7 +766,7 @@
                         <property>/instrumentation/altimeter/indicated-altitude-ft</property>
                     </greater-than>
                 </condition>
-                <value>20.0</value>
+                <value>25.0</value>
             </u_max>
             <u_max>
                 <condition>
@@ -782,6 +876,10 @@
 						<equals>
 							<property>/it-autoflight/apvertmode</property>
 							<value>2</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/apvertmode</property>
+							<value>6</value>
 						</equals>
 					</or>
 					<or>
@@ -1006,6 +1104,48 @@
 	</filter>
 	
  <!-- =============================================================== -->
+ <!-- Rudder Control                                                  -->
+ <!-- =============================================================== -->
+	
+	<pid-controller>
+		<name>IT-CONTROLLER: RUDDER ZERO</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/ap_master</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/ap_master2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<value>/controls/flight/rudder</value>
+		</input>
+		<reference>
+			<value>0</value>
+		</reference>
+		<output>
+			<property>/controls/flight/rudder</property>
+		</output>
+		<config>
+			<Kp>5</Kp>
+			<beta>1.0</beta>	
+			<alpha>0.1</alpha>	
+			<gamma>0.0</gamma>	
+			<Ti>10</Ti>        	
+			<Td>0.00001</Td>     	
+			<u_min>-0.1</u_min>
+			<u_max>0.1</u_max>
+		</config>
+	</pid-controller>
+	
+ <!-- =============================================================== -->
  <!-- Flight Director                                                 -->
  <!-- =============================================================== -->
 	
@@ -1040,228 +1180,6 @@
 			</expression>
 		</input>
 		<output>/it-autoflight/fd/pitch-bar</output>
-	</filter>
-
- <!-- =============================================================== -->
- <!-- Thrust Modes                                                    -->
- <!-- =============================================================== -->
-
- <!-- Auto throttle --> 
- <pid-controller>
-    <name>IAS THR</name>
-    <debug>false</debug>
-    <enable>
-	  <condition>
-		<and>
-		  <equals>
-			<property>/it-autoflight/apthrmode</property>
-			<value>0</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
-			<value>0</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/at_master</property>
-			<value>1</value>
-		  </equals>
-		</and>
-	  </condition>
-    </enable>
-    <input>
-      <property>/velocities/airspeed-kt</property>
-    </input>
-    <reference>
-      <property>/it-autoflight/settings/target-speed-kt</property>
-    </reference>
-    <output>
-      <property>/controls/flight/throttle-cmd</property>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        
-      <beta>1.0</beta>    
-      <alpha>0.1</alpha>  
-      <gamma>0.0</gamma>  
-                          
-      <Ti>10.0</Ti>       
-      <Td>0.00001</Td>    
-      <u_min>0.0</u_min>  
-      <u_max>0.94</u_max>  
-    </config>
-  </pid-controller>
-
-<!-- Auto throttle (Mach Hold)-->
-
- <pid-controller>
-    <name>MACH THR</name>
-    <debug>false</debug>
-    <enable>
-	  <condition>
-		<and>
-		  <equals>
-			<property>/it-autoflight/apthrmode</property>
-			<value>1</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
-			<value>0</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/at_master</property>
-			<value>1</value>
-		  </equals>
-		</and>
-	  </condition>
-    </enable>
-    <input>
-      <property>/velocities/mach</property>
-	  <scale>500.0</scale>
-    </input>
-    <reference>
-      <property>/it-autoflight/settings/target-mach</property>
-	  <scale>500.0</scale>
-    </reference>
-    <output>
-      <property>/controls/flight/throttle-cmd</property>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        
-      <beta>1.0</beta>    
-      <alpha>0.1</alpha>  
-      <gamma>0.0</gamma>  
-                          
-      <Ti>10.0</Ti>       
-      <Td>0.00001</Td>    
-      <u_min>0.0</u_min>  
-      <u_max>0.94</u_max>  
-    </config>
-  </pid-controller>
-  
-<!-- IDLE THR -->
- <pid-controller>
-    <name>IDLE</name>
-    <debug>false</debug>
-    <enable>
-	  <condition>
-		<and>
-		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
-			<value>1</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/at_master</property>
-			<value>1</value>
-		  </equals>
-		</and>
-	  </condition>
-    </enable>
-    <input>
-      <property>/velocities/airspeed-kt</property>
-    </input>
-    <reference>
-      <property>/it-autoflight/settings/idlethr</property>
-    </reference>
-    <output>
-      <property>/controls/flight/throttle-cmd</property>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        
-      <beta>1.0</beta>    
-      <alpha>0.1</alpha>  
-      <gamma>0.0</gamma>  
-                          
-      <Ti>10.0</Ti>       
-      <Td>0.00001</Td>    
-      <u_min>0.005</u_min>  
-      <u_max>0.2</u_max>  
-    </config>
-  </pid-controller>
-  
-  <!-- CLB THR -->
- <pid-controller>
-    <name>CLB</name>
-    <debug>false</debug>
-    <enable>
-	  <condition>
-		<and>
-		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
-			<value>2</value>
-		  </equals>
-		  <equals>
-			<property>/it-autoflight/at_master</property>
-			<value>1</value>
-		  </equals>
-		</and>
-	  </condition>
-    </enable>
-    <input>
-      <property>/velocities/airspeed-kt</property>
-    </input>
-    <reference>
-      <property>/it-autoflight/settings/clbthr</property>
-    </reference>
-    <output>
-      <property>/controls/flight/throttle-cmd</property>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        
-      <beta>1.0</beta>    
-      <alpha>0.1</alpha>  
-      <gamma>0.0</gamma>  
-                          
-      <Ti>10.0</Ti>       
-      <Td>0.00001</Td>    
-      <u_min>0.0</u_min>  
-      <u_max>0.95</u_max>  
-    </config>
-  </pid-controller>
-  
-	<filter>
-		<name>IT-CONTROLLER: THRUST FILTER</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<enable>
-			<condition>
-				<equals>
-					<property>/it-autoflight/at_master</property>
-					<value>1</value>
-				</equals>
-			</condition>
-		</enable>
-		<input>
-			<property>/controls/flight/throttle-cmd</property>
-		</input>
-		<output>
-			<prop>/controls/engines/engine[0]/throttle</prop>
-			<prop>/controls/engines/engine[1]/throttle</prop>
-			<prop>/controls/engines/engine[2]/throttle</prop>
-			<prop>/controls/engines/engine[3]/throttle</prop>
-			<prop>/controls/engines/engine[4]/throttle</prop>
-			<prop>/controls/engines/engine[5]/throttle</prop>
-			<prop>/controls/engines/engine[6]/throttle</prop>
-			<prop>/controls/engines/engine[7]/throttle</prop>
-		</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>
-			<condition>
-				<equals>
-					<property>/it-autoflight/apthrmode2</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<value>0.40</value>
-		</max-rate-of-change>
-		<max-rate-of-change>
-			<condition>
-				<not-equals>
-					<property>/it-autoflight/apthrmode2</property>
-					<value>0</value>
-				</not-equals>
-			</condition>
-			<value>0.05</value>
-		</max-rate-of-change>
 	</filter>
 
 </PropertyList>
