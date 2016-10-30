@@ -60,17 +60,30 @@
     <object-name>wiper2</object-name>
   </animation>
   
-<animation>
-	<type>translate</type>
+  <animation>
+    <type>translate</type>
     <object-name>eng.reverser</object-name>
-	<property>sim/multiplay/generic/float[4]</property>
-	<factor>0.6</factor>
+	<property>engines/engine[0]/reverser-pos-norm</property>
+	<factor>1</factor>
 	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
 	</axis>
-</animation>
+  </animation>
+
+  <!-- Disabled because eng.reverser is not separated on left end right elements
+  <animation>
+    <type>translate</type>
+    <object-name>eng.reverser</object-name>
+	<property>engines/engine[1]/reverser-pos-norm</property>
+	<factor>1</factor>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+  </animation> -->
 
   <animation>
     <type>material</type>
@@ -234,8 +247,8 @@
     <object-name>greennav</object-name>
     <object-name>GreenLight</object-name>
     <object-name>Strobelight.1</object-name>
-    <property>fdm/jsbsim/forces/wing[3]</property>
-    <factor>-0.0003</factor>
+    <property>sim/systems/wingflexer/z-m</property>
+    <factor>10</factor>
     <center>
       <x-m>31.3349</x-m>
       <y-m>10.5798</y-m>
@@ -258,8 +271,8 @@
     <object-name>greennav</object-name>
     <object-name>GreenLight</object-name>
     <object-name>Strobelight.1</object-name>
-    <property>fdm/jsbsim/forces/wing[3]</property>
-    <factor>-0.0003</factor>
+    <property>sim/systems/wingflexer/z-m</property>
+    <factor>10</factor>
     <center>
       <x-m>37.1835</x-m>
       <y-m>20.3627</y-m>
@@ -293,8 +306,8 @@
     <object-name>rednav</object-name>
     <object-name>RedLight</object-name>
     <object-name>Strobelight.2</object-name>
-    <property>fdm/jsbsim/forces/wing[3]</property>
-    <factor>-0.0003</factor>
+    <property>sim/systems/wingflexer/z-m</property>
+    <factor>10</factor>
     <center>
       <x-m>31.3349</x-m>
       <y-m>-10.5798</y-m>
@@ -317,8 +330,8 @@
     <object-name>rednav</object-name>
     <object-name>RedLight</object-name>
     <object-name>Strobelight.2</object-name>
-    <property>fdm/jsbsim/forces/wing[3]</property>
-    <factor>-0.0003</factor>
+    <property>sim/systems/wingflexer/z-m</property>
+    <factor>10</factor>
     <center>
       <x-m>37.1835</x-m>
       <y-m>-20.3627</y-m>
@@ -330,7 +343,6 @@
       <z>0</z>
     </axis>
   </animation>
-
 
   <!-- Ailerons -->
   
@@ -891,6 +903,14 @@
     <object-name>lamp_chrome</object-name>
   </animation>
 
+  <!-- Wingflexer -->
+  <animation>
+    <type>rotate</type>
+    <property>sim/systems/wingflexer/z-m</property>
+    <factor>10</factor>
+    <!-- ... -->
+  </animation>
+
   <!-- Rudder -->
 
   <animation>
@@ -1428,7 +1448,7 @@
       <z2-m>-1.3403</z2-m>
     </axis>
   </animation>
-  
+ 
   
   
   <!-- Left main gear -->
@@ -1731,9 +1751,9 @@
       <y2-m>-4.2103</y2-m>
       <z2-m>-1.3403</z2-m>
     </axis>
-  </animation>
-  
-  <!-- Contrails -->
+  </animation>  
+ 
+ <!-- Contrails -->
   <model>
     <path>Aircraft/A350XWB/Models/Effects/contrail-eng1.xml</path>
     <offsets>
@@ -1750,10 +1770,14 @@
       <z-m>-1.4369</z-m>
     </offsets>
   </model>
-  
+
+  <!-- LIGHTS -->
+
   <model>
     <path>Aircraft/A350XWB/Models/Lights/A350-lighting.xml</path>
   </model>
+
+  <!-- WIPERS -->
   
   <animation>
     <type>rotate</type>
@@ -1820,5 +1844,252 @@
       <z-m>-4.5445</z-m>
     </offsets>
   </model>
+
+<!-- Fuel Truck -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+	<condition>
+		<equals>
+			<property>/services/fuel-truck/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>35</x-m>
+		<y-m>-3</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</model>
+
+<animation>
+	<type>select</type>
+	<object-name>fuel_pipe</object-name>
+	<condition>
+		<equals>
+			<property>/services/fuel-truck/connect</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<!--<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets> -->
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>fuel_pipe_disconnected</object-name>
+	<condition>
+		<equals>
+			<property>/services/fuel-truck/connect</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<!-- <offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets> -->
+</animation>
+
+<!-- De-icing Truck -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Ground/Services/De-Icing/volvo_deicing_truck.xml</path>
+	<condition>
+		<equals>
+			<property>/services/deicing_truck/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>12.5</x-m>
+		<y-m>-15</y-m>
+		<z-m>-4</z-m>
+		<heading-deg>200</heading-deg>
+	</offsets>
+</model>
+
+<!-- Catering Truck -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Catering/Catering_Loader_Truck_VolvoFM.xml</path>
+	<condition>
+		<equals>
+			<property>/services/catering/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>32.5</x-m>
+		<y-m>-3</y-m>
+		<z-m>0</z-m>
+		<heading-deg>-10</heading-deg>
+	</offsets>
+</model>
+
+<!-- Baggage Truck -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Baggage/cargo_ramp.ac</path>
+	<condition>
+		<equals>
+			<property>/services/baggage/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>32.5</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</model>
+
+<!-- the following animation code has to be enabled when cargo_door and cargo_inside object's will be available (in order to auto open aircraft's cargo doors -->
+<!-- <animation>
+	<type>select</type>
+	<object-name>cargo_door</object-name>
+	<object-name>cargo_inside</object-name>
+	<condition>
+		<equals>
+			<property>/services/baggage/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</animation> -->
+
+<!-- External Power -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Ground/Services/External-Power/ext-pwr-box.ac</path>
+	<condition>
+		<equals>
+			<property>/services/ext-pwr/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>10</x-m>
+		<y-m>3</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</model>
+
+<!-- Chokes -->
+
+<model>
+	<name>choke_nose</name>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Chokes/choke_nose.ac</path>
+	<condition>
+		<equals>
+			<property>/services/chokes/nose</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>25.5</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.5</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>choke_left</name>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Chokes/choke_left.ac</path>
+	<condition>
+		<equals>
+			<property>/services/chokes/left</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>31</x-m>
+		<y-m>-0.5</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>choke_right</name>
+	<path>Aircraft/A350XWB/Models/Ground/Services/Chokes/choke_right.ac</path>
+	<condition>
+		<equals>
+			<property>/services/chokes/right</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>31</x-m>
+		<y-m>0.5</y-m>
+		<z-m>0</z-m>
+	</offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/tyresmoke-nose.xml</path>
+ <name>tyre-smoke-n</name>
+ <offsets>  
+  <x-m>-18.16</x-m>
+  <y-m>0</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/tyresmoke-left.xml</path>
+ <name>tyre-smoke-l</name>
+ <offsets>
+  <x-m>4.9</x-m>
+  <y-m>-5</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/tyresmoke-right.xml</path>
+ <name>tyre-smoke-r</name>
+ <offsets>
+ <x-m>4.9</x-m>
+  <y-m>5</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/wet-runway-nose.xml</path>
+ <name>tyre-smoke-n</name>
+ <offsets>  
+  <x-m>-18.16</x-m>
+  <y-m>0</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/wet-runway.xml</path>
+ <name>tyre-smoke-l</name>
+ <offsets>
+  <x-m>4.9</x-m>
+  <y-m>-5</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Effects/wet-runway.xml</path>
+ <name>tyre-smoke-r</name>
+ <offsets>
+  <x-m>4.9</x-m>
+  <y-m>5</y-m>
+  <z-m>-5.3</z-m>
+ </offsets>
+</model>
   
 </PropertyList>

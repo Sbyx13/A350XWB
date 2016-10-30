@@ -2,10 +2,6 @@
 
 <PropertyList>
 
-  <electrical>
-    <path>Aircraft/A350XWB/Nasal/Electrical.nas</path>
-  </electrical>
-
   <pitot>
     <name>pitot</name>
     <number>0</number>
