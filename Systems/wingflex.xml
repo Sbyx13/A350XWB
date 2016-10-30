@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<!-- # WING FLEX system for BOEING 747-400 #
+     # by Gijs de Rooy			           # -->
+
+<system name="wingflex">
+    
+    <channel name="wingflex">
+		
+		<fcs_function name="forces/wing[1]">
+			<function name="forces/wing-flex[1]">
+                <description>Wing_one_flex</description>
+                <sum>
+					<product>
+						<property>propulsion/tank[1]/contents-lbs</property>
+						<value>-0.15</value>
+					</product>
+					<product>
+						<property>forces/fbz-aero-lbs</property>
+						<value>-0.02</value>
+					</product>
+                </sum>
+			</function>
+        </fcs_function>
+		
+		<fcs_function name="forces/wing[2]">
+			<function name="forces/wing-flex[2]">
+                <description>Wing_two_flex</description>
+                <sum>
+					<product>
+						<property>propulsion/tank[2]/contents-lbs</property>
+						<value>-0.1</value>
+					</product>
+					<product>
+						<property>forces/fbz-aero-lbs</property>
+						<value>-0.02</value>
+					</product>
+                </sum>
+			</function>
+        </fcs_function>
+		
+		<fcs_function name="forces/wing[3]">
+			<function name="forces/wing-flex[3]">
+                <description>Wing_three_flex</description>
+                <sum>
+					<product>
+						<property>propulsion/tank[3]/contents-lbs</property>
+						<value>-0.1</value>
+					</product>
+					<product>
+						<property>forces/fbz-aero-lbs</property>
+						<value>-0.02</value>
+					</product>
+                </sum>
+			</function>
+        </fcs_function>
+		
+		<fcs_function name="forces/wing[4]">
+			<function name="forces/wing-flex[4]">
+                <description>Wing_four_flex</description>
+                <sum>
+					<product>
+						<property>propulsion/tank[4]/contents-lbs</property>
+						<value>-0.15</value>
+					</product>
+					<product>
+						<property>forces/fbz-aero-lbs</property>
+						<value>-0.02</value>
+					</product>
+                </sum>
+			</function>
+        </fcs_function>
+
+    </channel>
+
+</system>

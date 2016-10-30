@@ -1,3 +1,700 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+
+<fx>
+
+  <apoff>
+   <name>apoff</name>
+   <path>/Aircraft/A350XWB/Sounds/apoff.wav</path>
+   <condition>
+	 <property>/it-autoflight/apoffsound</property>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </apoff>
+  
+  <apoff>
+   <name>apoff2</name>
+   <path>/Aircraft/A350XWB/Sounds/apoff.wav</path>
+   <condition>
+	 <property>/it-autoflight/apoffsound2</property>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </apoff>
+  
+  <!-- extra Trent whine -->
+  <engine>
+    <name>Trent0 n2</name>
+    <path>Aircraft/A350XWB/Sounds/trent.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</greater-than>
+	<less-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>8</value>
+	</less-than>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>/engines/engine[0]/n1</property>
+      <factor>0.01</factor>
+      <max>0.7</max>
+    </volume>
+    <pitch>
+      <property>/engines/engine[0]/n1</property>
+      <factor>0.0015</factor>
+      <min>0.0</min>
+    </pitch>
+    <position>
+      <x>-7.3</x>
+      <y>-1.0</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+  
+  <engine>
+    <name>Trent1 n2</name>
+    <path>Aircraft/A350XWB/Sounds/trent.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</greater-than>
+	<less-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>8</value>
+	</less-than>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>/engines/engine[1]/n1</property>
+      <factor>0.01</factor>
+      <max>0.7</max>
+    </volume>
+    <pitch>
+      <property>/engines/engine[1]/n1</property>
+      <factor>0.0015</factor>
+      <min>0.0</min>
+    </pitch>
+    <position>
+      <x>-7.3</x>
+      <y>-1.0</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+  
+  <engine>
+    <name>Engine0 outside</name>
+    <path>Sounds/jet.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+        <greater-than>
+          <property>/sim/current-view/view-number</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>/sim/current-view/view-number</property>
+          <value>8</value>
+        </less-than>
+        <not>
+          <property>sim/crashed</property>
+        </not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[0]/n1</property>
+      <type>ln</type>
+      <factor>0.16</factor>
+      <offset>0.05</offset>
+   </volume>
+    <position>
+      <x>-7.3</x>
+      <y>-1.0</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+  
+  <engine>
+    <name>Engine1 outside</name>
+    <path>Sounds/jet.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</greater-than>
+	<less-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>8</value>
+	</less-than>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[1]/n1</property>
+      <type>ln</type>
+      <factor>0.16</factor>
+      <offset>0.05</offset>
+    </volume>
+    <position>
+      <x>-7.3</x>
+      <y>-0.3</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+
+<engine>
+    <name>Engine0 n1</name>
+    <path>Aircraft/A350XWB/Sounds/turbine.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</greater-than>
+	<less-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>8</value>
+	</less-than>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[0]/n1</property>
+      <factor>0.02</factor>
+      <min>0.0</min>
+      <max>0.8</max>
+    </volume>
+    <pitch>
+      <property>/engines/engine[0]/n1</property>
+      <factor>0.01</factor>
+      <min>0.0</min>
+      <max>0.8</max>
+    </pitch>
+    <position>
+      <x>-7.3</x>
+      <y>0.3</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+  
+  <engine>
+    <name>Engine1 n1</name>
+    <path>Aircraft/A350XWB/Sounds/turbine.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</greater-than>
+	<less-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>8</value>
+	</less-than>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[1]/n1</property>
+      <factor>0.02</factor>
+      <min>0.0</min>
+      <max>0.8</max>
+    </volume>
+    <pitch>
+      <property>/engines/engine[1]/n1</property>
+      <factor>0.01</factor>
+      <min>0.0</min>
+      <max>0.8</max>
+    </pitch>
+    <position>
+      <x>-7.3</x>
+      <y>-0.3</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+  
+  <engine>
+    <name>Engine0 inside</name>
+    <path>Sounds/jet.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<or>
+	  <equals>
+	    <property>/sim/current-view/view-number</property>
+	    <value>0</value>
+	  </equals>
+	  <equals>
+	    <property>/sim/current-view/view-number</property>
+	    <value>5</value>
+	  </equals>
+	  <greater-than>
+	    <property>/sim/current-view/view-number</property>
+	    <value>7</value>
+	  </greater-than>
+	</or>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[0]/n1</property>
+      <type>log</type>
+      <factor>0.15</factor>
+      <offset>0.05</offset>
+      <min>0.0</min>
+      <max>0.5</max>
+    </volume>
+    <position>
+      <x>-7.3</x>
+      <y>-1.0</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+
+  <engine>
+    <name>Engine0 n1 inside</name>
+    <path>Aircraft/A350XWB/Sounds/turbine.wav</path>
+    <mode>looped</mode>
+    <condition>
+      <and>
+	<or>
+	  <equals>
+	    <property>/sim/current-view/view-number</property>
+	    <value>0</value>
+	  </equals>
+	  <greater-than>
+	    <property>/sim/current-view/view-number</property>
+	    <value>7</value>
+	  </greater-than>
+	</or>
+	<not>
+	  <property>sim/crashed</property>
+	</not>
+      </and>
+    </condition>
+    <volume>
+      <property>engines/engine[0]/n1</property>
+      <factor>0.02</factor>
+      <max>0.2</max>
+    </volume>
+    <pitch>
+      <property>/engines/engine[0]/n1</property>
+      <factor>0.01</factor>
+      <min>0.0</min>
+      <max>0.4</max>
+    </pitch>
+    <position>
+      <x>-7.3</x>
+      <y>-1.0</y>
+      <z>10.0</z>
+    </position>
+  </engine>
+
+<engine>
+  <name>Engine1 inside</name>
+  <path>Sounds/jet.wav</path>
+  <mode>looped</mode>
+  <condition>
+    <and>
+      <or>
+	<equals>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</equals>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>7</value>
+	</greater-than>
+      </or>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+    </and>
+  </condition>
+  <volume>
+      <property>engines/engine[0]/n1</property>
+      <type>log</type>
+      <factor>0.15</factor>
+      <offset>0.05</offset>
+      <min>0.0</min>
+      <max>0.5</max>
+    </volume>
+  <position>
+    <x>-7.3</x>
+    <y>-0.3</y>
+    <z>10.0</z>
+  </position>
+</engine>
+
+<engine>
+  <name>Engine1 n1 inside</name>
+    <path>Aircraft/A350XWB/Sounds/turbine.wav</path>
+  <mode>looped</mode>
+  <condition>
+    <and>
+      <or>
+	<equals>
+	  <property>/sim/current-view/view-number</property>
+	  <value>0</value>
+	</equals>
+	<greater-than>
+	  <property>/sim/current-view/view-number</property>
+	  <value>7</value>
+	</greater-than>
+      </or>
+      <not>
+	<property>sim/crashed</property>
+      </not>
+    </and>
+  </condition>
+  <volume>
+      <property>engines/engine[1]/n1</property>
+      <factor>0.02</factor>
+      <max>0.3</max>
+    </volume>
+  <pitch>
+    <property>/engines/engine[1]/n1</property>
+    <factor>0.01</factor>
+    <min>0.0</min>
+    <max>1.0</max>
+  </pitch>
+  <position>
+    <x>-7.3</x>
+    <y>-0.3</y>
+    <z>10.0</z>
+  </position>
+</engine>
+
+<!-- Announcements -->
+
+<announcement>
+<name>welcome</name>
+ <path>Aircraft/A350XWB/Sounds/announce/welcome.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/welcome</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>safety</name>
+ <path>Aircraft/A350XWB/Sounds/announce/safety.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/safety</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>cruise</name>
+ <path>Aircraft/A350XWB/Sounds/announce/cruise.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/cruise</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>climb</name>
+ <path>Aircraft/A350XWB/Sounds/announce/climb.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/climb</property>
+ </condition>
+ <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>cruise-seatbelt</name>
+ <path>Aircraft/A350XWB/Sounds/announce/cruise-seatbelt.wav</path>
+ <mode>once</mode>
+ <condition>
+    <property>sim/sound/cruise-seatbelt</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>no-smoking</name>
+ <path>Aircraft/A350XWB/Sounds/announce/cruise-seatbelt.wav</path>
+ <mode>once</mode>
+ <condition>
+    <property>sim/sound/no-smoking-sign</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>seatbelt</name>
+ <path>Aircraft/A350XWB/Sounds/announce/cruise-seatbelt.wav</path>
+ <mode>once</mode>
+ <condition>
+    <property>sim/sound/seatbelt-sign</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>turbulence</name>
+ <path>Aircraft/A350XWB/Sounds/announce/turbulence.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/turbulence</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>descent</name>
+ <path>Aircraft/A350XWB/Sounds/announce/descent.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/descent</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>land</name>
+ <path>Aircraft/A350XWB/Sounds/announce/land.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/land</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>gate</name>
+ <path>Aircraft/A350XWB/Sounds/announce/gate.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/gate</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>emergency</name>
+ <path>Aircraft/A350XWB/Sounds/announce/emergency.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/emergency</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>pretakeoff</name>
+ <path>Aircraft/A350XWB/Sounds/announce/pretakeoff.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/pretakeoff</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>boarding1</name>
+ <path>Aircraft/A350XWB/Sounds/announce/music.wav</path>
+ <mode>looped</mode>
+ <condition>
+  <property>sim/sound/music1</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>boarding2</name>
+ <path>Aircraft/A350XWB/Sounds/announce/music2.wav</path>
+ <mode>looped</mode>
+ <condition>
+  <property>sim/sound/music2</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+
+<announcement>
+<name>brace</name>
+ <path>Aircraft/A350XWB/Sounds/announce/brace.wav</path>
+ <mode>once</mode>
+ <condition>
+  <property>sim/sound/brace</property>
+ </condition>
+        <volume>
+            <factor>8</factor>
+        </volume>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>0.00</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</announcement>
+  
+  </fx>
+
 </PropertyList>

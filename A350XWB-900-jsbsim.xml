@@ -64,7 +64,7 @@ YAW MOI_________3950000______23089847_______24848934
     <iyz unit="SLUG*FT2">         0 </iyz>
     <emptywt unit="LBS">229100</emptywt>
     <location name="CG" unit="IN">
-      <x> 0</x>
+      <x> 0 </x>
       <y> 0 </y>
       <z> 0 </z>
     </location>
@@ -97,7 +97,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>-800</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Aft Cargo">
@@ -109,7 +109,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>638</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Rear Bulk Cargo">
@@ -121,7 +121,7 @@ YAW MOI_________3950000______23089847_______24848934
       <location name="POINTMASS" unit="IN">
         <x>874</x>
         <y>0</y>
-        <z>-120</z>
+        <z>0</z>
       </location>
     </pointmass>
     <pointmass name="Engine1">
@@ -611,6 +611,7 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
     </tank>
   </propulsion>
+	<system file="TriCycle_PushbackJSBSIM"/>
   <system file="A350XWB-fuel"/>
   <!--system file="pushback" /> -->
   <flight_control name="FCS: A350">
@@ -887,7 +888,7 @@ YAW MOI_________3950000______23089847_______24848934
         <product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
-          <value>0.30</value>
+          <value>0.250</value> <!-- down from 0.30 because that caused at high speed and altitude the AP to hold the nose down to prevent unintended climbing -->
         </product>
       </function>
       <!--function name="aero/coefficient/CLalpha">
@@ -1466,4 +1467,21 @@ YAW MOI_________3950000______23089847_______24848934
     </function-->
     </axis>
   </aerodynamics>
+
+	<!-- JPACK: Force-point for Voodoomaster Pushback -->
+	<external_reactions>
+		<force name="pushback" frame="BODY">
+			<location unit="IN">
+				<x> -980.19 </x>
+				<y>    0.00 </y>
+				<z>  -65.00 </z>
+			</location>
+			<direction>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+			</direction>
+		</force>
+	</external_reactions>
+
 </fdm_config>

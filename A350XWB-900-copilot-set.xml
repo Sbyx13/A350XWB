@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList include="A350XWB-common.xml">
+  <sim>
+    <description>Airbus A350XWB-900 First Officer</description>
+	<author>vezza</author>
+	<status>alpha</status>
+	<flight-model>null</flight-model>
+        <variant-of>A350XWB</variant-of>
+    	<variant>900</variant>
+    	<engine>Trent XWB</engine>
+	<model>
+	  <path>Aircraft/A350XWB/Models/A350XWB-900.xml</path>
+	</model>
+	<airport>
+	  <runways>
+            <start-offset-m>30</start-offset-m>
+      	  </runways>
+    	</airport>
+	<startup>
+	  <splash-texture>Aircraft/A350XWB/splash.png</splash-texture>
+	</startup>
+<!--
+		<view>
+			<name>Copilot View</name>
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">0.525</x-offset-m>
+				<y-offset-m archive="y">2.3635023</y-offset-m>
+				<z-offset-m archive="y">-13.8829</z-offset-m>
+				<pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="100">
+			<name>Gear View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0</x-offset-m>
+				<y-offset-m archive="y">-1.5</y-offset-m>
+				<z-offset-m archive="y">8.5</z-offset-m>
+				<pitch-offset-deg archive="y">0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="101">
+			<name>Passenger View (Economy Class)</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-1.5</x-offset-m>
+				<y-offset-m archive="y">2.3</y-offset-m>
+				<z-offset-m archive="y">5</z-offset-m>
+				<pitch-offset-deg archive="y">0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="102">
+			<name>Passenger View (First Class)</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-1.45</x-offset-m>
+				<y-offset-m archive="y">2.3</y-offset-m>
+				<z-offset-m archive="y">-8.7</z-offset-m>
+				<pitch-offset-deg archive="y">0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="103">
+			<name>Copilot View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.525</x-offset-m>
+				<y-offset-m archive="y">2.3635023</y-offset-m>
+				<z-offset-m archive="y">-13.8829</z-offset-m>
+				<pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
+			</config>
+		</view>
+		<chase-distance-m>-40</chase-distance-m>
+
+		<sound>
+			<path>Aircraft/A350XWB/A350XWB-sound.xml</path>
+		</sound> -->
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Airbus A350XWB Copilot</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select MP A350XWB Pilot</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 aircraft_dual_control.pilot_type = "Aircraft/A350XWB/A350XWB-900.xml";
+							 dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
+							</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+
+		<help>
+			<title>Airbus A350XWB</title>
+			<key>
+				<name>Delete</name>
+				<desc>toggle thrust reversers</desc>
+			</key>
+			<key>
+				<name>Ctrl-b</name>
+				<desc>toggle speedbrakes/spoilers</desc>
+			</key>
+			<key>
+				<name>w</name>
+				<desc>walk forward toward view direction</desc>
+			</key>
+			<key>
+				<name>W</name>
+				<desc>run forward toward view direction</desc>
+			</key>
+			<key>
+				<name>s</name>
+				<desc>walk backward from view direction</desc>
+			</key>
+		</help>
+	</sim>
+
+	<input>
+		<keyboard>
+			<key n="119">
+				<name>w</name>
+				<desc>Walk forward toward view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(0.1);
+					</script>
+				</binding>
+			</key>
+			<key n="87">
+				<name>W</name>
+				<desc>Run forward toward view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(0.25);
+					</script>
+				</binding>
+			</key>
+			<key n="115">
+				<name>s</name>
+				<desc>Walk backward from view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(-0.1);
+					</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+
+	<nasal>
+		<!-- Dual control -->
+		<dual_control_tools>
+			<file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+		</dual_control_tools>
+		<aircraft_dual_control>
+			<file>Aircraft/A350XWB/DualControl/A350XWB-dual-control.nas</file>
+		</aircraft_dual_control>
+		<dual_control>
+			<file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+		</dual_control>
+	</nasal>
+
+	<!-- <aircraft>
+		<jetway-pos>
+			<x-tra>-1.95</x-tra>
+			<y-rot>0</y-rot>
+			<z-rot>24</z-rot>
+			<hood-rot>3</hood-rot>
+		</jetway-pos>
+	</aircraft> -->
+
+</PropertyList>
