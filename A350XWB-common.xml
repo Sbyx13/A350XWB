@@ -369,8 +369,13 @@
         <path>Aircraft/A350XWB/Systems/it-autoflight.xml</path>
       </autopilot>
       <autopilot>
-		<path>Aircraft/A350XWB/Systems/it-autothrust.xml</path>
+	<path>Aircraft/A350XWB/Systems/it-autothrust.xml</path>
       </autopilot>
+      <wingflexer include="Systems/wingflexer-params.xml"/>
+      <property-rule n="100">
+        <name>wing flexer property rule</name>
+        <path>Aircraft/Generic/wingflexer.xml</path>
+      </property-rule>
     </systems>
 	
         <multiplay>
@@ -526,7 +531,6 @@
       <file>Aircraft/A350XWB/Nasal/liveries.nas</file>
       <file>Aircraft/A350XWB/Models/Instruments/ND/ND.nas</file>
       <file>Aircraft/A350XWB/Nasal/ground_services.nas</file>
-      <file>Aircraft/A350XWB/Nasal/tyresmoke.nas</file>
     </A350XWB>
     <itaf>
       <file>Aircraft/A350XWB/Nasal/it-autoflight.nas</file>
@@ -537,6 +541,9 @@
     <electrical>
       <file>Aircraft/A350XWB/Nasal/electrical.nas</file>
     </electrical>
+    <tyresmoke>
+      <file>Aircraft/A350XWB/Nasal/tyresmoke.nas</file>
+    </tyresmoke>
     <walk>
       <file>Aircraft/A350XWB/Nasal/walk.nas</file>
     </walk>
@@ -563,24 +570,6 @@
 
   <controls>
     <gear>
-	<gear n="0">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
-	</gear>
-	<gear n="1">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
-	</gear>
-	<gear n="2">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
-	</gear>
       <brake-parking>1</brake-parking>
     </gear>
   </controls>

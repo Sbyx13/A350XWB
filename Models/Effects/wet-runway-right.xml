@@ -3,13 +3,13 @@
 <PropertyList>
 
     <particlesystem>
-        <name>tyre-smoke-l</name>
+        <name>tyre-smoke-r</name>
         <texture>tiresmoke.png</texture>
         <emissive>false</emissive>
         <lighting>false</lighting>
 
         <offsets>
-            <x-m>0</x-m>
+            <x-m>15</x-m>
             <y-m>0</y-m>
             <z-m>0</z-m>
         </offsets>
@@ -24,7 +24,7 @@
        			<property>velocities/groundspeed-kt</property>
        			<value>60</value>
        		</greater-than>
-                	<property>gear/gear[1]/wow</property>
+                	<property>gear/gear[2]/wow</property>
                 	<value>1</value>
 		</and>
         </condition>

@@ -3,7 +3,7 @@
 <PropertyList>
 
     <particlesystem>
-        <name>tyre-smoke-r</name>
+        <name>tyre-smoke-l</name>
         <texture>tiresmoke.png</texture>
         <emissive>false</emissive>
         <lighting>false</lighting>
@@ -15,8 +15,18 @@
         </offsets>
 
         <condition>
-                <property>aircraft/tyresmoke/right</property>
-                <value>1</value>
+		<and>
+		<greater-than>
+                	<property>environment/rain-norm</property>
+                	<value>0.2</value>
+		</greater-than>
+     		<greater-than>
+       			<property>velocities/groundspeed-kt</property>
+       			<value>60</value>
+       		</greater-than>
+                	<property>gear/gear[1]/wow</property>
+                	<value>1</value>
+		</and>
         </condition>
 
         <attach>world</attach>
@@ -46,8 +56,8 @@
 
         <counter>
             <particles-per-sec>
-                <value>80</value>
-                <spread>200</spread>
+                <value>40</value>
+                <spread>70</spread>
             </particles-per-sec>
         </counter>
 
@@ -66,11 +76,11 @@
                         <value>0.8</value>
                     </blue>
                     <alpha>
-                        <value>0.5</value>
+                        <value>0.8</value>
                     </alpha>
                 </color>
                 <size>
-                    <value>2</value>
+                    <value>1.5</value>
                 </size>
             </start>
             <end>
@@ -89,14 +99,14 @@
                     </alpha>
                 </color>
                 <size>
-                    <value>18</value>
+                    <value>10</value>
                 </size>
             </end>
             <life-sec>
-                <value>4</value>
+                <value>0.8</value>
             </life-sec>
-            <mass-kg>0.025</mass-kg>
-            <radius-m>0.175</radius-m>
+            <mass-kg>0.0005</mass-kg>
+            <radius-m>0.4</radius-m>
         </particle>
 
         <program>

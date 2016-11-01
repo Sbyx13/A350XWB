@@ -247,6 +247,8 @@
     <object-name>greennav</object-name>
     <object-name>GreenLight</object-name>
     <object-name>Strobelight.1</object-name>
+    <!-- <property>fdm/jsbsim/forces/wing[3]</property>
+    <factor>-0.0003</factor> -->
     <property>sim/systems/wingflexer/z-m</property>
     <factor>10</factor>
     <center>
@@ -271,6 +273,8 @@
     <object-name>greennav</object-name>
     <object-name>GreenLight</object-name>
     <object-name>Strobelight.1</object-name>
+    <!-- <property>fdm/jsbsim/forces/wing[3]</property>
+    <factor>-0.0003</factor> -->
     <property>sim/systems/wingflexer/z-m</property>
     <factor>10</factor>
     <center>
@@ -306,6 +310,8 @@
     <object-name>rednav</object-name>
     <object-name>RedLight</object-name>
     <object-name>Strobelight.2</object-name>
+    <!-- <property>fdm/jsbsim/forces/wing[3]</property>
+    <factor>-0.0003</factor> -->
     <property>sim/systems/wingflexer/z-m</property>
     <factor>10</factor>
     <center>
@@ -330,6 +336,8 @@
     <object-name>rednav</object-name>
     <object-name>RedLight</object-name>
     <object-name>Strobelight.2</object-name>
+    <!-- <property>fdm/jsbsim/forces/wing[3]</property>
+    <factor>-0.0003</factor> -->
     <property>sim/systems/wingflexer/z-m</property>
     <factor>10</factor>
     <center>
@@ -901,14 +909,6 @@
     <texture>chrome.png</texture>
     <object-name>engine_chrome</object-name>
     <object-name>lamp_chrome</object-name>
-  </animation>
-
-  <!-- Wingflexer -->
-  <animation>
-    <type>rotate</type>
-    <property>sim/systems/wingflexer/z-m</property>
-    <factor>10</factor>
-    <!-- ... -->
   </animation>
 
   <!-- Rudder -->
@@ -2073,7 +2073,7 @@
 </model>
 
 <model>
- <path>Aircraft/A350XWB/Models/Effects/wet-runway.xml</path>
+ <path>Aircraft/A350XWB/Models/Effects/wet-runway-left.xml</path>
  <name>tyre-smoke-l</name>
  <offsets>
   <x-m>4.9</x-m>
@@ -2083,7 +2083,7 @@
 </model>
 
 <model>
- <path>Aircraft/A350XWB/Models/Effects/wet-runway.xml</path>
+ <path>Aircraft/A350XWB/Models/Effects/wet-runway-right.xml</path>
  <name>tyre-smoke-r</name>
  <offsets>
   <x-m>4.9</x-m>
