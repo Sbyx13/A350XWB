@@ -1188,7 +1188,7 @@
     <object-name>tyres.right.back</object-name>
     <property>sim/multiplay/generic/float[2]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>-15</dep></entry>
+      <entry><ind>0</ind><dep>15</dep></entry>
       <entry><ind>0.001</ind><dep>0</dep></entry>
     </interpolation>
     <center>
@@ -1493,7 +1493,7 @@
     <object-name>tyres.left.back</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>-15</dep></entry>
+      <entry><ind>0</ind><dep>15</dep></entry>
       <entry><ind>0.001</ind><dep>0</dep></entry>
     </interpolation>
     <center>
@@ -1856,7 +1856,7 @@
 		</equals>
 	</condition>
 	<offsets>
-		<x-m>35</x-m>
+		<x-m>33</x-m>
 		<y-m>-3</y-m>
 		<z-m>0</z-m>
 	</offsets>
