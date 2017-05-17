@@ -4,14 +4,29 @@
 	<path>flightdeck/flightdeck.ac</path>
   	
 	<!-- Engine Indications and Crew Alerting System (Upper ECAM) -->
-	
 	<model>
 		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
 		<offsets>
-			<x-m>2.3571</x-m>
-			<y-m>-0.08</y-m>
-			<z-m>1.872</z-m>
-    			<pitch-deg>-17</pitch-deg>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>-0.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM2.xml</path>
+		<offsets>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
 		</offsets>
 		<condition>
 			<greater-than-equals>
@@ -22,11 +37,12 @@
 	</model>
   	
 	<animation>
-		<object-name>Upper-ECAM</object-name>>
+		<object-name>Upper-ECAM</object-name>
+		<object-name>Upper-ECAM2</object-name>
 		<type>scale</type>
 		<x-offset>1.15</x-offset>
-		<y-offset>1.15</y-offset>
-		<z-offset>1.15</z-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1.25</z-offset>
 	</animation>
 	
 	<!-- Primary Flight Displays -->
