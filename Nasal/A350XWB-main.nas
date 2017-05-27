@@ -61,3 +61,9 @@ A350XWBMain.reinit = func {
 
 A350XWBListener1 = setlistener("/sim/signals/fdm-initialized", func { globals.A350XWB.main = A350XWBMain.new(); removelistener(A350XWBListener1); });
 A350XWBListener2 = setlistener("/sim/signals/reinit", func { globals.A350XWB.main.reinit(); });
+
+setlistener("controls/lighting/landing-light",
+  func {
+    if(getprop("controls/lighting/landing-light")) setprop("controls/lighting/landing-lights-norm",1); else setprop("controls/lighting/landing-lights-norm",0);
+  }
+);
