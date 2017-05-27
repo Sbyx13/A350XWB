@@ -14,93 +14,37 @@
 	<group>
 		<layout>vbox</layout>
 
-		<text>
-			<label>Landing lights</label>
-		</text>
-
 		<group>
-			<layout>hbox</layout>
+			<layout>vbox</layout>
 
 			<checkbox>
-				<label>Left</label>
-				<property>controls/lighting/landing-lights[0]</property>
+				<label>Landing Lights</label>
+				<property>controls/lighting/landing-light</property>
 				<binding>
-					<command>dialog-apply</command>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-light</property>
 				</binding>
 				<live>true</live>
 			</checkbox>
-
 			<checkbox>
-				<label>Nosegear</label>
-				<property>controls/lighting/landing-lights[1]</property>
+				<label>Nav Lights</label>
+				<property>controls/lighting/nav-lights</property>
 				<binding>
-					<command>dialog-apply</command>
+					<command>property-toggle</command>
+					<property>controls/lighting/nav-lights</property>
 				</binding>
 				<live>true</live>
 			</checkbox>
-
 			<checkbox>
-				<label>Right</label>
-				<property>controls/lighting/landing-lights[2]</property>
+				<label>Strobe lights</label>
+				<property>controls/lighting/strobe</property>
 				<binding>
-					<command>dialog-apply</command>
+					<command>property-toggle</command>
+					<property>controls/lighting/strobe</property>
 				</binding>
 				<live>true</live>
 			</checkbox>
 		</group>
-
-		<hrule/>
-
-		<text>
-			<label>Navigation/logo lights</label>
-		</text>
-
-		<group>
-			<layout>hbox</layout>
-
-			<button>
-				<legend>Off</legend>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/lighting/nav-lights-switch</property>
-					<value>0</value>
-				</binding>
-			</button>
-			<button>
-				<legend>1</legend>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/lighting/nav-lights-switch</property>
-					<value>1</value>
-				</binding>
-			</button>
-			<button>
-				<legend>2</legend>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/lighting/nav-lights-switch</property>
-					<value>2</value>
-				</binding>
-			</button>
-		</group>
-
-		<checkbox>
-			<label>Strobe lights</label>
-			<property>controls/lighting/strobe</property>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-			<live>true</live>
-		</checkbox>
 
 <!--		<checkbox>
 			<label>Wing lights</label>
@@ -112,15 +56,41 @@
 		</checkbox>-->
 
 		<checkbox>
-			<label>Beacon</label>
+			<label>Beacon Lights</label>
 			<property>controls/lighting/beacon</property>
 			<binding>
-				<command>dialog-apply</command>
+					<command>property-toggle</command>
+					<property>controls/lighting/beacon</property>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+			<label>Logo Lights</label>
+			<property>controls/lighting/logo-lights</property>
+			<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/logo-lights</property>
 			</binding>
 			<live>true</live>
 		</checkbox>
 
 		<text>
+			<label>Panel Norm</label>
+		</text>
+
+		<slider>
+			<width>200</width>
+			<property>controls/lighting/panel-norm</property>
+			<step>0.05</step>
+			<min>0</min>
+			<max>1</max>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</slider>
+
+		<!--text>
 			<label>Cockpit dome lighting</label>
 		</text>
 
@@ -188,7 +158,7 @@
 			</binding>
 			<live>true</live>
 		</checkbox>
-	</group>
+	</group-->
 
 	<hrule />
 

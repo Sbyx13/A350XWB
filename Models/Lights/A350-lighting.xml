@@ -202,8 +202,14 @@
 <model>
 <path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
 	<name>Nose.landing.light</name>
-			<condition>
-			<property>controls/lighting/landing-light[1]</property>
+		<condition>
+			<and>
+				<equals>
+					<property>gear/gear/position-norm</property>
+					<value>1</value>
+				</equals>
+				<property>controls/lighting/landing-light</property>
+			</and>
 		</condition>
 	<offsets>
 		<x-m>4.2819</x-m>
@@ -214,8 +220,14 @@
 
 <model>
 <path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
-			<condition>
-			<property>controls/lighting/landing-light[1]</property>
+		<condition>
+			<and>
+				<equals>
+					<property>gear/gear/position-norm</property>
+					<value>1</value>
+				</equals>
+				<property>controls/lighting/landing-light</property>
+			</and>
 		</condition>
 	<offsets>
 		<x-m>4</x-m>
@@ -228,7 +240,7 @@
 <path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
 	<name>L.landing.light</name>
 			<condition>
-			<property>controls/lighting/landing-light[1]</property>
+			<property>controls/lighting/landing-light</property>
 		</condition>
 	<offsets>
 		<x-m>23</x-m>
@@ -241,7 +253,7 @@
 <model>
 <path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
 			<condition>
-			<property>controls/lighting/landing-light[1]</property>
+			<property>controls/lighting/landing-light</property>
 		</condition>
 	<offsets>
 		<x-m>23</x-m>
@@ -254,7 +266,7 @@
 <path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
 	<name>R.landing.light</name>
 			<condition>
-			<property>controls/lighting/landing-light[2]</property>
+			<property>controls/lighting/landing-light</property>
 		</condition>
 	<offsets>
 		<x-m>23</x-m>
@@ -266,7 +278,7 @@
 <model>
 <path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
 			<condition>
-			<property>controls/lighting/landing-light[2]</property>
+			<property>controls/lighting/landing-light</property>
 		</condition>
 	<offsets>
 		<x-m>23</x-m>

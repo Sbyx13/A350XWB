@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>center_console.ac</path>
+
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/center_console/LightMap/center_console.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>Cube.062</object-name>
+		<object-name>Cube.000</object-name>
+		<object-name>Fuselage.004</object-name>
+		<object-name>Fuselage.005</object-name>
+		<object-name>throttle_right</object-name>
+		<object-name>throttle_left</object-name>
+		<object-name>Cylinder.006</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/center_console/LightMap/knob.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>not	</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/center_console/LightMap/text_2.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>center_console_texts</object-name>
+	</effect>
+
+</PropertyList>

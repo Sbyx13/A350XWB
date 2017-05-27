@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/eicas2.ac</path>
+	<animation>
+		<name>Eicas-right</name>
+		<object-name>poly000002</object-name>
+	</animation>
+</PropertyList>
