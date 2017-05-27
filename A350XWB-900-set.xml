@@ -32,8 +32,39 @@
     </airport>
 
 		<startup>
-			<splash-texture>Aircraft/A350XWB/splash.png</splash-texture>
-		</startup>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash01.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash02.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash03.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash04.png</splash-texture>
+  </startup>
+  <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash01.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash02.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash03.png</path>
+      </preview>
+      <preview>
+        <type>interior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash04.png</path>
+      </preview>
+  </previews>
 
   </sim>
   <payload>
