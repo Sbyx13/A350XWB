@@ -531,6 +531,7 @@
       <file>Aircraft/A350XWB/Nasal/liveries.nas</file>
       <file>Aircraft/A350XWB/Models/Instruments/ND/ND.nas</file>
       <file>Aircraft/A350XWB/Nasal/ground_services.nas</file>
+      <file>Aircraft/A350XWB/Nasal/lighting.nas</file>
     </A350XWB>
     <itaf>
       <file>Aircraft/A350XWB/Nasal/it-autoflight.nas</file>

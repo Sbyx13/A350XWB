@@ -4,14 +4,29 @@
 	<path>flightdeck/flightdeck.ac</path>
   	
 	<!-- Engine Indications and Crew Alerting System (Upper ECAM) -->
-	
 	<model>
 		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
 		<offsets>
-			<x-m>2.3571</x-m>
-			<y-m>-0.08</y-m>
-			<z-m>1.872</z-m>
-    			<pitch-deg>-17</pitch-deg>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>-0.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM2.xml</path>
+		<offsets>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
 		</offsets>
 		<condition>
 			<greater-than-equals>
@@ -22,11 +37,12 @@
 	</model>
   	
 	<animation>
-		<object-name>Upper-ECAM</object-name>>
+		<object-name>Upper-ECAM</object-name>
+		<object-name>Upper-ECAM2</object-name>
 		<type>scale</type>
 		<x-offset>1.15</x-offset>
-		<y-offset>1.15</y-offset>
-		<z-offset>1.15</z-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1.25</z-offset>
 	</animation>
 	
 	<!-- Primary Flight Displays -->
@@ -117,6 +133,7 @@
 		</offsets>
 	</model>
 	
+
 	<model>
 		<name>EICAS</name>
 		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
@@ -151,8 +168,21 @@
 			<roll-deg>2.5</roll-deg>
 		</offsets>
 	</model>
-  
-        <model>
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/EICAS/EICAS-right.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8598</z-m>
+			<y-m>0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>-22</heading-deg>
+			<roll-deg>2.5</roll-deg>
+		</offsets>
+	</model>
+
+    <model>
 		<name>EICAS</name>
 		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
 		<offsets>
@@ -164,6 +194,28 @@
 			<roll-deg>-2.5</roll-deg>
 		</offsets>
 	</model>
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/EICAS/EICAS-left.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8598</z-m>
+			<y-m>-0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>22</heading-deg>
+			<roll-deg>-2.5</roll-deg>
+		</offsets>
+	</model>
+	
+	 <animation>
+		<type>scale</type>
+		<object-name>Eicas-left</object-name>
+		<object-name>Eicas-right</object-name>
+		<x-offset>1</x-offset>
+		<y-offset>2.2</y-offset>
+		<z-offset>1.4</z-offset>
+	 </animation>
   
 	<model>
 		<name>EICAS</name>
@@ -174,6 +226,37 @@
     			<pitch-deg>-47.5</pitch-deg>
 		</offsets>
 	</model>  
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/Instruments/Bottom-ECAM/Bottom-ECAM.xml</path>
+		<offsets>
+			<x-m>2.4889</x-m>
+			<z-m>1.6544</z-m>
+			<y-m>-0.09</y-m>
+    			<pitch-deg>-47.5</pitch-deg>
+		</offsets>
+	</model>
+
+	 <model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/Instruments/Bottom-ECAM/Bottom-ECAM2.xml</path>
+		<offsets>
+			<x-m>2.4889</x-m>
+			<z-m>1.6544</z-m>
+			<y-m>0.09</y-m>
+    			<pitch-deg>-47.5</pitch-deg>
+		</offsets>
+	</model>
+	
+	 <animation>
+		<type>scale</type>
+		<object-name>Bottom-ECAM</object-name>
+		<object-name>Bottom-ECAM2</object-name>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1.3</z-offset>
+	 </animation>
 
 	  
   
@@ -243,7 +326,7 @@
 	</model> 
 
 	<model>
-		<path>Aircraft/A350XWB/Models/flightdeck/center_console/center_console.ac</path>
+		<path>Aircraft/A350XWB/Models/flightdeck/center_console/center_console.xml</path>
 	</model> 
   
 	<animation>
@@ -962,4 +1045,42 @@
 		</center>
 	</animation>
 
+	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/dashboard.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+	  <object-name>Cube.210</object-name>
+	  <object-name>Fuselage.004</object-name>
+	  <object-name>Cube.054</object-name>
+	  <object-name>Cube.039</object-name>
+  	</effect>
+  	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/cockpit.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+  	</effect>
+  	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/cockpit_2.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+	  <object-name>Plane</object-name>
+  	</effect>
 </PropertyList>

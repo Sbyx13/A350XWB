@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 
 <PropertyList>
 
@@ -401,6 +401,19 @@
 		</binding>
 	</action>
 </animation>
- 
+
+<effect>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+      <texture n="1">
+        <image>Aircraft/A350XWB/Models/flightdeck/overhead/LightMap/OH.png</image>
+      </texture>
+      <factor>
+        <use>controls/lighting/panel-norm</use>
+      </factor>
+    </parameters>
+    <object-name>Cube.008</object-name>
+    <object-name>ldg.switch.001</object-name>
+  </effect> 
     
 </PropertyList>
