@@ -1,6 +1,5 @@
-# 737-800 
+# A350XWB 
 #By Gabriel Hernandez(YV3399) and Legoboyvdlp
-
 
 setlistener("/sim/signals/fdm-initialized", func {
 
@@ -30,4 +29,3 @@ setlistener("controls/lighting/landing-lights[0]", func
  setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",0);
  }
  });
-
