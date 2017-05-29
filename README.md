@@ -1,7 +1,7 @@
 FG Airbus A350XWB
 -----------------
 
-![Image](https://raw.githubusercontent.com/FGMEMBERS/A350XWB/master/splash.png)
+![Image](https://github.com/FGMEMBERS/A350XWB/blob/master/Splashs/splash.png)
 
 * By Sbyx, Jormappapa and other
 * Released under GPL2+
