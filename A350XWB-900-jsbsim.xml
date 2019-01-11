@@ -446,7 +446,7 @@ YAW MOI_________3950000______23089847_______24848934
         <pitch> 2.2 </pitch>
         <yaw> 1 </yaw>
       </orient>
-      <feed>7</feed>
+      <feed>5</feed>
       <thruster file="direct">
         <location unit="IN">
         <x>-307</x>
@@ -471,7 +471,7 @@ YAW MOI_________3950000______23089847_______24848934
         <pitch> 2.2 </pitch>
         <yaw> -1 </yaw>
       </orient>
-      <feed>8</feed>
+      <feed>6</feed>
       <thruster file="direct">
         <location unit="IN">
         <x>-307</x>
@@ -498,21 +498,7 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
       <temperature>50</temperature>
     </tank>
-    <tank type="FUEL">
-      <!-- Left Tank (Outer) -->
-      <location unit="IN">
-        <x> 200 </x>
-        <y> -804 </y>
-        <z> 96 </z>
-      </location>
-      <capacity unit="LBS"> 6000 </capacity>
-      <contents unit="LBS"> 3000 </contents>
-      <standpipe unit="LBS">21</standpipe>
-      <!-- minimun fuel on pipes -->
-      <priority>2</priority>
-      <type>JET-A1</type>
-      <temperature>50</temperature>
-    </tank>
+    
     <tank type="FUEL">
       <!-- Left Tank (Inner) -->
       <location unit="IN">
@@ -520,7 +506,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> -333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 60000 </capacity>
+      <capacity unit="LBS"> 52238 </capacity>
       <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
       <!-- minimun fuel on pipes -->
@@ -528,6 +514,7 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
       <temperature>50</temperature>
     </tank>
+	
     <tank type="FUEL">
       <!-- Center Tank -->
       <location unit="IN">
@@ -543,6 +530,7 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
       <temperature>50</temperature>
     </tank>
+	
     <tank type="FUEL">
       <!-- Right Tank (Inner) -->
       <location unit="IN">
@@ -550,7 +538,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 60000 </capacity>
+      <capacity unit="LBS"> 52238 </capacity>
       <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
       <!-- minimun fuel on pipes -->
@@ -558,21 +546,7 @@ YAW MOI_________3950000______23089847_______24848934
       <type>JET-A1</type>
       <temperature>50</temperature>
     </tank>
-    <tank type="FUEL">
-      <!-- Right Tank (Outer) -->
-      <location unit="IN">
-        <x> 200 </x>
-        <y> 804 </y>
-        <z> 96 </z>
-      </location>
-      <capacity unit="LBS"> 6000 </capacity>
-      <contents unit="LBS"> 3000 </contents>
-      <standpipe unit="LBS">21</standpipe>
-      <!-- minimun fuel on pipes -->
-      <priority>2</priority>
-      <type>JET-A1</type>
-      <temperature>50</temperature>
-    </tank>
+    
     <tank type="FUEL">
       <!-- Right Tank (Wing tip Ventilation Surge) -->
       <location unit="IN">
