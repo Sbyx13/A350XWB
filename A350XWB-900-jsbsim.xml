@@ -499,32 +499,17 @@ YAW MOI_________3950000______23089847_______24848934
       <temperature>50</temperature>
     </tank>
     <tank type="FUEL">
-      <!-- Left Tank (Outer) -->
-      <location unit="IN">
-        <x> 200 </x>
-        <y> -804 </y>
-        <z> 96 </z>
-      </location>
-      <capacity unit="LBS"> 6000 </capacity>
-      <contents unit="LBS"> 3000 </contents>
-      <standpipe unit="LBS">21</standpipe>
-      <!-- minimun fuel on pipes -->
-      <priority>2</priority>
-      <type>JET-A1</type>
-      <temperature>50</temperature>
-    </tank>
-    <tank type="FUEL">
       <!-- Left Tank (Inner) -->
       <location unit="IN">
         <x> -41 </x>
         <y> -333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 60000 </capacity>
+      <capacity unit="LBS"> 52238 </capacity>
       <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
       <!-- minimun fuel on pipes -->
-      <priority>3</priority>
+      <priority>2</priority>
       <type>JET-A1</type>
       <temperature>50</temperature>
     </tank>
@@ -535,7 +520,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 0 </y>
         <z> -59.05 </z>
       </location>
-      <capacity unit="LBS"> 112000 </capacity>
+      <capacity unit="LBS"> 145366 </capacity>
       <contents unit="LBS"> 64000 </contents>
       <standpipe unit="LBS">43</standpipe>
       <!-- minimun fuel on pipes -->
@@ -550,24 +535,9 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 333 </y>
         <z> 51 </z>
       </location>
-      <capacity unit="LBS"> 60000 </capacity>
+      <capacity unit="LBS"> 52238 </capacity>
       <contents unit="LBS"> 30000 </contents>
       <standpipe unit="LBS">31</standpipe>
-      <!-- minimun fuel on pipes -->
-      <priority>3</priority>
-      <type>JET-A1</type>
-      <temperature>50</temperature>
-    </tank>
-    <tank type="FUEL">
-      <!-- Right Tank (Outer) -->
-      <location unit="IN">
-        <x> 200 </x>
-        <y> 804 </y>
-        <z> 96 </z>
-      </location>
-      <capacity unit="LBS"> 6000 </capacity>
-      <contents unit="LBS"> 3000 </contents>
-      <standpipe unit="LBS">21</standpipe>
       <!-- minimun fuel on pipes -->
       <priority>2</priority>
       <type>JET-A1</type>

@@ -10,8 +10,8 @@
   <lift-node-lbs alias="/fdm/jsbsim/forces/fbz-aero-lbs"/>
   <fuel-node-1-kg alias="/consumables/fuel/tank[1]/level-kg"/>
   <fuel-node-2-kg alias="/consumables/fuel/tank[5]/level-kg"/>
-  <fuel-node-3-kg alias="/consumables/fuel/tank[2]/level-kg"/>
-  <fuel-node-4-kg alias="/consumables/fuel/tank[4]/level-kg"/>
+  <fuel-node-3-kg alias="/consumables/fuel/tank[3]/level-kg"/>
+  <fuel-node-4-kg alias="/consumables/fuel/tank[6]/level-kg"/>
   <z-fac type="double">-0.2</z-fac>
 </params>
 
