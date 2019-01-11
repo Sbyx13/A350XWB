@@ -512,21 +512,27 @@
         <name>Left Wing Vent</name>
       </tank>
       <tank n="1">
-        <name>Left Wing</name>
+        <name>Left Wing Outer</name>
       </tank>
       <tank n="2">
-        <name>Center</name>
+        <name>Left Wing Inner</name>
       </tank>
       <tank n="3">
-        <name>Right Wing</name>
+        <name>Center</name>
       </tank>
       <tank n="4">
-        <name>Right Wing Vent</name>
+        <name>Right Wing Inner</name>
       </tank>
       <tank n="5">
-        <name>Left Pipes</name>
+        <name>Right Wing Outer</name>
       </tank>
       <tank n="6">
+        <name>Right Wing Vent</name>
+      </tank>
+      <tank n="7">
+        <name>Left Pipes</name>
+      </tank>
+      <tank n="8">
         <name>Right Pipes</name>
       </tank>
     </fuel>
