@@ -535,7 +535,7 @@ YAW MOI_________3950000______23089847_______24848934
         <y> 0 </y>
         <z> -59.05 </z>
       </location>
-      <capacity unit="LBS"> 112000 </capacity>
+      <capacity unit="LBS"> 145366 </capacity>
       <contents unit="LBS"> 64000 </contents>
       <standpipe unit="LBS">43</standpipe>
       <!-- minimun fuel on pipes -->
