@@ -1,4 +1,4 @@
-# IT AUTOFLIGHT System Controller V3.2.4
+# IT AUTOFLIGHT System Controller V3.2.5
 # Copyright (c) 2019 Joshua Davidson (it0uchpods)
 # This program is 100% GPL!
 
@@ -353,7 +353,7 @@ var vertical = func {
 		} else {
 			setprop("/it-autoflight/mode/arm", " ");
 		}
-		var altpredic = math.round(getprop("/it-autoflight/internal/altitude-predicted"), 500);
+		var altpredic = math.round(getprop("/it-autoflight/internal/altitude-predicted"), 100);
 		setprop("/it-autoflight/input/alt", altpredic);
 		setprop("/it-autoflight/internal/alt", altpredic);
 		thrustmode();
@@ -515,9 +515,9 @@ var ap_various = func {
 	}
 	
 	# Calculate HDG Kp
-	hdgKp = getprop("/it-autoflight/config/cmd/hdg") + (getprop("/velocities/airspeed-kt") - 140) * ((getprop("/it-autoflight/config/cmd/hdg") - 1.0 - getprop("/it-autoflight/config/cmd/hdg")) / (360 - 140));
+	hdgKp = getprop("/it-autoflight/config/cmd/hdg") + (getprop("/velocities/airspeed-kt") - 140) * ((getprop("/it-autoflight/config/cmd/hdg") + 1.0 - getprop("/it-autoflight/config/cmd/hdg")) / (360 - 140));
 	
-	hdgKp = math.clamp(hdgKp, getprop("/it-autoflight/config/cmd/hdg") - 1.0, getprop("/it-autoflight/config/cmd/hdg"));
+	hdgKp = math.clamp(hdgKp, getprop("/it-autoflight/config/cmd/hdg"), getprop("/it-autoflight/config/cmd/hdg") + 1.0);
 	
 	setprop("/it-autoflight/config/cmd/hdg-kp", hdgKp);
 	
