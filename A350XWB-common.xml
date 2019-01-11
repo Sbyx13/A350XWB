@@ -435,8 +435,8 @@
 			<td>0.001</td>
 		</pitch>
 		<cmd>
-			<hdg>-1.6</hdg>
-			<vorloc>-2.6</vorloc>
+			<hdg>1.6</hdg>
+			<vorloc>2.6</vorloc>
 			<alt-gain>-5</alt-gain>
 		</cmd>
 		<autoland> 
