@@ -366,11 +366,17 @@
     <!-- Systems -->
     <systems>
       <autopilot>
+		<name>IT-AUTOFLIGHT</name>
         <path>Aircraft/A350XWB/Systems/it-autoflight.xml</path>
       </autopilot>
       <autopilot>
-	<path>Aircraft/A350XWB/Systems/it-autothrust.xml</path>
+		<name>IT-AUTOTHRUST</name>
+		<path>Aircraft/A350XWB/Systems/it-autothrust.xml</path>
       </autopilot>
+	  <autopilot>
+		<name>Gear AGL FT</name>
+		<path>Aircraft/A350XWB/Systems/gear-agl-ft.xml</path>
+	</autopilot>
       <wingflexer include="Systems/wingflexer-params.xml"/>
       <property-rule n="100">
         <name>wing flexer property rule</name>
@@ -413,6 +419,49 @@
 
 
   </sim>
+
+  <it-autoflight>
+	<config>
+		<roll>
+			<kp-low>0.11</kp-low> <!-- Kp at low speed -->
+			<kp-high>0.05</kp-high> <!-- Kp at high speed -->
+			<ti>1.0</ti>
+			<td>0.0001</td>
+		</roll>
+		<pitch>
+			<kp-low>-0.14</kp-low> <!-- Kp at low speed -->
+			<kp-high>-0.06</kp-high> <!-- Kp at high speed -->
+			<ti>0.5</ti>
+			<td>0.001</td>
+		</pitch>
+		<cmd>
+			<hdg>1.6</hdg>
+			<vorloc>2.6</vorloc>
+			<alt-gain>-5</alt-gain>
+		</cmd>
+		<autoland> 
+			<pitch-kp>0.0051</pitch-kp>
+			<yaw-kp>-0.05</yaw-kp>
+		</autoland>
+		<rollout>
+			<roll-kp>-0.1</roll-kp>
+			<pitch-defl>0.15</pitch-defl>
+			<yaw-kp>-0.02</yaw-kp>
+		</rollout>
+	</config>
+	<settings>
+		<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
+		<disable-final>0</disable-final> <!-- Disable the Final Controllers -->
+		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
+		<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
+		<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
+		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
+		<togaspd>160</togaspd> <!-- V2 + 10kts -->
+		<lat-agl-ft>50</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to LNAV (if armed) -->
+		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
+		<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+	</settings>
+</it-autoflight>
   
   <instrumentation>
         <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
