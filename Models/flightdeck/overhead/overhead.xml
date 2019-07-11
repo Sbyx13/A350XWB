@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>overhead.ac</path>
+		<!--Lights -->
+	<!-- Landing Lights -->	
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>ldg.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/landing-lights</property>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/lighting/landing-light</property>
+                <property>controls/lighting/landing-lights</property>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/lighting/landing-light[1]</property>
+                <property>controls/lighting/landing-lights</property>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/lighting/landing-light[2]</property>
+                <property>controls/lighting/landing-lights</property>
+            </binding>
+        </action>
+    </animation>
+    
+             	  	<animation>
+ <type>rotate</type>
+ <object-name>ldg.switch</object-name>
+   <property>controls/lighting/landing-lights</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5231</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+    
+        <animation>
+        <type>pick</type>
+        <object-name>beacon.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/beacon</property>
+            </binding>
+        </action>
+    </animation>
+
+    
+         	  	<animation>
+ <type>rotate</type>
+ <object-name>beacon.switch</object-name>
+   <property>controls/lighting/beacon</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5713</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+        <animation>
+        <type>pick</type>
+        <object-name>wing.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/wing</property>
+            </binding>
+        </action>
+    </animation>
+
+    
+  <animation>
+ <type>rotate</type>
+ <object-name>wing.switch</object-name>
+   <property>controls/lighting/wing</property>
+		<interpolation>
+    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+    <entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5231</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+    
+      <animation>
+        <type>pick</type>
+        <object-name>strobe.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/strobe</property>
+            </binding>
+        </action>
+    </animation>
+    
+  <animation>
+ <type>rotate</type>
+ <object-name>strobe.switch</object-name>
+   <property>controls/lighting/strobe</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5713</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+    
+    
+        <animation>
+        <type>pick</type>
+        <object-name>nav.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/nav-lights</property>
+            </binding>
+        </action>
+    </animation>
+    
+     	  	<animation>
+ <type>rotate</type>
+ <object-name>nav.switch</object-name>
+   <property>controls/lighting/nav-lights</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5713</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>logo.switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/logo-lights</property>
+            </binding>
+        </action>
+    </animation>
+ 
+ 	  	<animation>
+ <type>rotate</type>
+ <object-name>logo.switch</object-name>
+<property>controls/lighting/logo-lights</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>60</dep></entry>
+		</interpolation>
+ <center>
+  <x-m>-1.1525</x-m>
+  <y-m>0</y-m>
+  <z-m>3.5713</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>a-i.wing.006</object-name>
+   <property>controls/lighting/logo-lights</property>
+   <factor>0.5</factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+    
+	<!-- APU -->
+	<animation>
+		<name>APU master switch pick</name>
+		<type>pick</type>
+		<object-name>APUMasterBtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/APU/master-switch</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>APU master switch fault</name>
+		<type>textranslate</type>
+		<object-name>APUMasterBtn</object-name>
+		<property>engines/apu/serviceable</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0.5</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>APU master switch on</name>
+		<type>textranslate</type>
+		<object-name>APUMasterBtn</object-name>
+		<property>controls/APU/master-switch</property>
+		<factor>0.25</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>    
+	
+		<animation>
+		<name>APU starter pick</name>
+		<type>pick</type>
+		<object-name>APUStarterBtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/APU/starter</property>
+			</binding>
+		</action>
+	</animation>
+
+	 <animation>
+   <type>textranslate</type>
+   <object-name>APUStarterBtn</object-name>
+   <property>controls/electric/b-apugen</property>
+   <factor>0.25</factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+ 
+		<animation>
+		<name>Battery</name>
+		<type>pick</type>
+		<object-name>batt.butt</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+                <property>controls/electric/battery-switch</property>
+			</binding>
+		</action>
+	</animation>
+	 <animation>
+   <type>textranslate</type>
+   <object-name>batt.butt</object-name>
+                <property>controls/electric/battery-switch</property>
+   <factor>0.25</factor>
+   <axis>
+     <x>0</x>
+     <y>-1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 	<animation>
+		<type>translate</type>
+		<object-name>batt.butt</object-name>
+<property>controls/electric/battery-switch</property>
+		<factor>0.003</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+ 	<animation>
+	<type>pick</type>
+	<object-name>WiperKnb</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>	
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperl/switch</property>
+			<step>1</step>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+</animation>
+
+	<animation>
+	<type>pick</type>
+	<object-name>WiperKnb</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>false</repeatable>	
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperl/switch</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+</animation>
+
+ 	<animation>
+	<type>pick</type>
+	<object-name>WiperKnb2</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>	
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperr/switch</property>
+			<step>1</step>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+</animation>
+
+	<animation>
+	<type>pick</type>
+	<object-name>WiperKnb2</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>false</repeatable>	
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperr/switch</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+</animation>
+
+<effect>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+      <texture n="1">
+        <image>Aircraft/A350XWB/Models/flightdeck/overhead/LightMap/OH.png</image>
+      </texture>
+      <factor>
+        <use>controls/lighting/panel-norm</use>
+      </factor>
+    </parameters>
+    <object-name>Cube.008</object-name>
+    <object-name>ldg.switch.001</object-name>
+  </effect> 
+    
+</PropertyList>

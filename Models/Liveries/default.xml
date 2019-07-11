@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Airbus House - Default</name>
+        <index type="int">0</index>
+        <bodyWork>
+  	  <texture>Liveries/a350xwb.png</texture>
+        </bodyWork>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

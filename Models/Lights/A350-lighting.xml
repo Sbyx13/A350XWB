@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<PropertyList>
+
+<path>empty.ac</path>
+
+	<!-- Green Naviagation Light -->
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/greennav.xml</path>
+<name>greennav</name>     
+   <condition>
+		<property>controls/lighting/nav-lights</property>
+   </condition>
+<offsets>
+<x-m>42.7393</x-m>
+<y-m>30.7065</y-m>
+<z-m>3.3013</z-m>      
+</offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/light-green.xml</path>
+ <name>GreenLight</name>
+    <condition>
+		<property>controls/lighting/nav-lights</property>
+   </condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+
+<!-- Red Naviagation Light -->
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/rednav.xml</path>
+<name>rednav</name>     
+   <condition>
+		<property>controls/lighting/nav-lights</property>
+   </condition>
+<offsets>
+<x-m>42.7393</x-m>
+<y-m>-30.7065</y-m>
+<z-m>3.3013</z-m>      
+</offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/light-red.xml</path>
+ <name>RedLight</name>
+    <condition>
+		<property>controls/lighting/nav-lights</property>
+   </condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>-30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+	<!-- Strobe right-->
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/light-white.xml</path>
+ <name>Strobelight.1</name>
+	<condition>
+		<property>controls/lighting/strobe</property>
+	</condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
+ <name>Strobelight.1</name>
+    <condition>
+		<property>controls/lighting/strobe</property>
+   </condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+<animation>
+	<type>select</type>
+	<object-name>Strobelight.1</object-name>
+	<condition>
+		<equals>
+			<property>/sim/model/lights/strobe/state</property>
+			<value>1</value>
+		</equals>
+	</condition>
+</animation>
+
+	<!-- Strobe left-->
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/light-white.xml</path>
+ <name>Strobelight.2</name>
+	<condition>
+		<property>controls/lighting/strobe</property>
+	</condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>-30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
+ <name>Strobelight.2</name>
+    <condition>
+		<property>controls/lighting/strobe</property>
+   </condition>
+ <offsets>
+  <x-m>42.7393</x-m>
+  <y-m>-30.7065</y-m>
+  <z-m>3.3013</z-m>
+ </offsets>
+</model>
+
+<animation>
+	<type>select</type>
+	<object-name>Strobelight.2</object-name>
+	<condition>
+		<equals>
+			<property>/sim/model/lights/strobe/state</property>
+			<value>1</value>
+		</equals>
+	</condition>
+</animation>
+
+<!-- Beacon light -->
+
+<model>
+	<path>Aircraft/A350XWB/Models/Lights/beacon.xml</path>
+	<name>Beacon.Lower</name>
+	    <condition>
+		<property>controls/lighting/beacon</property>
+   </condition>
+	<offsets>
+		<x-m>34.3579</x-m>
+		<y-m>0</y-m>
+		<z-m>-2.1976</z-m>
+		<pitch-deg>180</pitch-deg>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/beacon_light.xml</path>
+	<name>Beacon.Lower.Light</name>
+		    <condition>
+		<property>controls/lighting/beacon</property>
+   </condition>
+	<offsets>
+		<x-m>34.3579</x-m>
+		<y-m>0</y-m>
+		<z-m>-2.1976</z-m>
+		<pitch-deg>180</pitch-deg>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/beacon.xml</path>
+	<name>Beacon.Upper</name>
+		    <condition>
+		<property>controls/lighting/beacon</property>
+   </condition>
+	<offsets>
+		<x-m>25.5050</x-m>
+		<y-m>0</y-m>
+		<z-m>4.5780</z-m>
+		<pitch-deg>180</pitch-deg>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/beacon_light.xml</path>
+	<name>Beacon.Upper.Light</name>
+		    <condition>
+		<property>controls/lighting/beacon</property>
+   </condition>
+	<offsets>
+		<x-m>25.5050</x-m>
+		<y-m>0</y-m>
+		<z-m>4.5780</z-m>
+		<pitch-deg>180</pitch-deg>
+	</offsets>
+</model>
+
+<!-- Landing lights -->
+ 
+<model>
+<path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
+	<name>Nose.landing.light</name>
+		<condition>
+			<and>
+				<equals>
+					<property>gear/gear/position-norm</property>
+					<value>1</value>
+				</equals>
+				<property>controls/lighting/landing-light</property>
+			</and>
+		</condition>
+	<offsets>
+		<x-m>4.2819</x-m>
+		<y-m>0</y-m>
+		<z-m>-2.3285</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
+		<condition>
+			<and>
+				<equals>
+					<property>gear/gear/position-norm</property>
+					<value>1</value>
+				</equals>
+				<property>controls/lighting/landing-light</property>
+			</and>
+		</condition>
+	<offsets>
+		<x-m>4</x-m>
+		<y-m>0</y-m>
+		<z-m>-2.3285</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
+	<name>L.landing.light</name>
+			<condition>
+			<property>controls/lighting/landing-light</property>
+		</condition>
+	<offsets>
+		<x-m>23</x-m>
+		<y-m>-4.1318</y-m>
+		<z-m>-0.1950</z-m>
+	</offsets>
+</model> 
+
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
+			<condition>
+			<property>controls/lighting/landing-light</property>
+		</condition>
+	<offsets>
+		<x-m>23</x-m>
+		<y-m>-4.1318</y-m>
+		<z-m>-0.1950</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/light-cone.xml</path>
+	<name>R.landing.light</name>
+			<condition>
+			<property>controls/lighting/landing-light</property>
+		</condition>
+	<offsets>
+		<x-m>23</x-m>
+		<y-m>4.1318</y-m>
+		<z-m>-0.1950</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/whitelight.xml</path>
+			<condition>
+			<property>controls/lighting/landing-light</property>
+		</condition>
+	<offsets>
+		<x-m>23</x-m>
+		<y-m>4.1318</y-m>
+		<z-m>-0.1950</z-m>
+	</offsets>
+</model> 
+
+<!-- Logo light -->
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/light-logo.xml</path>
+	<offsets>
+		<x-m>62.4380</x-m>
+		<y-m>-5.4934</y-m>
+		<z-m>3.3460</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/light-logo2.xml</path>
+	<offsets>
+		<x-m>62.4380</x-m>
+		<y-m>5.4934</y-m>
+		<z-m>3.3460</z-m>
+	</offsets>
+</model> 
+
+<!-- Wing lights -->
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/wing-light-right.xml</path>
+<name>wing-light-right</name>
+	<offsets>
+		<x-m>13.9957</x-m>
+		<y-m>3.0384</y-m>
+		<z-m>1.4161</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/wing-light-left.xml</path>
+<name>wing-light-left</name>
+	<offsets>
+		<x-m>13.9957</x-m>
+		<y-m>-3.0384</y-m>
+		<z-m>1.4161</z-m>
+	</offsets>
+</model> 
+
+<animation>
+	<type>select</type>
+	<object-name>wing-light-right</object-name>
+		<object-name>wing-light-left</object-name>
+	<condition>
+			<property>controls/lighting/wing</property>
+	</condition>
+</animation>
+
+
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/cockpit-light.xml</path>
+<name>cockpit-light</name>
+	<offsets>
+		<x-m>2.3799</x-m>
+		<y-m>0.3</y-m>
+		<z-m>2.2</z-m>
+							<roll-deg>30</roll-deg>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/cockpit-light.xml</path>
+<name>cockpit-light</name>
+	<offsets>
+		<x-m>2.3799</x-m>
+		<y-m>-0.3</y-m>
+		<z-m>2.2</z-m>
+					<roll-deg>-30</roll-deg>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/cockpit-light.xml</path>
+<name>cockpit-light</name>
+	<offsets>
+		<x-m>2.3799</x-m>
+		<y-m>0.15</y-m>
+		<z-m>2.2</z-m>
+	</offsets>
+</model>
+
+<model>
+<path>Aircraft/A350XWB/Models/Lights/cockpit-light.xml</path>
+<name>cockpit-light</name>
+	<offsets>
+		<x-m>2.3799</x-m>
+		<y-m>-0.15</y-m>
+		<z-m>2.2</z-m>
+	</offsets>
+</model>
+
+    <animation>
+        <type>select</type>
+        <object-name>cockpit-light</object-name>
+        <condition>
+            <property>sim/current-view/internal</property>
+        </condition>
+    </animation>
+
+</PropertyList>

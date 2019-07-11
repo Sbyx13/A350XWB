@@ -1,396 +1,661 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
-  <path>flightdeck/flightdeck.ac</path>
+
+	<path>flightdeck/flightdeck.ac</path>
+  	
+	<!-- Engine Indications and Crew Alerting System (Upper ECAM) -->
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
+		<offsets>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>-0.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/Upper-ECAM/Upper-ECAM2.xml</path>
+		<offsets>
+			<x-m>2.3591</x-m><!-- 2.3571 more back--><!-- -->
+			<y-m>.09</y-m>
+			<z-m>1.855</z-m> <!-- 1872 more up -->
+    			<pitch-deg>-17</pitch-deg><!-- -17 -->
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+  	
+	<animation>
+		<object-name>Upper-ECAM</object-name>
+		<object-name>Upper-ECAM2</object-name>
+		<type>scale</type>
+		<x-offset>1.15</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1.25</z-offset>
+	</animation>
+	
+	<!-- Primary Flight Displays -->
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>-0.529</y-m>
+			<z-m>1.8782</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/PFD/PFD2.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>0.529</y-m>
+			<z-m>1.8782</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+  	
+	<animation>
+		<object-name>PFD</object-name>>
+		<type>scale</type>
+		<x-offset>1.1</x-offset>
+		<y-offset>1.1</y-offset>
+		<z-offset>1.1</z-offset>
+	</animation>
+	
+	<!-- Navigation Displays -->
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/ND/ND_L.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>-0.349</y-m>
+			<z-m>1.8778</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/Instruments/ND/ND_R.xml</path>
+		<offsets>
+			<x-m>2.3481</x-m>
+			<y-m>0.349</y-m>
+			<z-m>1.8778</z-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+		<condition>
+			<greater-than-equals>
+				<property>/systems/electrical/outputs/bus</property>
+				<value>12</value>
+			</greater-than-equals>
+		</condition>
+	</model>
+
+<!-- ##################################################### -->
+	<model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.3571</x-m>
+			<z-m>1.8452</z-m>
+			<y-m>0.439</y-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+	</model>
+	
+
+	<model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.3571</x-m>
+			<z-m>1.8452</z-m>
+			<y-m>0</y-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+	</model>
+  
+	<model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.3571</x-m>
+			<z-m>1.8452</z-m>
+			<y-m>-0.439</y-m>
+    			<pitch-deg>-17</pitch-deg>
+		</offsets>
+	</model>
+  
+        <model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8538</z-m>
+			<y-m>0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>-22</heading-deg>
+			<roll-deg>2.5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/EICAS/EICAS-right.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8598</z-m>
+			<y-m>0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>-22</heading-deg>
+			<roll-deg>2.5</roll-deg>
+		</offsets>
+	</model>
+
+    <model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8538</z-m>
+			<y-m>-0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>22</heading-deg>
+			<roll-deg>-2.5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/EICAS/EICAS-left.xml</path>
+		<offsets>
+			<x-m>2.433</x-m>
+			<z-m>1.8598</z-m>
+			<y-m>-0.8107</y-m>
+    			<pitch-deg>-13.5</pitch-deg>
+			<heading-deg>22</heading-deg>
+			<roll-deg>-2.5</roll-deg>
+		</offsets>
+	</model>
+	
+	 <animation>
+		<type>scale</type>
+		<object-name>Eicas-left</object-name>
+		<object-name>Eicas-right</object-name>
+		<x-offset>1</x-offset>
+		<y-offset>2.2</y-offset>
+		<z-offset>1.4</z-offset>
+	 </animation>
+  
+	<model>
+		<name>EICAS</name>
+		<path>Aircraft/A350XWB/Models/flightdeck/A350XWB-900-EICAS.xml</path>
+		<offsets>
+			<x-m>2.4889</x-m>
+			<z-m>1.6444</z-m>
+    			<pitch-deg>-47.5</pitch-deg>
+		</offsets>
+	</model>  
+
+	<model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/Instruments/Bottom-ECAM/Bottom-ECAM.xml</path>
+		<offsets>
+			<x-m>2.4889</x-m>
+			<z-m>1.6544</z-m>
+			<y-m>-0.09</y-m>
+    			<pitch-deg>-47.5</pitch-deg>
+		</offsets>
+	</model>
+
+	 <model>
+		<name>EICAS-left</name>
+		<path>Aircraft/A350XWB/Models/Instruments/Bottom-ECAM/Bottom-ECAM2.xml</path>
+		<offsets>
+			<x-m>2.4889</x-m>
+			<z-m>1.6544</z-m>
+			<y-m>0.09</y-m>
+    			<pitch-deg>-47.5</pitch-deg>
+		</offsets>
+	</model>
+	
+	 <animation>
+		<type>scale</type>
+		<object-name>Bottom-ECAM</object-name>
+		<object-name>Bottom-ECAM2</object-name>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1.3</z-offset>
+	 </animation>
+
+	  
   
 	<!-- Mode Control Panel -->
 	<model>
 		<path>Aircraft/A350XWB/Models/flightdeck/MCP/MCP.xml</path>
-      <offsets>
-      <pitch-deg>-12</pitch-deg>
+		<offsets>
+			<pitch-deg>-12</pitch-deg>
 		</offsets>
 	</model>
 	
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
-<offsets>
-  <x-m>3.2534</x-m>
-  <y-m>0.1261</y-m>
-  <z-m>1.5074</z-m>
-        <pitch-deg>-90</pitch-deg>
-</offsets>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/overhead/overhead.xml</path>
+		<offsets>
+			<pitch-deg>64</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
+		<offsets>
+			<x-m>3.2534</x-m>
+			<y-m>0.1261</y-m>
+			<z-m>1.5074</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model> 
 
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
-<offsets>
-  <x-m>2.9161</x-m>
-  <y-m>0.1633</y-m>
-  <z-m>1.5117</z-m>
-        <pitch-deg>-86</pitch-deg>
-</offsets>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
+		<offsets>
+			<x-m>2.9161</x-m>
+			<y-m>0.1633</y-m>
+			<z-m>1.5117</z-m>
+			<pitch-deg>-86</pitch-deg>
+		</offsets>
+	</model> 
 
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
-<offsets>
-  <x-m>2.9161</x-m>
-  <y-m>-0.1633</y-m>
-  <z-m>1.5117</z-m>
-        <pitch-deg>-86</pitch-deg>
-</offsets>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/RMP/radio.ac</path>
+		<offsets>
+			<x-m>2.9161</x-m>
+			<y-m>-0.1633</y-m>
+			<z-m>1.5117</z-m>
+			<pitch-deg>-86</pitch-deg>
+		</offsets>
+	</model> 
 
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/standby/stndby.ac</path>
-<offsets>
-  <x-m>2.4385</x-m>
-  <y-m>0.2279</y-m>
-  <z-m>1.6899</z-m>
-        <pitch-deg>-48</pitch-deg>
-</offsets>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/standby/stndby.ac</path>
+		<offsets>
+			<x-m>2.4385</x-m>
+			<y-m>0.2279</y-m>
+			<z-m>1.6899</z-m>
+			<pitch-deg>-48</pitch-deg>
+		</offsets>
+	</model> 
 
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/standby/stndby.ac</path>
-<offsets>
-  <x-m>2.4385</x-m>
-  <y-m>-0.2279</y-m>
-  <z-m>1.6899</z-m>
-        <pitch-deg>-48</pitch-deg>
-</offsets>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/standby/stndby.ac</path>
+		<offsets>
+			<x-m>2.4385</x-m>
+			<y-m>-0.2279</y-m>
+			<z-m>1.6899</z-m>
+			<pitch-deg>-48</pitch-deg>
+		</offsets>
+	</model> 
 
-<model>
-<path>Aircraft/A350XWB/Models/flightdeck/center_console/center_console.ac</path>
-</model> 
+	<model>
+		<path>Aircraft/A350XWB/Models/flightdeck/center_console/center_console.xml</path>
+	</model> 
   
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-  <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
- <property>controls/flight/elevator</property>
- <factor>10</factor>
- <center>
-  <x-m>2.7908</x-m>
-  <y-m>0</y-m>
-  <z-m>1.6389</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>10</factor>
+		<center>
+			<x-m>2.7908</x-m>
+			<y-m>0</y-m>
+			<z-m>1.6389</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
- <property>controls/flight/aileron</property>
- <factor>10</factor>
- <center>
-  <x-m>2.7908</x-m>
-  <y-m>-0.8877</y-m>
-  <z-m>1.6389</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>10</factor>
+		<center>
+			<x-m>2.7908</x-m>
+			<y-m>-0.8877</y-m>
+			<z-m>1.6389</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6617</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6617</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6617</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6617</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
-  <object-name>level2</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6510</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<object-name>level2</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6510</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
-  <object-name>level2</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6510</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<object-name>level2</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6510</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
-  <object-name>level2</object-name>
-  <object-name>level1</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6376</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<object-name>level2</object-name>
+		<object-name>level1</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6376</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_1</object-name>
-   <object-name>sidestick_3</object-name>
-  <object-name>sidestick_button1</object-name>
-  <object-name>level3</object-name>
-  <object-name>level2</object-name>
-  <object-name>level1</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>-0.8907</y-m>
-  <z-m>1.6376</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_1</object-name>
+		<object-name>sidestick_3</object-name>
+		<object-name>sidestick_button1</object-name>
+		<object-name>level3</object-name>
+		<object-name>level2</object-name>
+		<object-name>level1</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>-0.8907</y-m>
+			<z-m>1.6376</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-   <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
- <property>controls/flight/elevator</property>
- <factor>10</factor>
- <center>
-  <x-m>2.7908</x-m>
-  <y-m>0</y-m>
-  <z-m>1.6389</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>10</factor>
+		<center>
+			<x-m>2.7908</x-m>
+			<y-m>0</y-m>
+			<z-m>1.6389</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
- <property>controls/flight/aileron</property>
- <factor>10</factor>
- <center>
-  <x-m>2.7908</x-m>
-  <y-m>0.8877</y-m>
-  <z-m>1.6389</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>10</factor>
+		<center>
+			<x-m>2.7908</x-m>
+			<y-m>0.8877</y-m>
+			<z-m>1.6389</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6617</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6617</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6617</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6617</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
-  <object-name>level2_2</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6510</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<object-name>level2_2</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6510</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
-  <object-name>level2_2</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6510</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<object-name>level2_2</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6510</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-  <animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
-  <object-name>level2_2</object-name>
-  <object-name>level1_2</object-name>
- <property>controls/flight/elevator</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6376</z-m>
- </center>
- <axis>
-  <x>0.0</x>
-  <y>-1.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<object-name>level2_2</object-name>
+		<object-name>level1_2</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6376</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>sidestick_2</object-name>
-    <object-name>sidestick_4</object-name>
-  <object-name>sidestick_button2</object-name>
-  <object-name>level3_2</object-name>
-  <object-name>level2_2</object-name>
-  <object-name>level1_2</object-name>
- <property>controls/flight/aileron</property>
- <factor>3</factor>
- <center>
-  <x-m>2.7912</x-m>
-  <y-m>0.8907</y-m>
-  <z-m>1.6376</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>sidestick_2</object-name>
+		<object-name>sidestick_4</object-name>
+		<object-name>sidestick_button2</object-name>
+		<object-name>level3_2</object-name>
+		<object-name>level2_2</object-name>
+		<object-name>level1_2</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>3</factor>
+		<center>
+			<x-m>2.7912</x-m>
+			<y-m>0.8907</y-m>
+			<z-m>1.6376</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
 	<!-- Throttle quadrant -->
 	<animation>
@@ -420,6 +685,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 1 throttle lever</name>
 		<type>rotate</type>
@@ -437,6 +703,7 @@
 			<z-m>1.5022</z-m>
 		</center>
 	</animation>
+
 	<animation>
 		<name>Engine 1 reverser lever pick</name>
 		<type>pick</type>
@@ -450,6 +717,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 1 reverser lever</name>
 		<type>rotate</type>
@@ -495,6 +763,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 2 throttle lever</name>
 		<type>rotate</type>
@@ -512,6 +781,7 @@
 			<z-m>1.5022</z-m>
 		</center>
 	</animation>
+
 	<animation>
 		<name>Engine 2 reverser lever pick</name>
 		<type>pick</type>
@@ -525,6 +795,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 2 reverser lever</name>
 		<type>rotate</type>
@@ -569,6 +840,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Flap lever</name>
 		<type>rotate</type>
@@ -592,7 +864,7 @@
 		</center>
 	</animation>
 	
-		<!-- Speedbrake lever -->
+	<!-- Speedbrake lever -->
 	<animation>
 		<name>Speedbrake lever pick</name>
 		<type>pick</type>
@@ -618,6 +890,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Gear lever rotate</name>
 		<type>rotate</type>
@@ -639,7 +912,7 @@
 		</center>
 	</animation>
 	
-		<!-- Gear lever -->
+	<!-- Gear lever -->
 	<animation>
 		<name>Gear lever rotate</name>
 		<type>rotate</type>
@@ -659,6 +932,7 @@
 			<z-m>1.7864</z-m>
 		</center>
 	</animation>
+
 	<animation>
 		<name>Gear lever pick</name>
 		<type>pick</type>
@@ -673,7 +947,7 @@
 		</action>
 	</animation>
 	
-		<!-- Parking brake -->
+	<!-- Parking brake -->
 	<animation>
 		<name>Parking brake lever pick</name>
 		<type>pick</type>
@@ -687,6 +961,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Gear lever rotate</name>
 		<type>rotate</type>
@@ -707,69 +982,105 @@
 		</center>
 	</animation>
 	
-	        <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>center_console_texts</object-name>
-    </effect>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>center_console_texts</object-name>
+	</effect>
     
-    <animation>
- <type>translate</type>
- <object-name>pedals_left</object-name>
- <property>controls/flight/rudder</property>
- <factor>0.06</factor>
- <axis>
-  <x>1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>pedals_left</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>0.06</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>translate</type>
- <object-name>pedals_right</object-name>
- <property>controls/flight/rudder</property>
- <factor>-0.06</factor>
- <axis>
-  <x>1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>pedals_right</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>-0.06</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>pedals_left</object-name>
- <property>controls/gear/brake-left</property>
- <factor>-10</factor>
- <axis>
-  <x>0.0</x>
-  <y>1.0</y>
-  <z>0.0</z>
- </axis>
- <center>
-  <x-m>2.2220</x-m>
-  <y-m>0</y-m>
-  <z-m>1.1827</z-m>
- </center>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>pedals_left</object-name>
+		<property>controls/gear/brake-left</property>
+		<factor>-10</factor>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>2.2220</x-m>
+			<y-m>0</y-m>
+			<z-m>1.1827</z-m>
+		</center>
+	</animation>
 
-<animation>
- <type>rotate</type>
- <object-name>pedals_right</object-name>
- <property>controls/gear/brake-right</property>
- <factor>-10</factor>
- <axis>
-  <x>0.0</x>
-  <y>1.0</y>
-  <z>0.0</z>
- </axis>
- <center>
-  <x-m>2.2220</x-m>
-  <y-m>0</y-m>
-  <z-m>1.1827</z-m>
- </center>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>pedals_right</object-name>
+		<property>controls/gear/brake-right</property>
+		<factor>-10</factor>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>2.2220</x-m>
+			<y-m>0</y-m>
+			<z-m>1.1827</z-m>
+		</center>
+	</animation>
 
-	
-
+	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/dashboard.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+	  <object-name>Cube.210</object-name>
+	  <object-name>Fuselage.004</object-name>
+	  <object-name>Cube.054</object-name>
+	  <object-name>Cube.039</object-name>
+  	</effect>
+  	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/cockpit.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+  	</effect>
+  	<effect>
+	  <inherits-from>Effects/lightmap</inherits-from>
+	  <parameters>
+	    <texture n="1">
+	      <image>Aircraft/A350XWB/Models/flightdeck/LightMap/cockpit_2.png</image>
+	    </texture>
+	    <factor>
+	      <use>controls/lighting/panel-norm</use>
+	    </factor>
+	  </parameters>
+	  <object-name>Plane</object-name>
+  	</effect>
 </PropertyList>

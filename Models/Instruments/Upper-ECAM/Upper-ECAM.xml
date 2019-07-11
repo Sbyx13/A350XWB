@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/eicas.ac</path>
+
+	<animation>
+		<name>Upper-ECAM</name>
+		<object-name>osgtext-green</object-name>
+		<object-name>thrl1</object-name>
+		<object-name>thrl2</object-name>
+		<object-name>thr1</object-name>
+		<object-name>thr2</object-name>
+		<object-name>egt1</object-name>
+		<object-name>egt2</object-name>
+		<object-name>rect</object-name>
+		<object-name>revv</object-name>
+		<object-name>poly000002</object-name>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>osgtext-green</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>0.543</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0.543</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+
+	<!-- OSGText -->
+	<!-- REV -->
+	
+	<animation>
+		<type>select</type>
+		<object-name>revv</object-name>
+		<condition>
+			<property>/surface-positions/reverser-norm</property>
+		</condition>
+	</animation>
+		
+	
+	<text>
+		<name>revv</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.031</y-m>
+    		<z-m>0.06</z-m>
+		</offsets>
+		<property>/controls/useless</property>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.008</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+	<text>
+		<name>revv</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.03</y-m>
+    		<z-m>0.06</z-m>
+		</offsets>
+		<property>/controls/useless</property>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.008</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<!-- THR -->
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0225</y-m>
+			<z-m>0.0526</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine/thr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.0385</y-m>
+			<z-m>0.0526</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[1]/thr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<!-- N1 -->
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.025</y-m>
+			<z-m>0.035</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine/n1</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.025</y-m>
+			<z-m>0.035</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[1]/n1</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<!-- EGT -->
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0595</y-m>
+			<z-m>0.03525</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>engines/engine/egt-degc</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>osgtext-green</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.0555</y-m>
+			<z-m>0.035</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>engines/engine[1]/egt-degc</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<!-- Analog Displays -->
+    <!-- THR LVR -->
+	
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thrl1</object-name>
+    	<property>controls/engines/engine[0]/throttle</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  8</dep></entry>
+			<entry><ind>0.5</ind><dep> 90</dep></entry>
+			<entry><ind>  1</ind><dep>183</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.031</y-m>
+    		<z-m>0.0557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>thrl2</object-name>
+    	<property>controls/engines/engine[1]/throttle</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  8</dep></entry>
+			<entry><ind>0.5</ind><dep> 90</dep></entry>
+			<entry><ind>  1</ind><dep>183</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.03</y-m>
+    		<z-m>0.0557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	
+    <!-- THR -->
+	
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thr1</object-name>
+    	<property>engines/engine/thr</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 50</ind><dep> 85</dep></entry>
+			<entry><ind>100</ind><dep>183</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.031</y-m>
+    		<z-m>0.0557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>thr2</object-name>
+    	<property>engines/engine[1]/thr</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 50</ind><dep> 85</dep></entry>
+			<entry><ind>100</ind><dep>183</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.03</y-m>
+    		<z-m>0.0557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <!-- EGT -->
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>egt1</object-name>
+    	<property>engines/engine[0]/egt-degc</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind>850</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0585</y-m>
+    		<z-m>0.035</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>egt2</object-name>
+    	<property>engines/engine[1]/egt-degc</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind>850</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0565</y-m>
+    		<z-m>0.035</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+
+</PropertyList>

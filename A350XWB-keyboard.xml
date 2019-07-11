@@ -28,4 +28,70 @@
    <value>0</value>
  </binding>
  </key>
+
+			<key n="2">
+				<name>Ctrl-b</name>
+				<desc>Speedbrakes</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>property-cycle</command>
+					<property>controls/flight/speedbrake</property>
+					<value>0.0</value>
+					<value>0.5</value>
+					<value>1.0</value>
+				</binding>
+			</key>
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle thrust reversers</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 reversethrust.togglereverser();
+					</script>
+				</binding>
+			</key>
+			<key n="66">
+				<name>B</name>
+				<desc>Toggle parking brakes</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 A350XWB.toggle_parkingbrakes();
+					</script>
+				</binding>
+			</key>
+			<key n="119">
+				<name>w</name>
+				<desc>Walk forward toward view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(0.1);
+					</script>
+				</binding>
+			</key>
+			<key n="87">
+				<name>W</name>
+				<desc>Run forward toward view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(0.25);
+					</script>
+				</binding>
+			</key>
+			<key n="115">
+				<name>s</name>
+				<desc>Walk backward from view</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					 walk.walk_about(-0.1);
+					</script>
+				</binding>
+			</key>
 </PropertyList>

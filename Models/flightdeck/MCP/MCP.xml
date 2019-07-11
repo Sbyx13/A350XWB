@@ -4,6 +4,41 @@
 
 	<path>mcp.ac</path>
 
-
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/MCP/LightMap/mcp.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>Cube.039</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/MCP/LightMap/knob.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>Cylinder.024</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/A350XWB/Models/flightdeck/MCP/LightMap/text.png</image>
+			</texture>
+			<factor>
+				<use>controls/lighting/panel-norm</use>
+			</factor>
+		</parameters>
+		<object-name>not</object-name>
+	</effect>
 
 </PropertyList>

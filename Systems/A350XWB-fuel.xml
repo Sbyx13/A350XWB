@@ -1,49 +1,49 @@
 <?xml version="1.0"?>
 <system name="fuel">
   <channel name="fuel">
-    <switch name="tank1pump">
+    <switch name="leftpump">
       <default value="0"/>
-      <test logic="AND" value="-5">
+      <test logic="AND" value="-3">
+        propulsion/tank[2]/contents-lbs eq 0
         propulsion/tank[1]/contents-lbs gt 0
-        propulsion/tank[7]/contents-lbs lt 99
+        propulsion/tank[5]/contents-lbs lt 99
       </test>
       <output>propulsion/tank[1]/external-flow-rate-pps</output>
     </switch>
-    <switch name="tank2pump">
+	
+	<switch name="centerpump">
       <default value="0"/>
-      <test logic="AND" value="-5">
-        propulsion/tank[1]/contents-lbs eq 0
+      <test logic="AND" value="-3">
         propulsion/tank[2]/contents-lbs gt 0
-        propulsion/tank[7]/contents-lbs lt 99
+        propulsion/tank[5]/contents-lbs lt 99
+      </test>
+      <test logic="AND" value="-3">
+        propulsion/tank[2]/contents-lbs gt 0
+        propulsion/tank[6]/contents-lbs lt 99
       </test>
       <output>propulsion/tank[2]/external-flow-rate-pps</output>
     </switch>
-    <switch name="tank5pump">
+	
+    <switch name="rightpump">
       <default value="0"/>
-      <test logic="AND" value="-5">
-        propulsion/tank[5]/contents-lbs gt 0
-        propulsion/tank[8]/contents-lbs lt 99
+      <test logic="AND" value="-3">
+        propulsion/tank[2]/contents-lbs eq 0
+        propulsion/tank[3]/contents-lbs gt 0
+        propulsion/tank[6]/contents-lbs lt 99
       </test>
-      <output>propulsion/tank[5]/external-flow-rate-pps</output>
+      <output>propulsion/tank[3]/external-flow-rate-pps</output>
     </switch>
-    <switch name="tank4pump">
-      <default value="0"/>
-      <test logic="AND" value="-5">
-        propulsion/tank[4]/contents-lbs gt 0
-        propulsion/tank[5]/contents-lbs eq 0
-        propulsion/tank[8]/contents-lbs lt 99
-      </test>
-      <output>propulsion/tank[4]/external-flow-rate-pps</output>
-    </switch>
-    <summer  name="tank7inlet">
+	
+    <summer  name="tank5inlet">
       <input>-propulsion/tank[1]/external-flow-rate-pps</input>
       <input>-propulsion/tank[2]/external-flow-rate-pps</input>
-      <output>propulsion/tank[7]/external-flow-rate-pps</output>
+      <output>propulsion/tank[5]/external-flow-rate-pps</output>
     </summer>
-    <summer name="tank8inlet">
-      <input>-propulsion/tank[5]/external-flow-rate-pps</input>
-      <input>-propulsion/tank[4]/external-flow-rate-pps</input>
-      <output>propulsion/tank[8]/external-flow-rate-pps</output>
+	
+    <summer name="tank6inlet">
+      <input>-propulsion/tank[3]/external-flow-rate-pps</input>
+      <input>-propulsion/tank[2]/external-flow-rate-pps</input>
+      <output>propulsion/tank[6]/external-flow-rate-pps</output>
     </summer>
   </channel>
 </system>

@@ -1,13 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList include="A350XWB-common.xml">
   <sim>
-    <description>Airbus A350XWB-900 (Rolls Royce High ByPass Turbofan Engine)</description>
+    <description>Airbus A350XWB-900</description>
     <flight-model>jsb</flight-model>
     <aero>A350XWB-900-jsbsim</aero>
     <variant>900</variant>
     <engine>Trent XWB</engine>
     <model>
       <path>Aircraft/A350XWB/Models/A350XWB-900.xml</path>
+
+			<!-- JPack: push forces for Voodoomaster Pushback -->
+			<pushback>
+				<kp type="double">1200</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+				<enabled type="bool">false</enabled>
+			</pushback>
     </model>
     <flaps>
       <setting>0.00</setting>
@@ -21,6 +30,41 @@
         <start-offset-m>30</start-offset-m>
       </runways>
     </airport>
+
+		<startup>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash01.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash02.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash03.png</splash-texture>
+   <splash-texture>Aircraft/A350XWB/Splashs/splash04.png</splash-texture>
+  </startup>
+  <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash01.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash02.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash03.png</path>
+      </preview>
+      <preview>
+        <type>interior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash04.png</path>
+      </preview>
+  </previews>
 
   </sim>
   <payload>
@@ -55,10 +99,6 @@
       <max-lb type="double">3000</max-lb>
     </weight>
   </payload>
-  
-  <instrumentation>
-  </instrumentation>
-
 
 
   <limits>

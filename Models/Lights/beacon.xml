@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>rednav.ac</path>
+
+	<!-- ANIMATIONS -->
+	<!-- On/off -->
+<animation>
+	<type>select</type>
+	<object-name>Light</object-name>
+	<condition>
+		<equals>
+			<property>/sim/model/lights/beacon/state</property>
+			<value>1</value>
+		</equals>
+	</condition>
+</animation>
+
+	<!-- Billboard animation -->
+	<animation>
+		<name>Billboard</name>
+		<type>billboard</type>
+		<object-name>Light</object-name>
+	</animation>
+	
+		          <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>Light</object-name>
+    </effect>
+
+</PropertyList>
